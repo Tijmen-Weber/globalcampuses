@@ -1,0 +1,299 @@
+.placeholder {
+    height: 300px; /* Adjust the height to create space for fixed elements */
+}
+
+.placeholder2 {
+    height: 250px; /* Adjust the height to create space for fixed elements */
+}
+
+.sticky-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+
+.banner-container {
+  background-color: #5785C1;
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+  width:100%;
+    font-family: sans-serif;
+}
+
+.banner-text {
+  margin: 0;
+}
+
+/* The side navigation menu */
+.sidebar {
+    display:none;
+}
+
+
+
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #D3D4D8;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  font-size: 36px;
+    font-family: sans-serif;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+      font-size: 4vw;
+  float: left;
+  display: block;
+  color: #333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+    font-family: sans-serif;
+}
+
+/* Add a dropdown to the chapters button */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Style the dropdown button */
+.dropdown .dropbtn {
+  font-size: 4vw;
+  border: none;
+  outline: none;
+  color: #333;
+  padding: 10px;
+  background-color: inherit;
+  font-family: sans-serif;
+  margin: 0;
+
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+      font-size: 4vw;
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color on hover */
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* -----------------------testing */
+.topnav2 {
+  background-color: #D3D4D8;
+  overflow: hidden;
+  display: flex;
+  justify-content: left;
+  font-size: 36px;
+    font-family: sans-serif;
+}
+
+/* Style the links inside the navigation bar */
+.topnav2 a {
+      font-size: 4vw;
+  float: left;
+  display: block;
+  color: #333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+    font-family: sans-serif;
+}
+
+
+
+/* Specifically for desktops with small resolution */
+
+@media (pointer: fine) and (max-width: 1080px) {
+.topnav a {
+    font-size: 3vw;
+  float: left;
+  display: block;
+  color: #333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+    font-family: sans-serif;
+  }
+
+/* Style the dropdown button */
+.dropdown .dropbtn {
+  font-size: 3vw;
+  border: none;
+  outline: none;
+  color: #333;
+  padding: 10px;
+  background-color: inherit;
+  font-family: sans-serif;
+  margin: 0;
+
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+      font-size: 3vw;
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.body-content {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: left;
+  font-family: sans-serif;
+}
+
+
+}
+
+
+
+/* Body */
+
+
+
+.body-content {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: left;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 6vw;
+      font-family: sans-serif;
+}
+
+h2 {
+  font-size: 2.35em;
+      font-family: sans-serif;
+}
+
+h3 {
+  font-size: 3vw;
+      font-family: sans-serif;
+}
+
+
+p {
+  font-size: 20px;
+      font-family: sans-serif;
+}
+
+ul, li {
+    font-size:20px;
+      font-family: sans-serif;
+    }
+iframe {
+    border:none;
+    }
+
+table, th, td {
+  border: 1px solid black;
+  font-size: 3vw;
+    font-family: sans-serif;
+}
+
+/* CSS to style links within the table */
+table a:link {
+  color: black; /* Set the link color to black */
+  text-decoration: underline; /* Add underline */
+}
+
+table a:visited {
+  color: black; /* Set the visited link color to black */
+  text-decoration: underline; /* Add underline */
+}
+
+/* Hover text settings */
+.keyword {
+    font-size: 20px;
+  color: black;
+  text-decoration: underline;
+  position: relative;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -125px;
+  opacity: 0;
+  transition: opacity 0.3s;
+    font-family: sans-serif;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+}
+
+.rounded-image img {
+  border-radius: 10px; /* Adjust the value to change the roundness */
+  overflow: hidden; /* This ensures the image stays within the rounded border */
+}
+
+.rounded-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

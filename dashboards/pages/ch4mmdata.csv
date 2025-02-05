@@ -1,0 +1,151 @@
+,FOS,group,pred_rel,HDIq
+1,Agriculture,all,0.102152609,1: Very Low
+2,Economics,all,0.33371736,1: Very Low
+3,Education,all,0.005668688,1: Very Low
+4,Engineering,all,0.149200792,1: Very Low
+5,Interdisciplinary,all,0.033527262,1: Very Low
+6,Language and Culture,all,0.063960511,1: Very Low
+7,Law,all,0.103093099,1: Very Low
+8,Medicine,all,0.038076662,1: Very Low
+9,Natural Sciences,all,0.104032986,1: Very Low
+10,Social Sciences,all,0.06657003,1: Very Low
+11,Agriculture,all,0.072567963,2: Low
+12,Economics,all,0.398341604,2: Low
+13,Education,all,0.011555004,2: Low
+14,Engineering,all,0.155611133,2: Low
+15,Interdisciplinary,all,0.031393295,2: Low
+16,Language and Culture,all,0.078126406,2: Low
+17,Law,all,0.053386556,2: Low
+18,Medicine,all,0.029146294,2: Low
+19,Natural Sciences,all,0.09568691,2: Low
+20,Social Sciences,all,0.074184836,2: Low
+21,Agriculture,all,0.045390828,3: Medium
+22,Economics,all,0.41389092,3: Medium
+23,Education,all,0.006350495,3: Medium
+24,Engineering,all,0.164889016,3: Medium
+25,Interdisciplinary,all,0.035601671,3: Medium
+26,Language and Culture,all,0.096323087,3: Medium
+27,Law,all,0.049413636,3: Medium
+28,Medicine,all,0.015953732,3: Medium
+29,Natural Sciences,all,0.10497847,3: Medium
+30,Social Sciences,all,0.067208146,3: Medium
+31,Agriculture,all,0.020530756,4: High
+32,Economics,all,0.384225546,4: High
+33,Education,all,0.004392986,4: High
+34,Engineering,all,0.145138501,4: High
+35,Interdisciplinary,all,0.038166906,4: High
+36,Language and Culture,all,0.131649968,4: High
+37,Law,all,0.085823379,4: High
+38,Medicine,all,0.016627088,4: High
+39,Natural Sciences,all,0.094880292,4: High
+40,Social Sciences,all,0.078564578,4: High
+41,Agriculture,all,0.0234889,5: Very High
+42,Economics,all,0.285995317,5: Very High
+43,Education,all,0.01395395,5: Very High
+44,Engineering,all,0.093299082,5: Very High
+45,Interdisciplinary,all,0.041875554,5: Very High
+46,Language and Culture,all,0.245626538,5: Very High
+47,Law,all,0.07351357,5: Very High
+48,Medicine,all,0.039435519,5: Very High
+49,Natural Sciences,all,0.077125576,5: Very High
+50,Social Sciences,all,0.105685995,5: Very High
+51,Agriculture,ba,0.019095633,1: Very Low
+52,Economics,ba,0.448421232,1: Very Low
+53,Education,ba,0.00239355,1: Very Low
+54,Engineering,ba,0.163329902,1: Very Low
+55,Interdisciplinary,ba,0.060825941,1: Very Low
+56,Language and Culture,ba,0.0483892,1: Very Low
+57,Law,ba,0.062379065,1: Very Low
+58,Medicine,ba,0.019759229,1: Very Low
+59,Natural Sciences,ba,0.12542899,1: Very Low
+60,Social Sciences,ba,0.049977256,1: Very Low
+61,Agriculture,ba,0.014604697,2: Low
+62,Economics,ba,0.456590603,2: Low
+63,Education,ba,0.010850881,2: Low
+64,Engineering,ba,0.15158093,2: Low
+65,Interdisciplinary,ba,0.064723609,2: Low
+66,Language and Culture,ba,0.059368874,2: Low
+67,Law,ba,0.043305155,2: Low
+68,Medicine,ba,0.010479655,2: Low
+69,Natural Sciences,ba,0.10803765,2: Low
+70,Social Sciences,ba,0.080457947,2: Low
+71,Agriculture,ba,0.010973006,3: Medium
+72,Economics,ba,0.48389871,3: Medium
+73,Education,ba,0.002111552,3: Medium
+74,Engineering,ba,0.149307608,3: Medium
+75,Interdisciplinary,ba,0.073312762,3: Medium
+76,Language and Culture,ba,0.080871544,3: Medium
+77,Law,ba,0.026088997,3: Medium
+78,Medicine,ba,0.00480317,3: Medium
+79,Natural Sciences,ba,0.085965063,3: Medium
+80,Social Sciences,ba,0.082667588,3: Medium
+81,Agriculture,ba,0.005957549,4: High
+82,Economics,ba,0.423483301,4: High
+83,Education,ba,0.003748395,4: High
+84,Engineering,ba,0.155887745,4: High
+85,Interdisciplinary,ba,0.081830472,4: High
+86,Language and Culture,ba,0.095963937,4: High
+87,Law,ba,0.064460693,4: High
+88,Medicine,ba,0.007755996,4: High
+89,Natural Sciences,ba,0.100616202,4: High
+90,Social Sciences,ba,0.06029571,4: High
+91,Agriculture,ba,0.007440976,5: Very High
+92,Economics,ba,0.332173315,5: Very High
+93,Education,ba,0.010938673,5: Very High
+94,Engineering,ba,0.085126358,5: Very High
+95,Interdisciplinary,ba,0.108684504,5: Very High
+96,Language and Culture,ba,0.186169712,5: Very High
+97,Law,ba,0.077151116,5: Very High
+98,Medicine,ba,0.021967136,5: Very High
+99,Natural Sciences,ba,0.079591457,5: Very High
+100,Social Sciences,ba,0.090756753,5: Very High
+101,Agriculture,ma,0.198195541,1: Very Low
+102,Economics,ma,0.129341241,1: Very Low
+103,Education,ma,0.024338381,1: Very Low
+104,Engineering,ma,0.150001574,1: Very Low
+105,Interdisciplinary,ma,0.01143917,1: Very Low
+106,Language and Culture,ma,0.100181573,1: Very Low
+107,Law,ma,0.132011027,1: Very Low
+108,Medicine,ma,0.054158632,1: Very Low
+109,Natural Sciences,ma,0.107448883,1: Very Low
+110,Social Sciences,ma,0.092883978,1: Very Low
+111,Agriculture,ma,0.155226076,2: Low
+112,Economics,ma,0.229456857,2: Low
+113,Education,ma,0.006669894,2: Low
+114,Engineering,ma,0.1582415,2: Low
+115,Interdisciplinary,ma,0.004295044,2: Low
+116,Language and Culture,ma,0.124417599,2: Low
+117,Law,ma,0.069329415,2: Low
+118,Medicine,ma,0.053766133,2: Low
+119,Natural Sciences,ma,0.104315611,2: Low
+120,Social Sciences,ma,0.09428187,2: Low
+121,Agriculture,ma,0.070947298,3: Medium
+122,Economics,ma,0.237668191,3: Medium
+123,Education,ma,0.02689077,3: Medium
+124,Engineering,ma,0.179146012,3: Medium
+125,Interdisciplinary,ma,0.008144826,3: Medium
+126,Language and Culture,ma,0.176389512,3: Medium
+127,Law,ma,0.069669907,3: Medium
+128,Medicine,ma,0.027470575,3: Medium
+129,Natural Sciences,ma,0.13197183,3: Medium
+130,Social Sciences,ma,0.07170108,3: Medium
+131,Agriculture,ma,0.036846563,4: High
+132,Economics,ma,0.211199909,4: High
+133,Education,ma,0.007862334,4: High
+134,Engineering,ma,0.108029337,4: High
+135,Interdisciplinary,ma,0.009995517,4: High
+136,Language and Culture,ma,0.288900675,4: High
+137,Law,ma,0.110999637,4: High
+138,Medicine,ma,0.027667772,4: High
+139,Natural Sciences,ma,0.097663482,4: High
+140,Social Sciences,ma,0.100834775,4: High
+141,Agriculture,ma,0.028635919,5: Very High
+142,Economics,ma,0.124636997,5: Very High
+143,Education,ma,0.018209509,5: Very High
+144,Engineering,ma,0.068555476,5: Very High
+145,Interdisciplinary,ma,0.005498737,5: Very High
+146,Language and Culture,ma,0.495416217,5: Very High
+147,Law,ma,0.062485254,5: Very High
+148,Medicine,ma,0.037417757,5: Very High
+149,Natural Sciences,ma,0.065082482,5: Very High
+150,Social Sciences,ma,0.094061651,5: Very High

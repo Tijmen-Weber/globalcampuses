@@ -1,0 +1,151 @@
+,FOS,group,pred_rel,HDIq
+1,Landbouw,all,0.102152609,1: Zeer laag
+2,Economie,all,0.33371736,1: Zeer laag
+3,Onderwijs,all,0.005668688,1: Zeer laag
+4,Techniek,all,0.149200792,1: Zeer laag
+5,Sectoroverstijgend,all,0.033527262,1: Zeer laag
+6,Taal en Cultuur,all,0.063960511,1: Zeer laag
+7,Recht,all,0.103093099,1: Zeer laag
+8,Gezondheidszorg,all,0.038076662,1: Zeer laag
+9,Natuur,all,0.104032986,1: Zeer laag
+10,Gedrag en Maatschappij,all,0.06657003,1: Zeer laag
+11,Landbouw,all,0.072567963,2: Laag
+12,Economie,all,0.398341604,2: Laag
+13,Onderwijs,all,0.011555004,2: Laag
+14,Techniek,all,0.155611133,2: Laag
+15,Sectoroverstijgend,all,0.031393295,2: Laag
+16,Taal en Cultuur,all,0.078126406,2: Laag
+17,Recht,all,0.053386556,2: Laag
+18,Gezondheidszorg,all,0.029146294,2: Laag
+19,Natuur,all,0.09568691,2: Laag
+20,Gedrag en Maatschappij,all,0.074184836,2: Laag
+21,Landbouw,all,0.045390828,3: Midden
+22,Economie,all,0.41389092,3: Midden
+23,Onderwijs,all,0.006350495,3: Midden
+24,Techniek,all,0.164889016,3: Midden
+25,Sectoroverstijgend,all,0.035601671,3: Midden
+26,Taal en Cultuur,all,0.096323087,3: Midden
+27,Recht,all,0.049413636,3: Midden
+28,Gezondheidszorg,all,0.015953732,3: Midden
+29,Natuur,all,0.10497847,3: Midden
+30,Gedrag en Maatschappij,all,0.067208146,3: Midden
+31,Landbouw,all,0.020530756,4: Hoog
+32,Economie,all,0.384225546,4: Hoog
+33,Onderwijs,all,0.004392986,4: Hoog
+34,Techniek,all,0.145138501,4: Hoog
+35,Sectoroverstijgend,all,0.038166906,4: Hoog
+36,Taal en Cultuur,all,0.131649968,4: Hoog
+37,Recht,all,0.085823379,4: Hoog
+38,Gezondheidszorg,all,0.016627088,4: Hoog
+39,Natuur,all,0.094880292,4: Hoog
+40,Gedrag en Maatschappij,all,0.078564578,4: Hoog
+41,Landbouw,all,0.0234889,5: Zeer hoog
+42,Economie,all,0.285995317,5: Zeer hoog
+43,Onderwijs,all,0.01395395,5: Zeer hoog
+44,Techniek,all,0.093299082,5: Zeer hoog
+45,Sectoroverstijgend,all,0.041875554,5: Zeer hoog
+46,Taal en Cultuur,all,0.245626538,5: Zeer hoog
+47,Recht,all,0.07351357,5: Zeer hoog
+48,Gezondheidszorg,all,0.039435519,5: Zeer hoog
+49,Natuur,all,0.077125576,5: Zeer hoog
+50,Gedrag en Maatschappij,all,0.105685995,5: Zeer hoog
+51,Landbouw,ba,0.019095633,1: Zeer laag
+52,Economie,ba,0.448421232,1: Zeer laag
+53,Onderwijs,ba,0.00239355,1: Zeer laag
+54,Techniek,ba,0.163329902,1: Zeer laag
+55,Sectoroverstijgend,ba,0.060825941,1: Zeer laag
+56,Taal en Cultuur,ba,0.0483892,1: Zeer laag
+57,Recht,ba,0.062379065,1: Zeer laag
+58,Gezondheidszorg,ba,0.019759229,1: Zeer laag
+59,Natuur,ba,0.12542899,1: Zeer laag
+60,Gedrag en Maatschappij,ba,0.049977256,1: Zeer laag
+61,Landbouw,ba,0.014604697,2: Laag
+62,Economie,ba,0.456590603,2: Laag
+63,Onderwijs,ba,0.010850881,2: Laag
+64,Techniek,ba,0.15158093,2: Laag
+65,Sectoroverstijgend,ba,0.064723609,2: Laag
+66,Taal en Cultuur,ba,0.059368874,2: Laag
+67,Recht,ba,0.043305155,2: Laag
+68,Gezondheidszorg,ba,0.010479655,2: Laag
+69,Natuur,ba,0.10803765,2: Laag
+70,Gedrag en Maatschappij,ba,0.080457947,2: Laag
+71,Landbouw,ba,0.010973006,3: Midden
+72,Economie,ba,0.48389871,3: Midden
+73,Onderwijs,ba,0.002111552,3: Midden
+74,Techniek,ba,0.149307608,3: Midden
+75,Sectoroverstijgend,ba,0.073312762,3: Midden
+76,Taal en Cultuur,ba,0.080871544,3: Midden
+77,Recht,ba,0.026088997,3: Midden
+78,Gezondheidszorg,ba,0.00480317,3: Midden
+79,Natuur,ba,0.085965063,3: Midden
+80,Gedrag en Maatschappij,ba,0.082667588,3: Midden
+81,Landbouw,ba,0.005957549,4: Hoog
+82,Economie,ba,0.423483301,4: Hoog
+83,Onderwijs,ba,0.003748395,4: Hoog
+84,Techniek,ba,0.155887745,4: Hoog
+85,Sectoroverstijgend,ba,0.081830472,4: Hoog
+86,Taal en Cultuur,ba,0.095963937,4: Hoog
+87,Recht,ba,0.064460693,4: Hoog
+88,Gezondheidszorg,ba,0.007755996,4: Hoog
+89,Natuur,ba,0.100616202,4: Hoog
+90,Gedrag en Maatschappij,ba,0.06029571,4: Hoog
+91,Landbouw,ba,0.007440976,5: Zeer hoog
+92,Economie,ba,0.332173315,5: Zeer hoog
+93,Onderwijs,ba,0.010938673,5: Zeer hoog
+94,Techniek,ba,0.085126358,5: Zeer hoog
+95,Sectoroverstijgend,ba,0.108684504,5: Zeer hoog
+96,Taal en Cultuur,ba,0.186169712,5: Zeer hoog
+97,Recht,ba,0.077151116,5: Zeer hoog
+98,Gezondheidszorg,ba,0.021967136,5: Zeer hoog
+99,Natuur,ba,0.079591457,5: Zeer hoog
+100,Gedrag en Maatschappij,ba,0.090756753,5: Zeer hoog
+101,Landbouw,ma,0.198195541,1: Zeer laag
+102,Economie,ma,0.129341241,1: Zeer laag
+103,Onderwijs,ma,0.024338381,1: Zeer laag
+104,Techniek,ma,0.150001574,1: Zeer laag
+105,Sectoroverstijgend,ma,0.01143917,1: Zeer laag
+106,Taal en Cultuur,ma,0.100181573,1: Zeer laag
+107,Recht,ma,0.132011027,1: Zeer laag
+108,Gezondheidszorg,ma,0.054158632,1: Zeer laag
+109,Natuur,ma,0.107448883,1: Zeer laag
+110,Gedrag en Maatschappij,ma,0.092883978,1: Zeer laag
+111,Landbouw,ma,0.155226076,2: Laag
+112,Economie,ma,0.229456857,2: Laag
+113,Onderwijs,ma,0.006669894,2: Laag
+114,Techniek,ma,0.1582415,2: Laag
+115,Sectoroverstijgend,ma,0.004295044,2: Laag
+116,Taal en Cultuur,ma,0.124417599,2: Laag
+117,Recht,ma,0.069329415,2: Laag
+118,Gezondheidszorg,ma,0.053766133,2: Laag
+119,Natuur,ma,0.104315611,2: Laag
+120,Gedrag en Maatschappij,ma,0.09428187,2: Laag
+121,Landbouw,ma,0.070947298,3: Midden
+122,Economie,ma,0.237668191,3: Midden
+123,Onderwijs,ma,0.02689077,3: Midden
+124,Techniek,ma,0.179146012,3: Midden
+125,Sectoroverstijgend,ma,0.008144826,3: Midden
+126,Taal en Cultuur,ma,0.176389512,3: Midden
+127,Recht,ma,0.069669907,3: Midden
+128,Gezondheidszorg,ma,0.027470575,3: Midden
+129,Natuur,ma,0.13197183,3: Midden
+130,Gedrag en Maatschappij,ma,0.07170108,3: Midden
+131,Landbouw,ma,0.036846563,4: Hoog
+132,Economie,ma,0.211199909,4: Hoog
+133,Onderwijs,ma,0.007862334,4: Hoog
+134,Techniek,ma,0.108029337,4: Hoog
+135,Sectoroverstijgend,ma,0.009995517,4: Hoog
+136,Taal en Cultuur,ma,0.288900675,4: Hoog
+137,Recht,ma,0.110999637,4: Hoog
+138,Gezondheidszorg,ma,0.027667772,4: Hoog
+139,Natuur,ma,0.097663482,4: Hoog
+140,Gedrag en Maatschappij,ma,0.100834775,4: Hoog
+141,Landbouw,ma,0.028635919,5: Zeer hoog
+142,Economie,ma,0.124636997,5: Zeer hoog
+143,Onderwijs,ma,0.018209509,5: Zeer hoog
+144,Techniek,ma,0.068555476,5: Zeer hoog
+145,Sectoroverstijgend,ma,0.005498737,5: Zeer hoog
+146,Taal en Cultuur,ma,0.495416217,5: Zeer hoog
+147,Recht,ma,0.062485254,5: Zeer hoog
+148,Gezondheidszorg,ma,0.037417757,5: Zeer hoog
+149,Natuur,ma,0.065082482,5: Zeer hoog
+150,Gedrag en Maatschappij,ma,0.094061651,5: Zeer hoog

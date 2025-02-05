@@ -1,0 +1,7 @@
+/* styles.css */
+.checklist-grid {
+  display: flex;
+  grid-template-rows: repeat(auto-fill, minmax(115px, 1fr));
+  flex-flow: column nowrap;
+  grid-gap: 0px;
+}

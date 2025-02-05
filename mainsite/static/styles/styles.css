@@ -1,0 +1,364 @@
+.sidebar {
+  margin: 0;
+  padding: 0 ;
+  width: 200px !important;
+  background-color: white;
+  position: fixed;
+  font-family: sans-serif;
+  font-size: 24px;
+  left: 0;
+  background-color: white !important;
+  border-right: 2px solid #ccc; /* Add a thin vertical line */
+  overflow: hidden !important;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.sidebar a.active {
+  background-color: #B4D3FF;
+  color: black;
+    font-size: 20px;
+}
+
+
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #B4D3FF;
+  color: black;
+}
+
+/* Remove the :after pseudo-element for items without submenus */
+.sidebar a:after {
+  content: ''; /* Empty content */
+
+}
+
+    .submenu {
+      padding-left: 16px;
+    }
+
+    .collapsible {
+      cursor: pointer;
+      font-size: 20px;
+      border: none;
+      background-color: #B4D3FF;
+      text-align: left;
+      color: black;
+      padding: 5px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .collapsible:hover {
+      background-color: #B4D3FF;
+      color: black;
+    }
+
+    .active, .collapsible.active {
+        background-color: #B4D3FF;
+        color: black;
+
+    }
+
+    .collapsible:after {
+  content: '\002B';
+  color: black;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+      padding-left: 16px;
+      display: none;
+      transition: max-height 0.2s ease-out;
+  overflow-y: hidden; /* Add this line to enable vertical scrolling */
+    }
+
+.placeholder {
+    height: 91px; /* Adjust the height to create space for fixed elements */
+}
+.placeholder2 {
+    height: 122px; /* Adjust the height to create space for fixed elements */
+}
+
+
+
+
+
+
+.sticky-top {
+    position: fixed;
+    top: 0;
+    left :0;
+    width: 100%;
+}
+
+
+
+.banner-container {
+  background-color: #5785C1;
+  color: white;
+  text-align: center;
+  padding: 5px ;
+  width:100%;
+    font-family: sans-serif;
+}
+
+.sticky-top2 {
+    position: fixed;
+    top: 0;
+    left :0;
+    padding:0;
+    width: 100%;
+}
+
+/* old color was#AFD5F9 #DAECFD #C3DDFE*/
+.banner-container2 {
+  background: linear-gradient(to right, #B4D3FF,#B9D6FE);
+  color: white;
+  text-align: center;
+  padding: 0 ;
+  width:100%;
+  height:130px;
+  padding-left: 0px;
+    font-family: sans-serif;
+}
+
+
+
+.banner-text {
+  margin: 0;
+}
+
+
+/* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 99%;
+  overflow: auto;
+  font-family: sans-serif;
+  font-size: 20px;
+  overflow: scroll;
+}
+
+
+
+
+/* Navigation bar */
+nav {
+  background-color: #333;
+  color: #fff;
+  font-size: 24px;
+  padding: 10px;
+  font-family: sans-serif;
+  margin: 0 auto;
+  width:100%;
+  box-sizing: border-box;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+    font-family: sans-serif;
+
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+nav a:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+    display:none;
+}
+
+.topnav2 {
+    display:none;
+}
+
+/* Body */
+
+.body-content2 {
+  max-width: 860px;
+    margin-left: 300px;
+  text-align: left;
+  font-family: sans-serif;
+}
+
+
+.body-content {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: left;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 36px;
+      font-family: sans-serif;
+}
+
+p {
+  font-size: 20px;
+      font-family: sans-serif;
+}
+
+ul, li {
+    font-size:20px;
+      font-family: sans-serif;
+    }
+iframe {
+    border:none;
+    }
+
+table, th, td {
+  border: 1px solid black;
+  font-size: 20px;
+    font-family: sans-serif;
+}
+
+/* CSS to style links within the table */
+table a:link {
+  color: black; /* Set the link color to black */
+  text-decoration: underline; /* Add underline */
+}
+
+table a:visited {
+  color: black; /* Set the visited link color to black */
+  text-decoration: underline; /* Add underline */
+}
+
+/* Hover text settings */
+.keyword {
+    font-size: 20px;
+  color: black;
+  text-decoration: underline;
+  position: relative;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -125px;
+  opacity: 0;
+  transition: opacity 0.3s;
+    font-family: sans-serif;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+}
+
+.rounded-image img {
+  border-radius: 10px; /* Adjust the value to change the roundness */
+  overflow: hidden; /* This ensures the image stays within the rounded border */
+}
+
+.rounded-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style for the container */
+.about {
+      display: flex;
+      align-items: center; /* Vertically center items */
+      justify-content: center; /* Horizontally center items */
+    }
+
+/* Style for text */
+.about-text {
+      flex: 1; /* Allow text to grow within the container */
+      padding: 20px; /* Add padding for spacing */
+}
+
+/* Style for the image */
+.profile-pic {
+      flex: 1; /* Allow image to grow within the container */
+      text-align: center; /* Align the image to the center horizontally */
+      padding: 20px; /* Add padding for spacing */
+}
+
+ion-icon {
+  color: black;
+}
+
+    .language-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start; /* Change 'top' to 'flex-start' */
+      height: 100vh;
+    }
+
+    .language {
+      margin: 20px;
+      width: 150px;
+      text-align: center; /* Center the text */
+    }
+
+    .flag {
+      width: 150px; /* Adjust the width as needed */
+      height: 100px;
+      margin-right: 10px;
+    }
+    .text-container {
+        height: 75px;
+    }
