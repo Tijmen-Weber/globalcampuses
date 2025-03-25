@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Global Campuses?</title>
+            <link rel="icon" type="image/png" href="{{ url_for('static', filename='icons/favicon.png') }}" />
+    <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet" media="only screen" /> <!--For Flask-->
+    <link href="{{ url_for('static', filename='styles/mobilestyles.css') }}" rel="stylesheet" type="text/css" media="(pointer: coarse) and (max-device-width: 1080px)"  />
+    <link href="{{ url_for('static', filename='styles/smallpcstyles.css') }}" rel="stylesheet" type="text/css"  media="(pointer: fine) and (max-width: 1280px)" />
+    </head>
+
+<body>
+<div class = "placeholder2"></div>
+
+
+<div class="sticky-top2">
+    <div class="banner-container2">
+    <img src="{{ url_for('static', filename='WebBannerDutch.jpg') }}" height="130">
+    </div>
+
+    <nav class="topnav">
+        <li><a href="/thuis">Start</a></li>
+        <li><div class="dropdown">
+          <button class="dropbtn">Hoofdstukken ▾</button>
+          <div class="dropdown-content">
+            <a href="voorwoord">Voorwoord</a>
+            <a href="introductie">Introductie</a>
+            <a href="hoofdstuk2">Hoofdstuk 2</a>
+            <a href="hoofdstuk3">Hoofdstuk 3</a>
+            <a href="hoofdstuk4">Hoofdstuk 4</a>
+            <a href="hoofdstuk5">Hoofdstuk 5</a>
+            <a href="conclusie">Conclusie</a>
+            <a href="nawoord">Nawoord</a></div>
+
+          </div></li>
+        <li><a href="over">Over</a></li>
+                    <li><a href="/about"><img src="{{ url_for('static', filename='american_flag.png') }}" width="45", height="30"></a></li>
+        </nav>
+    </div>
+
+    </nav>
+</div>
+<!-- The sidebar -->
+<div class="sidebar" id="sidebar">
+    <a href="/about"><img src="{{ url_for('static', filename='american_flag.png') }}" width="30", height="20"></a>
+    <a href="/thuis">Start</a>
+    <a href="voorwoord">Voorwoord</a>
+    <a href="introductie">Hoofdstuk 1: Introductie</a>
+    <a href="hoofdstuk2">Hoofdstuk 2</a>
+    <a href="hoofdstuk3">Hoofdstuk 3</a>
+    <a href="hoofdstuk4">Hoofdstuk 4</a>
+    <a href="hoofdstuk5">Hoofdstuk 5</a>
+    <a href="conclusie">Hoofdstuk 6: Conclusie</a>
+    <a href="nawoord">Nawoord</a>
+  <a class="active" href="over">Over</a>
+  </div>
+
+
+
+<script>
+  document.querySelectorAll('.sidebar a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default behavior of internal anchor links
+
+      const targetId = this.getAttribute('href').substring(1); // Get target ID
+      const targetElement = document.getElementById(targetId); // Get target element
+
+      if (targetElement) {
+        const offset = targetElement.offsetTop - 110; // Calculate desired offset from top
+        window.scrollTo({ top: offset, behavior: 'smooth' }); // Scroll to the target element
+      }
+    });
+  });
+
+
+</script>
+
+<!--Header-->
+<!--Body text-->
+<div class="body-content">
+    <div class="about">
+        <div class="about-text">
+            <p>Mijn naam is Tijmen Weber <a href="https://nl.linkedin.com/in/tijmen-weber" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-linkedin"></ion-icon></a><a href="https://scholar.google.com/citations?user=kZtxMVUAAAAJ&hl=nl&oi=ao" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-google"></ion-icon></a> en deze website heb ik gemaakt als onderdeel van mijn promotietraject. Mijn bachelor heb ik behaald aan het <a href="https://curriculum.maastrichtuniversity.nl/education/bachelor/university-college-maastricht" target="_blank" rel="noopener noreferrer">University College Maastricht</a> waar ik me heb gespecialiseerd in sociologie en filosofie. Daarna ben ik naar Nijmegen verhuisd om aan de Radboud Universiteit een <a href="https://www.ru.nl/en/education/masters/social-and-cultural-science-comparative-research-on-societies-research" target="_blank" rel="noopener noreferrer">master in sociale en culturele wetenschappen</a> te behalen. Kort na mijn afstuderen begon ik te werken bij de <a href="https://www.hanuniversity.com/en/programs/bachelor/international-business/fulltime/" target="_blank" rel="noopener noreferrer">international business opleiding</a> van de Hogeschool van Arnhem en Nijmegen (HAN), waar ik nu voornamelijk cursussen geef in kwantitatief onderzoek en data science. Terwijl ik daar werkte vroeg ik een <a href="https://www.nwo.nl/en/researchprogrammes/doctoral-grant-for-teachers" target="_blank" rel="noopener noreferrer">promotiebeurs voor leraren </a> aan bij NWO, waardoor ik parttime aan deze promotie kon werken naast mijn baan als docent. Na mijn promotie zal ik les blijven geven aan de HAN en (toegepast) onderzoek doen naar duurzaamheid voor het <a href="https://www.hanuniversity.com/en/research/research-center/international-business/" target="_blank" rel="noopener noreferrer">Research Center International Business</a> van de HAN.</p>
+            <p>Naast mijn werk houd ik van koken, ITF taekwondo, <a href="https://www.youtube.com/@tijmenweber6184" target="_blank" rel="noopener noreferrer">piano spelen</a>, boeken lezen en videogames.</p>
+            <p>De banner bovenaan de website is ontworpen door Ato Kwamina Essuman Mensah<a href="https://www.linkedin.com/in/atokwamina/" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-linkedin"></ion-icon></a>, een internationale student die communicatie studeert op de HAN</p>
+            <div class="profile-pic">
+                <img src="{{ url_for('static', filename='Tijmen.jpg') }}" width="400", height="400" alt="It's me!">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

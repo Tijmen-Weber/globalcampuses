@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=0.7">
+        <title>Global Campuses?</title>
+            <link rel="icon" type="image/png" href="{{ url_for('static', filename='icons/favicon.png') }}" />
+    <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet" media="only screen" /> <!--For Flask-->
+    <link href="{{ url_for('static', filename='styles/mobilestyles.css') }}" rel="stylesheet" type="text/css" media="(pointer: coarse) and (max-device-width: 1080px)"  />
+    <link href="{{ url_for('static', filename='styles/smallpcstyles.css') }}" rel="stylesheet" type="text/css"  media="(pointer: fine) and (max-width: 1280px)" />
+    </head>
+
+ <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .language-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start; /* Change 'top' to 'flex-start' */
+      height: 100vh;
+    }
+
+    .language {
+      margin: 20px;
+      width: 150px;
+      text-align: center; /* Center the text */
+    }
+
+    .flag {
+      width: 150px; /* Adjust the width as needed */
+      height: 100px;
+      margin-right: 10px;
+    }
+    .text-container {
+        height: 75px;
+    }
+
+  </style>
+
+<body>
+    <div class = "placeholder2"></div>
+
+
+<div class="sticky-top2">
+    <div class="banner-container2">
+    <img src="{{ url_for('static', filename='WebBanner.jpg') }}" height="130">
+    </div>
+
+    <div class="language-container">
+      <div class="language">
+        <div class="text-container">
+          <p>Select your language</p>
+        </div>
+        <a href="https://www.globalcampuses.nl/home"><img class="flag" src="{{ url_for('static', filename='american_flag.png') }}"></a>
+        <div class="text-container">
+          <p>This website is best viewed on a PC, laptop or tablet</p>
+        </div>
+      </div>
+
+      <div class="language">
+        <div class="text-container">
+          <p>Selecteer uw taal</p>
+        </div>
+        <a href="https://www.globalcampuses.nl/thuis"><img class="flag" src="{{ url_for('static', filename='dutch_flag.png') }}"></a>
+        <div class="text-container">
+          <p>Deze website werkt het beste op een PC, laptop of tablet</p>
+        </div>
+      </div>
+    </div>
+</div>
+</body>
+</html>

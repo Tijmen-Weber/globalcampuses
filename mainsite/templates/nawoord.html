@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Global Campuses?</title>
+            <link rel="icon" type="image/png" href="{{ url_for('static', filename='icons/favicon.png') }}" />
+    <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet" media="only screen" /> <!--For Flask-->
+    <link href="{{ url_for('static', filename='styles/mobilestyles.css') }}" rel="stylesheet" type="text/css" media="(pointer: coarse) and (max-device-width: 1080px)"  />
+    <link href="{{ url_for('static', filename='styles/smallpcstyles.css') }}" rel="stylesheet" type="text/css"  media="(pointer: fine) and (max-width: 1280px)" />
+    </head>
+
+<body>
+<div class = "placeholder2"></div>
+
+
+<div class="sticky-top2">
+    <div class="banner-container2">
+    <img src="{{ url_for('static', filename='WebBannerDutch.jpg') }}" height="130">
+    </div>
+
+    <nav class="topnav">
+        <li><a href="/thuis">Start</a></li>
+        <li><div class="dropdown">
+          <button class="dropbtn">Hoofdstukken ▾</button>
+          <div class="dropdown-content">
+            <a href="voorwoord">Voorwoord</a>
+            <a href="introductie">Introductie</a>
+            <a href="hoofdstuk2">Hoofdstuk 2</a>
+            <a href="hoofdstuk3">Hoofdstuk 3</a>
+            <a href="hoofdstuk4">Hoofdstuk 4</a>
+            <a href="hoofdstuk5">Hoofdstuk 5</a>
+            <a href="conclusie">Conclusie</a>
+            <a href="nawoord">Nawoord</a></div>
+          </div></li>
+        <li><a href="over">Over</a></li>
+        <li><a href="/afterword"><img src="{{ url_for('static', filename='american_flag.png') }}" width="45", height="30"></a></li>
+        </nav>
+    </div>
+
+<!-- The sidebar -->
+<div class="sidebar" id="sidebar">
+    <a href="/afterword"><img src="{{ url_for('static', filename='american_flag.png') }}" width="30", height="20"></a>
+    <a href="/thuis">Start</a>
+    <a href="voorwoord">Voorwoord</a>
+    <a href="introductie">Hoofdstuk 1: Introductie</a>
+    <a href="hoofdstuk2">Hoofdstuk 2</a>
+    <a href="hoofdstuk3">Hoofdstuk 3</a>
+    <a href="hoofdstuk4">Hoofdstuk 4</a>
+    <a href="hoofdstuk5">Hoofdstuk 5</a>
+    <a href="conclusie">Hoofdstuk 6: Conclusie</a>
+          <button type="button" class="collapsible">Nawoord</button>
+          <div class="submenu content">
+            <a href="#dilemma1">Dilemma 1</a>
+            <a href="#dilemma2">Dilemma 2</a>
+            <a href='#dilemma3'>Dilemma 3</a>
+        </div>
+          <a href="over">Over</a>
+    </div>
+
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+
+    document.querySelectorAll('.sidebar a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default behavior of internal anchor links
+
+      const targetId = this.getAttribute('href').substring(1); // Get target ID
+      const targetElement = document.getElementById(targetId); // Get target element
+
+      if (targetElement) {
+        const offset = targetElement.offsetTop - 140; // Calculate desired offset from top
+        window.scrollTo({ top: offset, behavior: 'smooth' }); // Scroll to the target element
+      }
+    });
+  });
+</script>
+
+
+<!--Header-->
+<!--Body text-->
+<div class="body-content">
+<div id="epilogue"></div><h1>Nawoord: Moeten we internationale studentenmobiliteit stimuleren?</h1>
+<p>In dit proefschrift heb ik internationale studentenmobiliteit besproken zonder rekening te houden met de morele dimensies die ik aantrof in de mobiliteitsontwikkelingen en -patronen. In dit nawoord wil ik niet ingaan op beleidsproblemen, zoals woningnood en overvolle klaslokalen, maar wel op enkele diepere ethische dilemma's die steeds meer aandacht krijgen, zowel binnen als buiten de academische literatuur.</p>
+<div id="dilemma1"></div><h2>Dilemma 1: Internationale studentenmobiliteit kan de ongelijkheid vergroten</h2>
+<p>Soms wordt aangenomen dat internationale studentenmobiliteit kan leiden tot betere kansen op de arbeidsmarkt. Voor studenten uit rijke landen, zoals Nederland, draagt internationale studentenmobiliteit echter <a href="https://doi.org/10.1007/s10734-020-00532-3" target="_blank" rel="noopener noreferrer">niet direct bij</a> aan een hoger inkomen. Door op te treden als zogenaamd <a href="https://doi.org/10.1111/j.1475-5661.2011.00454.x" target="_blank" rel="noopener noreferrer">“mobiliteitskapitaal”</a> kan internationale studentenmobiliteit juist dienen als een manier voor de rijken om hun status nog verder te verhogen. Hoewel internationale studentenmobiliteit voor studenten in ontwikkelingslanden een manier kan zijn om toegang te krijgen tot beter onderwijs, kan dit ook de <a href="https://doi.org/10.1080/02680931003782827" target="_blank" rel="noopener noreferrer">stimulans voor de elites verminderen</a> om de binnenlandse onderwijsstelsels te verbeteren. Voor rijke families is er is minder behoefte aan beter onderwijs in eigen land als ze hun kinderen ook gewoon naar het buitenland kunnen sturen. Dan is er ook nog het probleem van brain-drain. Fundamenteel voor de discussie in Nederland, maar ook in veel andere westerse landen, is het behouden van internationale studenten na hun afstuderen. Dat wil zeggen: internationale studenten aanmoedigen om na hun afstuderen te blijven, zodat zij dankzij hun hoogontwikkelde vaardigheden en kennis kunnen <a href="https://www.taylorfrancis.com/chapters/edit/10.4324/9781003217923-7/attracting-international-students-netherlands-floor-van-donselaar-margje-geurts-hendrik-jan-hobbes" target="_blank" rel="noopener noreferrer">bijdragen aan de economie</a>. Wat in deze discussie echter ontbreekt is de implicatie dat deze studenten niet zullen bijdragen aan hun thuisland, maar in plaats daarvan hun talenten zullen gebruiken om toch al rijke landen nog rijker te maken. Internationale studentenmobiliteit is zeer asymmetrisch en talent stroomt van de <a href="https://doi.org/10.1080/02680931003782827" target="_blank" rel="noopener noreferrer">armere naar de rijkere</a> landen. Internationale studentenmobiliteit kan daarom niet alleen de ongelijkheid binnen landen vergroten, maar ook tussen landen. </p>
+<p>De realiteit is echter misschien niet zo somber als hier wordt geschetst. Er is niet veel onderzoek gedaan naar de effecten van internationale studentenmobiliteit op de herkomstlanden, maar er is wel veel onderzoek gedaan naar de effecten van kennismigratie in zijn algemeenheid. Braindrain komt vaak de bestemmingslanden ten goede maar en hoe vreemd het ook mag klinken, komt het ook vaak de herkomstlanden ten goede. Speranta Dumitru heeft verschillende van <a href="https://ssrn.com/abstract=2174447" target="_blank" rel="noopener noreferrer">dergelijke voordelen</a> geschetst. Ten eerste sturen hoogopgeleide migranten geld terug (en de bedragen die migranten terugsturen zijn bij elkaar vier keer zo hoog als alle ontwikkelingshulp samen), en faciliteren ze commerciële en technologische uitwisseling. Ten tweede, als kennismigratie een realistische optie wordt voor armere mensen, dan kan dit persoonlijke en institutionele investeringen in het onderwijs stimuleren. Voor internationale studentenmobiliteit zou dit kunnen betekenen dat er meer wordt geïnvesteerd in secundair onderwijs om zo tertiair onderwijs in het buitenland mogelijk te maken. Ten derde keren veel kennismigranten uiteindelijk terug en brengen ze grote hoeveelheden financieel, sociaal en cultureel kapitaal mee. Het argument dat internationale studentenmobiliteit investeringen in het hoger onderwijs in eigen land in de weg staat lijkt ook niet op te gaan. Het hoger onderwijs in Azië heeft zich bijvoorbeeld <a href="https://www.researchgate.net/publication/339927032_Higher_Education_in_Asia_and_the_Search_for_a_New_Modernity_An_Introduction" target="_blank" rel="noopener noreferrer">snel ontwikkeld</a>, ondanks (of misschien dankzij) de vele emigrerende internationale studenten. Het is mogelijk dat internationale studentenmobiliteit in eerste instantie de ongelijkheid binnen landen vergroot, maar wanneer internationale studenten terugkeren kunnen ze hun vaardigheden gebruiken om het hoger onderwijs in eigen land te verbeteren. Dit kan ten goede komen aan de mensen die achterbleven. Tot slot en dit is misschien wel het belangrijkste: er is een wezenlijk probleem om braindrain als iets negatiefs te beschouwen, namelijk dat <a href="https://ssrn.com/abstract=2174447" target="_blank" rel="noopener noreferrer">deze visie botst</a> met fundamentele mensenrechten zoals het recht op onderwijs en het streven naar een beter leven. In plaats van braindrain te zien als een vergelijking tussen landen die winnen en landen die verliezen, is het misschien beter om een <a href="https://doi.org/10.1016/j.geoforum.2008.03.005" target="_blank" rel="noopener noreferrer">transnationale benadering</a> te kiezen en na te denken over hoe de voordelen en kansen door migratie kunnen worden gemaximaliseerd en verspreid.</p>
+<div id="dilemma2"></div><h2>Dilemma 2: Internationale studentenmobiliteit kan klimaatverandering verergeren.</h2>
+<p>Het inschatten van de uitstoot van broeikasgassen door verschillende levensstijlkeuzes is erg moeilijk, maar <a href="https://doi.org/10.1016/j.trd.2017.08.020" target="_blank" rel="noopener noreferrer">vliegen</a> is waarschijnlijk één van de, zo niet de meest schadelijke activiteit die door individuen kan worden ondernomen. De uitstoot die voortkwam uit de vluchten van internationale studenten in 2014 <a href="https://doi.org/10.1016/j.jclepro.2019.01.291" target="_blank" rel="noopener noreferrer">was naar schatting</a> mogelijk gelijk aan de totale uitstoot (van alle activiteiten) van een klein land als Kroatië. In 2024 zal het aantal internationale studenten waarschijnlijk met 50% zijn toegenomen ten opzichte van 2014<sup><a href="#fn1" id="ref1">1</a></sup>. Op basis van de huidige gegevens vermindert deze groei nog niet. Bovendien kan internationale studentenmobiliteit ervoor zorgen dat vliegreizen als vanzelfsprekend wordt gezien. Dit veroorzaak mogelijk meer uitstoot enerzijds doordat internationale studenten zelf vaker gaan vliegen, of doordat internationale studenten anderen motiveren om te vliegen. Omdat internationale studenten doorgaans naar hoger ontwikkelde landen verhuizen en de uitstoot in rijke landen per persoon hoger is, is het bovendien mogelijk dat internationale studentenmobiliteit leidt tot het overnemen van een minder duurzame levensstijl. <a href="https://uni-foundation.eu/uploads/2022_GE_Research-on-habits-of-Erasmus-students.pdf" target="_blank" rel="noopener noreferrer">Zelfs onder ERASMUS-studenten</a>, een groep die beweert zich zorgen te maken over de klimaatverandering, maakt de meerderheid van de studenten gebruik van vliegreizen en speelt duurzaamheid nauwelijks een rol in hun dagelijkse consumptiegewoontes. Deze problemen leiden tot een <a href="https://doi.org/10.1177/10283153221121386" target="_blank" rel="noopener noreferrer">fundamentele tegenstrijdigheid</a> omdat aan de ene kant internationale studentenmobiliteit wordt gezien als een methode om het onderwijs over duurzaamheid te verspreiden, maar aan de andere kant het een duurzame wereld in de weg kan staan. </p>
+<div class="rounded-image"><a title="Oleg Yunakov" href="https://commons.wikimedia.org/wiki/File:Air_Europa_airplane.jpg"><img width="450" alt="Air Europa airplane" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Air_Europa_airplane.jpg/1024px-Air_Europa_airplane.jpg"></a></div>
+<p>Er zijn echter enkele potentiële voordelen van internationale studentenmobiliteit om de strijd tegen klimaatverandering te steunen die verder gaan dan alleen onderwijs. Om klimaatverandering effectief te bestrijden, hebben we zowel veranderingen in <a href="https://www.ipcc.ch/2022/04/04/ipcc-ar6-wgiii-pressrelease/" target="_blank" rel="noopener noreferrer">levensstijl als technologische innovaties</a> nodig, en er zijn aanwijzingen dat onder de juiste omstandigheden organisatorische diversiteit innovatie kan stimuleren. Bovendien blijven internationale studenten na hun afstuderen vaak niet in hetzelfde land, waardoor de opgedane kennis circuleert. Interculturele vaardigheden kunnen ook de <a href="https://doi.org/10.1002/ejsp.2617" target="_blank" rel="noopener noreferrer">samenwerking en solidariteit</a> onder jongeren bevorderen. Dit kan belangrijke gevolgen hebben voor internationale samenwerking op langere termijn. Rijke landen hebben de middelen om te investeren in oplossingen voor klimaatverandering. Als hogeronderwijsinstellingen in deze landen duurzaamheid tot een kernelement van hun curricula maken, kunnen ze helpen bij het stimuleren van innovatieve oplossingen. Hoewel het onmogelijk te zeggen is of dit de schade van de mobiliteit zelf kan compenseren, kan internationale studentenmobiliteit de wereld toch helpen bij het vinden van de juiste oplossingen voor de klimaatcrisis.</p>
+<div id="dilemma3"></div><h2>Dilemma 3: Internationale studentenmobiliteit kan schadelijk zijn voor het welzijn.</h2>
+<p>Internationale studenten zijn over het algemeen vreemden in een nieuw land en door hun reis maken ze zich los van hun familie en thuiscultuur. Vaak gebeurt dit op een moment dat jongeren zich op een kwetsbaar punt in hun leven bevinden, namelijk wanneer ze als volwassenen worden beschouwd maar nog weinig levenservaring hebben. De cultuurshock, eenzaamheid en de druk om te slagen kunnen mogelijk een welzijnscrisis veroorzaken. Als jongvolwassene is het al moeilijk om door de vele instellingen in een land te navigeren, wat alleen maar moeilijker wordt als je de taal of cultuur niet kent. Dit komt tot uiting in problemen bij de <a href="https://doi.org/10.18060/164" target="_blank" rel="noopener noreferrer">aanpassing aan nieuwe onderwijsmethoden</a>, maar het kan ook een onvermogen zijn om goed te communiceren met bijvoorbeeld een arts. Internationale studenten moeten ook nieuwe vrienden maken en kunnen niet gemakkelijk terugvallen op familie als ze eenzaam zijn, wat nog wordt versterkt door het feit dat het vaak moeilijk is om vriendschappen te sluiten met <a href="https://doi.org/10.1080/03075079.2017.1293874" target="_blank" rel="noopener noreferrer">lokale studenten</a>. Bovendien worden internationale studenten vaak geconfronteerd met <a href="https://doi.org/10.1080/03075079.2011.614940" target="_blank" rel="noopener noreferrer">racisme</a>, <a href="https://doi.org/10.1080/03075079.2017.1293874" target="_blank" rel="noopener noreferrer">vreemdelingenhaat</a> en <a href="https://doi.org/10.1037/a0035404" target="_blank" rel="noopener noreferrer">uitsluiting</a>. In Nederland mogen bijvoorbeeld veel studentenhuizen kiezen wie hun nieuwe huisgenoot is en het is heel gebruikelijk (ook al is het illegaal) om openlijk <a href="https://iso.nl/2022/08/annual-international-student-survey-internationale-student-blijft-tweederangs-student/" target="_blank" rel="noopener noreferrer">“no internationals”</a> te vernoemen in de advertenties. Om dergelijke redenen is gebleken dat het subjectieve welzijn van internationale studenten in Nederland <a href="https://doi.org/10.5117/MEM2021.3.004.VANM" target="_blank" rel="noopener noreferrer">minder</a> is dan dat van Nederlandse studenten.</p>
+<p>Op basis van al deze obstakels is het misschien niet verrassend om te constateren dat internationale studenten vaak met aanzienlijke <a href=" https://doi.org/10.3390/ijerph20021500" target="_blank" rel="noopener noreferrer">geestelijke gezondheidsproblemen</a> kampen. Een belangrijke kanttekening is echter dat psychische problemen bij alle studenten voorkomen en dat internationale studenten <a href="https://doi.org/10.1080/03075079.2014.966072" target="_blank" rel="noopener noreferrer">niet meer psychische problemen</a> lijken te hebben dan nationale studenten. Een theorie is dat dit komt doordat de mensen die in het buitenland gaan studeren <a href="https://doi.org/10.1080/07294360.2023.2234315" target="_blank" rel="noopener noreferrer">veerkrachtiger</a> zijn dan gebruikelijk en dus de toegenomen stressfactoren beter aankunnen. Veel van de obstakels die in de vorige paragraaf zijn besproken komen ook voor bij andere soorten migranten, maar migratie heeft desondanks een <a href="https://doi.org/10.1186/s40878-020-00210-4" target="_blank" rel="noopener noreferrer">enorm potentieel</a> . om het welzijn op de lange termijn te verbeteren. Internationale studentenmobiliteit in het bijzonder kan belangrijke voordelen met zich meebrengen, vooral voor studenten uit ontwikkelingslanden: Goed onderwijs kan leiden tot meer kansen en capaciteiten, bredere perspectieven en een toename van de levenskwaliteit op de lange termijn. De bezorgdheid over het welzijn van internationale studenten mag niet onderschat worden en beleidsmakers moeten er meer aandacht aan besteden. Er valt echter wel iets voor te zeggen dat de (lange termijn) voordelen voor het welzijn van internationale studenten de aanvankelijke terugval in welzijn kunnen compenseren.</p>
+<h2>Slotopmerkingen</h2>
+<p>Internationale studentenmobiliteit zal blijven bestaan en zal in de toekomst waarschijnlijk alleen maar toenemen. Er zijn aanzienlijke uitdagingen op het gebied van ongelijkheid, duurzaamheid en welzijn, maar de positieve effecten van internationale studentenmobiliteit, namelijk meer capaciteiten, kansen, interculturele inzichten en kenniscirculatie, zouden dit wel eens kunnen goedmaken. De Universele Verklaring van de Rechten van de Mens stipuleert zowel het recht op onderwijs als het recht op een toereikende levensstandaard. Internationale studentenmobiliteit biedt de mogelijkheid om gebruik te maken van deze rechten. Internationale studentenmobiliteit is daarom, mits het goed wordt georganiseerd, inderdaad iets dat we zouden moeten stimuleren. </p>
+<sup id="fn1">1. Gebaseerd op extrapolatie van UNESCO data tussen 2000 en 2024 door middel van simpele regressie. R^2 = 0.975.<a href="#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup>
+<br><br>
+</div>
+
+</body>
+</html>

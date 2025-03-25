@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Global Campuses?</title>
+            <link rel="icon" type="image/png" href="{{ url_for('static', filename='icons/favicon.png') }}" />
+    <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet" media="only screen" /> <!--For Flask-->
+    <link href="{{ url_for('static', filename='styles/mobilestyles.css') }}" rel="stylesheet" type="text/css" media="(pointer: coarse) and (max-device-width: 1080px)"  />
+    <link href="{{ url_for('static', filename='styles/smallpcstyles.css') }}" rel="stylesheet" type="text/css"  media="(pointer: fine) and (max-width: 1280px)" />
+    </head>
+
+<body>
+<div class = "placeholder2"></div>
+
+
+<div class="sticky-top2">
+    <div class="banner-container2">
+    <img src="{{ url_for('static', filename='WebBannerDutch.jpg') }}" height="130">
+    </div>
+
+    <nav class="topnav">
+        <li><a href="/thuis">Start</a></li>
+        <li><div class="dropdown">
+          <button class="dropbtn">Hoofdstukken ▾</button>
+          <div class="dropdown-content">
+            <a href="voorwoord">Voorwoord</a>
+            <a href="introductie">Introductie</a>
+            <a href="hoofdstuk2">Hoofdstuk 2</a>
+            <a href="hoofdstuk3">Hoofdstuk 3</a>
+            <a href="hoofdstuk4">Hoofdstuk 4</a>
+            <a href="hoofdstuk5">Hoofdstuk 5</a>
+            <a href="conclusie">Conclusie</a>
+            <a href="nawoord">Nawoord</a></div>
+          </div></li>
+        <li><a href="over">Over</a></li>
+                    <li><a href="/preface"><img src="{{ url_for('static', filename='american_flag.png') }}" width="45", height="30"></a></li>
+        </nav>
+    </div>
+
+<!-- The sidebar -->
+<div class="sidebar" id="sidebar">
+    <a href="/preface"><img src="{{ url_for('static', filename='american_flag.png') }}" width="30", height="20"></a>
+  <a href="/thuis">Start</a>
+  <a class="active" href="voorwoord">Voorwoord</a>
+  <a href="introductie">Hoofdstuk 1: Introductie</a>
+  <a href="hoofdstuk2">Hoofdstuk 2</a>
+  <a href="hoofdstuk3">Hoofdstuk 3</a>
+  <a href="hoofdstuk4">Hoofdstuk 4</a>
+  <a href="hoofdstuk5">Hoofdstuk 5</a>
+  <a href="conclusie">Hoofdstuk 6: Conclusie</a>
+  <a href="nawoord">Nawoord</a>
+  <a href="over">Over</a>
+</div>
+
+
+<script>
+  document.querySelectorAll('.sidebar a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default behavior of internal anchor links
+
+      const targetId = this.getAttribute('href').substring(1); // Get target ID
+      const targetElement = document.getElementById(targetId); // Get target element
+
+      if (targetElement) {
+        const offset = targetElement.offsetTop - 110; // Calculate desired offset from top
+        window.scrollTo({ top: offset, behavior: 'smooth' }); // Scroll to the target element
+      }
+    });
+  });
+
+
+</script>
+
+<!--Header-->
+<!--Body text-->
+<div class="body-content">
+    <h1>Voorwoord</h1>
+    <p>De afgelopen veertien jaar ben ik omringd geweest door internationale studenten. Hoewel ik nooit avontuurlijk genoeg was om zelf een internationale student te worden, op een korte tijd als ERASMUS-student na, heb ik me altijd onder internationale studenten begeven. Mijn bachelor heb ik behaald aan de Universiteit van Maastricht, één van de meest internationale universiteiten van Nederland en hier ben ik ook lid geworden van een internationale studentenvereniging. Daarna ben ik naar Nijmegen verhuisd. Hoewel mijn master niet erg internationaal was heb ik toch aardig wat internationale vrienden gemaakt. Uiteindelijk ben ik aan gaan werken bij de HAN, waar ik nu lesgeef aan veel internationale studenten. </p>
+    <p>Mijn ervaringen van de afgelopen veertien jaar hebben me geïnspireerd en beïnvloedden veel van de ideeën in dit proefschrift. Om een voorbeeld te geven, mijn bachelor was in ‘liberal arts and sciences’, een erg interessante en stimulerende opleiding, maar niet direct een erg pragmatische. De opleiding waar ik nu lesgeef, international business, is daarentegen een stuk pragmatischer. Opvallend genoeg zijn de internationale studenten van beide opleidingen heel verschillend. Aan de Universiteit van Maastricht kwamen de internationale studenten voornamelijk uit rijke West-Europese landen, terwijl de internationale studenten waar ik nu les aan geef voornamelijk uit Oost-Europese en Aziatische landen komen. Hierdoor begon ik me af te vragen waarom deze groepen zo verschillend zijn. </p>
+    <p>Ik heb me ook vaak afgevraagd hoe internationale studenten op bepaalde plekken terechtkomen. Maastricht lijkt voor de hand liggend, zeker als de studenten Duits zijn, maar hoe komen internationale studenten op de HAN terecht? Voor de bestuurders op mijn faculteit lijkt dit zelfs een raadsel. Ik kreeg ooit te horen dat ze aan studenten vroegen waarom ze voor de HAN kozen in plaats van voor een soortgelijke instelling in een naburige stad en hun antwoord kwam neer op: “Ik had er gewoon een goed gevoel bij”. Dus hoe komen ze dan op de HAN terecht? En hoe groot is de betrokkenheid en invloed van de HAN zelf?</p>
+    <p>Dit soort vragen gaven richting aan mijn onderzoek en waren voor mij de inspiratie om de onderwerpen van elk hoofdstuk te bedenken. Hoewel ik niet kan beweren dat ik deze vragen nu alomvattend kan beantwoorden, heb ik er op zijn minst wat meer licht op kunnen werpen, en heb ik andere onderzoekers kunnen laten zien waar interessante mogelijkheden liggen. Ik hoop dat de conclusies van dit proefschrift niet alleen als interessant en nuttig zijn, maar dat ze ook tot nadenken zullen aanzetten. Internationale studentenmobiliteit is een complex fenomeen dat steeds belangrijker wordt in onze globaliserende wereld.  </p>
+<br>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Global Campuses?</title>
+            <link rel="icon" type="image/png" href="{{ url_for('static', filename='icons/favicon.png') }}" />
+    <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet" media="only screen" /> <!--For Flask-->
+    <link href="{{ url_for('static', filename='styles/mobilestyles.css') }}" rel="stylesheet" type="text/css" media="(pointer: coarse) and (max-device-width: 1080px)"  />
+    <link href="{{ url_for('static', filename='styles/smallpcstyles.css') }}" rel="stylesheet" type="text/css"  media="(pointer: fine) and (max-width: 1280px)" />
+    </head>
+
+<body>
+<div class = "placeholder2"></div>
+
+
+<div class="sticky-top2">
+    <div class="banner-container2">
+    <img src="{{ url_for('static', filename='WebBanner.jpg') }}" height="130">
+    </div>
+
+    <nav class="topnav">
+    <li><a href="/home">Home</a></li>
+    <li><div class="dropdown">
+      <button class="dropbtn">Chapters ▾</button>
+      <div class="dropdown-content">
+          <a href="preface">Preface</a>
+        <a href="Introduction">Introduction</a>
+        <a href="chapter2">Chapter 2</a>
+        <a href="chapter3">Chapter 3</a>
+        <a href="chapter4">Chapter 4</a>
+        <a href="chapter5">Chapter 5</a>
+        <a href="Conclusion">Conclusion</a>
+        <a href="afterword">Afterword</a></div>
+      </div></li>
+    <li><a href="about">About</a></li>
+                <li><a href="/voorwoord"><img src="{{ url_for('static', filename='dutch_flag.png') }}" width="45", height="30"></a></li>
+    </nav>
+</div>
+<!-- The sidebar -->
+    <div class="sidebar" id="sidebar">
+              <a href="/voorwoord"><img src="{{ url_for('static', filename='dutch_flag.png') }}" width="30", height="20"></a>
+        <a href="/home">Home</a>
+        <a class="active" href="preface">Preface</a>
+        <a href="Introduction">Chapter 1: Introduction</a>
+        <a href="chapter2">Chapter 2</a>
+        <a href="chapter3">Chapter 3</a>
+        <a href="chapter4">Chapter 4</a>
+        <a href="chapter5">Chapter 5</a>
+        <a href="Conclusion">Chapter 6: Conclusion</a>
+        <a href="afterword">Afterword</a>
+        <a href="about">About</a>
+    </div>
+
+
+
+
+
+
+
+<script>
+  document.querySelectorAll('.sidebar a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default behavior of internal anchor links
+
+      const targetId = this.getAttribute('href').substring(1); // Get target ID
+      const targetElement = document.getElementById(targetId); // Get target element
+
+      if (targetElement) {
+        const offset = targetElement.offsetTop - 110; // Calculate desired offset from top
+        window.scrollTo({ top: offset, behavior: 'smooth' }); // Scroll to the target element
+      }
+    });
+  });
+
+
+</script>
+
+<!--Header-->
+<!--Body text-->
+<div class="body-content">
+    <h1>Preface</h1>
+    <p>For the past fourteen years I have been surrounded by international students. Although I was never adventurous enough to become an international student myself, except for a brief stint as an ERASMUS student, I have always managed to be around international students. I received my bachelor’s degree at Maastricht University, one of the most international universities in the Netherlands, and here I also joined an international student association. After this, I moved to Nijmegen and although my master’s degree was not very international, I did make quite a few international friends. I finally ended up working at the HAN University of Applied Sciences where I now teach many international students. </p>
+    <p>It is my experiences in these last fourteen years that have inspired and influenced many of the ideas in this dissertation. For example, my bachelor’s degree was in liberal arts and sciences, a very interesting and stimulating program, but not necessarily a very pragmatic one. The program that I am currently teaching at, international business, is on the contrary quite a bit more pragmatic. As a result, the international students at both programs are quite different. At Maastricht University the international students at my study program were mostly from wealthy Western European countries, while international students that I am currently teaching are primarily from Eastern European and Asian countries. This made me wonder: why are these populations so different? </p>
+    <p>I have also often wondered how international students end up where they do. Maastricht seems obvious, especially if the students are German, but how do international students end up at the HAN? Indeed, this even seems to be a mystery to many of the administrators at my faculty. I was once told that they asked students why they picked the HAN instead of a similar institution in a neighboring city, and their answer boiled down to, “I just had a good feeling about it”. So how they do end up at the HAN? And how big is the involvement and influence of the HAN itself? </p>
+    <p>These kinds of questions steered my research and gave me the inspiration to come up with the topics of each chapter. While I cannot claim that I can now comprehensively answer these questions, I have at the very least been able to shed a little more light on them, and show others possible directions on where to shine their light. It is my hope that the conclusions of this dissertation will not only be considered interesting, but also useful and thought-provoking. International student mobility is a complex phenomenon yet is also becoming increasingly important in our ever-globalizing world.  </p>
+<br>
+</div>
+
+</body>
+</html>

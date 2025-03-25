@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Global Campuses?</title>
+            <link rel="icon" type="image/png" href="{{ url_for('static', filename='icons/favicon.png') }}" />
+    <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet" media="only screen" /> <!--For Flask-->
+    <link href="{{ url_for('static', filename='styles/mobilestyles.css') }}" rel="stylesheet" type="text/css" media="(pointer: coarse) and (max-device-width: 1080px)"  />
+    <link href="{{ url_for('static', filename='styles/smallpcstyles.css') }}" rel="stylesheet" type="text/css"  media="(pointer: fine) and (max-width: 1280px)" />
+    </head>
+
+<body>
+<div class = "placeholder2"></div>
+
+
+<div class="sticky-top2">
+    <div class="banner-container2">
+    <img src="{{ url_for('static', filename='WebBanner.jpg') }}" height="130">
+    </div>
+
+    <nav class="topnav">
+    <li><a href="/home">Home</a></li>
+    <li><div class="dropdown">
+      <button class="dropbtn">Chapters ▾</button>
+      <div class="dropdown-content">
+          <a href="preface">Preface</a>
+        <a href="Introduction">Introduction</a>
+        <a href="chapter2">Chapter 2</a>
+        <a href="chapter3">Chapter 3</a>
+        <a href="chapter4">Chapter 4</a>
+        <a href="chapter5">Chapter 5</a>
+        <a href="Conclusion">Conclusion</a>
+        <a href="afterword">Afterword</a></div>
+      </div></li>
+    <li><a href="about">About</a></li>
+                <li><a href="/nawoord"><img src="{{ url_for('static', filename='dutch_flag.png') }}" width="45", height="30"></a></li>
+    </nav>
+</div>
+
+<!-- The sidebar -->
+    <div class="sidebar" id="sidebar">
+              <a href="/nawoord"><img src="{{ url_for('static', filename='dutch_flag.png') }}" width="30", height="20"></a>
+        <a href="/home">Home</a>
+        <a href="preface">Preface</a>
+        <a href="Introduction">Chapter 1: Introduction</a>
+        <a href="chapter2">Chapter 2</a>
+        <a href="chapter3">Chapter 3</a>
+        <a href="chapter4">Chapter 4</a>
+        <a href="chapter5">Chapter 5</a>
+        <a href="Conclusion">Chapter 6: Conclusion</a>
+          <button type="button" class="collapsible">Afterword</button>
+          <div class="submenu content">
+            <a href="#dilemma1">Dilemma 1</a>
+            <a href="#dilemma2">Dilemma 2</a>
+            <a href='#dilemma3'>Dilemma 3</a>
+        </div>
+        <a href="about">About</a>
+    </div>
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+
+    document.querySelectorAll('.sidebar a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default behavior of internal anchor links
+
+      const targetId = this.getAttribute('href').substring(1); // Get target ID
+      const targetElement = document.getElementById(targetId); // Get target element
+
+      if (targetElement) {
+        const offset = targetElement.offsetTop - 140; // Calculate desired offset from top
+        window.scrollTo({ top: offset, behavior: 'smooth' }); // Scroll to the target element
+      }
+    });
+  });
+</script>
+
+
+<!--Header-->
+<!--Body text-->
+<div class="body-content">
+<div id="epilogue"></div><h1>Afterword: Should we Encourage International Student Mobility?</h1>
+<p>Throughout this whole dissertation I discussed international student mobility without considering the moral dimensions I found in the mobility developments and patterns. In this epilogue I do not intend to discuss policy problems, like shortages in housing and overcrowding of classrooms. Rather, I aim to cover my own view on some critical deeper ethical dilemmas that are increasingly gaining attention both inside and outside the academic literature.</p>
+<div id="dilemma1"></div><h2>Dilemma 1: International Student Mobility could increase Inequality.</h2>
+<p>It is sometimes believed that international student mobility can lead to better job opportunities later in life. However, for students from rich countries, such as the Netherlands, international student mobility <a href="https://doi.org/10.1007/s10734-020-00532-3" target="_blank" rel="noopener noreferrer">might not directly contribute to higher earnings</a>. Rather, by acting as <a href="https://doi.org/10.1111/j.1475-5661.2011.00454.x" target="_blank" rel="noopener noreferrer">mobility capital</a>, international student mobility can serve as a way for the rich to increase their status even more. Additionally, for students in developing countries, international student mobility could be a way to access better education, but it could thereby also <a href="https://doi.org/10.1080/02680931003782827" target="_blank" rel="noopener noreferrer">reduce pressure on elites</a> for improving domestic education systems. For rich families there is less need for better education at home if they can also simply send their children to other countries. Then there is also the problem of brain drain. Fundamental to the discourse in the Netherlands, but also many other Western countries, is the idea of post-graduate retention. That is, encouraging international students to stay after graduating so they can <a href="https://www.taylorfrancis.com/chapters/edit/10.4324/9781003217923-7/attracting-international-students-netherlands-floor-van-donselaar-margje-geurts-hendrik-jan-hobbes" target="_blank" rel="noopener noreferrer">contribute to the economy</a> thanks to their highly developed skills and knowledge. Missing from this discourse, however, is the implication that these students will not contribute to their home country, but instead use their talents to make already wealthy countries even wealthier. International student mobility is very asymmetrical, and <a href="https://doi.org/10.1080/02680931003782827" target="_blank" rel="noopener noreferrer">talent flows from the poorer to the richer countries</a>. International student mobility might therefore not only increase inequality within countries, but also between countries. </p>
+<p>However, the reality might not be as bleak as presented here. There has not been much research on the effects of international student mobility on origin countries, but there has been much research on the effects of skilled migration in general. Brain drain benefits destination countries but, strange as it might sound, it often also benefits the origin countries. Speranta Dumitru has outlined <a href="https://ssrn.com/abstract=2174447" target="_blank" rel="noopener noreferrer">several such benefits</a>. First, skilled migrants send back remittances (which amount to four times as much money as development aid) and facilitate commercial and technological exchange. Second, if skilled migration becomes a realistic option to poor people, then this could stimulate personal and institutional investment in education. For international student mobility, this could mean greater investments into secondary education in order to make tertiary education abroad possible. Third, many skilled migrants eventually return and bring back large amounts of financial, social, and cultural capital. The argument that international student mobility prevents investment in higher education at home also does not seem to hold. For example, the higher education sector in Asia has been <a href="https://www.researchgate.net/publication/339927032_Higher_Education_in_Asia_and_the_Search_for_a_New_Modernity_An_Introduction" target="_blank" rel="noopener noreferrer">developing rapidly</a> despite (or perhaps because of) the many outgoing international students. It is possible that international student mobility increases inequality within countries at first, but when international students return, they can use their skills to enhance higher education domestically thus benefiting people who stayed behind. Finally, and perhaps most importantly, there is a fundamental problem with viewing brain drain as something negative, which is that <a href="https://ssrn.com/abstract=2174447" target="_blank" rel="noopener noreferrer">this view clashes with basic human rights</a> such as the right to education and the pursuit of a better life. Instead of thinking about brain drain as a comparison between winning and losing countries, it might be better to take a <a href="https://doi.org/10.1016/j.geoforum.2008.03.005" target="_blank" rel="noopener noreferrer">transnational approach</a> and think about how the benefits and opportunities of migration can be maximized and dispersed.</p>
+<div id="dilemma2"></div><h2>Dilemma 2: International Student Mobility could worsen Climate Change.</h2>
+<p>Estimating greenhouse gas emissions of various lifestyles choices is very difficult, but <a href="https://doi.org/10.1016/j.trd.2017.08.020" target="_blank" rel="noopener noreferrer">flying</a> is probably one of the, if not the most damaging activity undertaken by individuals. The emissions caused by the flights taken by international students in 2014 <a href="https://doi.org/10.1016/j.jclepro.2019.01.291" target="_blank" rel="noopener noreferrer">have been estimated</a> to potentially be the same as the total emissions (from all activities) produced by a small country like Croatia. By 2024 the number of international students will likely have increased by 50% compared to 2014<sup><a href="#fn1" id="ref1">1</a></sup>, and based on the current data there is no plateau in sight. On top of this, international mobility can normalize the idea of travelling through flying and thereby indirectly causes even more emission either from international students being inspired to take flights, or by international students inspiring and necessitating others to fly. Furthermore, since international students tend to move to higher developed countries, and emissions in wealthy countries are higher per person, it is possible that international student mobility leads to the adoption of a less sustainable lifestyle. <a href="https://uni-foundation.eu/uploads/2022_GE_Research-on-habits-of-Erasmus-students.pdf" target="_blank" rel="noopener noreferrer">Even among ERASMUS students</a>, a group that claims to be concerned about climate change, the majority of students uses air travel and sustainability barely factors in their daily consumption habits. These concerns lead to a <a href="https://doi.org/10.1177/10283153221121386" target="_blank" rel="noopener noreferrer">fundamental contradiction</a> in international student mobility being seen as a method to increase education about sustainability yet also being detrimental to sustainability.</p>
+<div class="rounded-image"><a title="Oleg Yunakov" href="https://commons.wikimedia.org/wiki/File:Air_Europa_airplane.jpg"><img width="450" alt="Air Europa airplane" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Air_Europa_airplane.jpg/1024px-Air_Europa_airplane.jpg"></a></div>
+<p>However, there are some potential benefits of international student mobility to the fight against climate change, beyond mere education. In order to effectively combat climate change, we need both <a href="https://www.ipcc.ch/2022/04/04/ipcc-ar6-wgiii-pressrelease/" target="_blank" rel="noopener noreferrer">lifestyle changes and technological innovations</a>, and there is evidence that under the right circumstances organizational diversity can increase innovation. Furthermore, international students often do not stay in the same country after graduating, meaning that the knowledge they acquired circulates. Intercultural skills can also <a href="https://doi.org/10.1002/ejsp.2617" target="_blank" rel="noopener noreferrer">foster cooperation and solidarity</a> in young people, which could have important implications for international cooperation later in life. Rich countries have the resources to invest in solutions to climate change, and if higher education institutions in these countries make sustainability a core element of their curricula, then they can help in stimulating innovative solutions. Although it is impossible to say whether this can compensate for the damage caused by the mobility itself, international student mobility might nevertheless help the world in finding the right solutions to the climate crisis.</p>
+<div id="dilemma3"></div><h2>Dilemma 3: International Student Mobility could decrease Well-being.</h2>
+<p>International students are generally strangers in a new land who have embarked on a journey by wresting themselves from their families and home cultures. Often, this is done at a time when young people are at a vulnerable point in their lives, namely when they are considered adults but have very little experience in navigating adult life. Couple this with culture shock, loneliness, and a pressure to succeed, and you could end up with a crisis in well-being. As a young adult, it is already difficult to navigate the many institutions in a country, which is only made much more difficult if you do not know the language or culture. This is manifested in difficulties with <a href="https://doi.org/10.18060/164" target="_blank" rel="noopener noreferrer">adapting to new teaching methods</a>, but it could also be an inability to properly communicate with, for example, a doctor. International students also have to make new friends and cannot easily fall back on family when they are lonely, which is exacerbated by the fact that it is often <a href="https://doi.org/10.1080/03075079.2017.1293874" target="_blank" rel="noopener noreferrer">difficult to establish friendships with local students</a>. On top of all this, international students are often confronted by <a href="https://doi.org/10.1080/03075079.2011.614940" target="_blank" rel="noopener noreferrer">racism</a>, <a href="https://doi.org/10.1080/03075079.2017.1293874" target="_blank" rel="noopener noreferrer">xenophobia</a>, and <a href="https://doi.org/10.1037/a0035404" target="_blank" rel="noopener noreferrer">exclusion</a>. In the Netherlands, for example, many student houses get to choose who their new roommate is, and <a href="https://iso.nl/2022/08/annual-international-student-survey-internationale-student-blijft-tweederangs-student/" target="_blank" rel="noopener noreferrer">openly advertising “no internationals”</a> is extremely common. For such reasons the subjective well-being of international students in the Netherlands has been found to be <a href="https://doi.org/10.5117/MEM2021.3.004.VANM" target="_blank" rel="noopener noreferrer">lower than that of Dutch students</a>.</p>
+<p>Based on all these obstacles it might not be surprising to hear that international students face <a href=" https://doi.org/10.3390/ijerph20021500" target="_blank" rel="noopener noreferrer">significant mental health problems</a>. However, an important caveat is that mental health problems are common among all students and that international students <a href="https://doi.org/10.1080/03075079.2014.966072" target="_blank" rel="noopener noreferrer">do not seem to have more mental health problems</a> than domestic students. It is theorized that this is because the types of people that become international students also <a href="https://doi.org/10.1080/07294360.2023.2234315" target="_blank" rel="noopener noreferrer">tend to be more resilient</a> and can thus make up for the increased stressors by being better able to cope with them. Furthermore, many of the obstacles discussed in the previous paragraph are also common for other types of migrants, but migration nevertheless has <a href="https://doi.org/10.1186/s40878-020-00210-4" target="_blank" rel="noopener noreferrer">a huge potential to improve long-term well-being</a>. Indeed, international student mobility specifically can bring important benefits, especially to students from developing countries, as good education can mean increased opportunities and capabilities, widened perspectives, and long-term increases in quality of life. Concerns about the well-being of international students are not to be underestimated, and policy makers need to pay attention to them. However, there is a case to be made that (long-term) benefits to the well-being of international students can potentially make up for the initial decreases in well-being.</p>
+<h2>Concluding remarks</h2>
+<p>International Student Mobility is here to stay and will likely continue to increase in the future. There are significant challenges related to inequality, sustainability, and well-being, but the positive effect of international student mobility, namely increased capabilities, opportunities, intercultural understandings, and knowledge circulation, might just make up for this. The universal declaration of human rights stipulates both the right to education and the right to an adequate standard of living, and international student mobility serves as an opportunity to act on these rights. Therefore, when done appropriately, international student mobility is indeed something to be encouraged.</p>
+<sup id="fn1">1. Based on extrapolation of UNESCO data between 2000 and 2020 using simple regression. R^2 = 0.975.<a href="#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup>
+<br><br>
+</div>
+
+</body>
+</html>

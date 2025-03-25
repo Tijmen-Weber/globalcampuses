@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Global Campuses?</title>
+            <link rel="icon" type="image/png" href="{{ url_for('static', filename='icons/favicon.png') }}" />
+    <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet" media="only screen" /> <!--For Flask-->
+    <link href="{{ url_for('static', filename='styles/mobilestyles.css') }}" rel="stylesheet" type="text/css" media="(pointer: coarse) and (max-device-width: 1080px)"  />
+    <link href="{{ url_for('static', filename='styles/smallpcstyles.css') }}" rel="stylesheet" type="text/css"  media="(pointer: fine) and (max-width: 1280px)" />
+    </head>
+
+<body>
+<div class = "placeholder2"></div>
+
+
+<div class="sticky-top2">
+    <div class="banner-container2">
+    <img src="{{ url_for('static', filename='WebBanner.jpg') }}" height="130">
+    </div>
+
+    <nav class="topnav">
+        <li><a href="/home">Home</a></li>
+        <li><div class="dropdown">
+          <button class="dropbtn">Chapters ▾</button>
+          <div class="dropdown-content">
+              <a href="preface">Preface</a>
+            <a href="Introduction">Introduction</a>
+            <a href="chapter2">Chapter 2</a>
+            <a href="chapter3">Chapter 3</a>
+            <a href="chapter4">Chapter 4</a>
+            <a href="chapter5">Chapter 5</a>
+            <a href="Conclusion">Conclusion</a>
+            <a href="afterword">Afterword</a></div>
+          </div></li>
+        <li><a href="about">About</a></li>
+                    <li><a href="/thuis"><img src="{{ url_for('static', filename='dutch_flag.png') }}" width="45", height="30"></a></li>
+        </nav>
+</div>
+<!-- The sidebar -->
+    <div class="sidebar" id="sidebar">
+              <a href="/thuis"><img src="{{ url_for('static', filename='dutch_flag.png') }}" width="30", height="20"></a>
+        <a class="active" href="/home">Home</a>
+        <a href="preface">Preface</a>
+        <a href="Introduction">Chapter 1: Introduction</a>
+        <a href="chapter2">Chapter 2</a>
+        <a href="chapter3">Chapter 3</a>
+        <a href="chapter4">Chapter 4</a>
+        <a href="chapter5">Chapter 5</a>
+        <a href="Conclusion">Chapter 6: Conclusion</a>
+        <a href="afterword">Afterword</a>
+        <a href="about">About</a>
+    </div>
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+
+    document.querySelectorAll('.sidebar a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default behavior of internal anchor links
+
+      const targetId = this.getAttribute('href').substring(1); // Get target ID
+      const targetElement = document.getElementById(targetId); // Get target element
+
+      if (targetElement) {
+        const offset = targetElement.offsetTop - 110; // Calculate desired offset from top
+        window.scrollTo({ top: offset, behavior: 'smooth' }); // Scroll to the target element
+      }
+    });
+  });
+</script>
+
+<!--Header-->
+<!--Body text-->
+<div class="body-content">
+    <H1>Home</H1>
+    <p>Hello and welcome. I created this website as part of my dissertation on international student mobility. In my dissertation, I look at where international students enroll, and whether this has anything to do with where they come from and where they go to. In order to make my conclusions more accessible, I have adapted the chapters so that they are easier and more fun to read. Have a look at the table below to see which question each chapter answers! </p>
+    <p>You can download the complete dissertation <a href="https://repository.ubn.ru.nl/handle/2066/306643">here</a>. All the code used to create this website can be found <a href="https://github.com/Tijmen-Weber/globalcampuses">here</a>.</p>
+
+<H2>Overview of Chapters</H2>
+    <table style="width:100%">
+        <tr><th style="width:28%"><b>Chapter</b></th><th style="width:72%"><b>Questions Answered</b></th></tr>
+        <tr><td><a href="https://www.globalcampuses.nl/preface">Preface</a></td><td>What has been the inspiration for this research?</td></tr>
+        <tr><td><a href="https://www.globalcampuses.nl/Introduction">Chapter 1 (Introduction)</a></td><td>What have been the main developments in international student mobility? And what have other researchers said about it?</td></tr>
+        <tr><td><a href="https://www.globalcampuses.nl/chapter2">Chapter 2</a></td><td>How is international student mobility related to the development level of origin and destination countries?</td></tr>
+        <tr><td><a href="https://www.globalcampuses.nl/chapter3">Chapter 3</a></td><td>What selling points do higher education institutions in the Netherlands use to profile themselves? And how well do these selling points correlate with actual enrollments?</td></tr>
+        <tr><td><a href="https://www.globalcampuses.nl/chapter4">Chapter 4</a></td><td>Does the development level of the origin countries of international student influence which study program they choose in the Netherlands?</td></tr>
+        <tr><td><a href="https://www.globalcampuses.nl/chapter5">Chapter 5</a></td><td>How does international student mobility relate to how higher education is funded?</td></tr>
+        <tr><td><a href="https://www.globalcampuses.nl/Conclusion">Chapter 6 (Conclusion)</a></td><td>What are the main conclusions of this dissertation? And what are the policy implications?</td></tr>
+        <tr><td><a href="https://www.globalcampuses.nl/afterword">Afterword</a></td><td>Should we encourage international student mobility?</td></tr>
+
+    </table>
+<br>
+<iframe src="https://tijmenweber.pythonanywhere.com/empty" height="1" width="1"></iframe>
+</div>
+
+</body>
+</html>

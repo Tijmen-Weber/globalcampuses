@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Global Campuses?</title>
+            <link rel="icon" type="image/png" href="{{ url_for('static', filename='icons/favicon.png') }}" />
+    <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet" media="only screen" /> <!--For Flask-->
+    <link href="{{ url_for('static', filename='styles/mobilestyles.css') }}" rel="stylesheet" type="text/css" media="(pointer: coarse) and (max-device-width: 1080px)"  />
+    <link href="{{ url_for('static', filename='styles/smallpcstyles.css') }}" rel="stylesheet" type="text/css"  media="(pointer: fine) and (max-width: 1280px)" />
+    </head>
+
+<body>
+<div class = "placeholder2"></div>
+
+
+<div class="sticky-top2">
+    <div class="banner-container2">
+    <img src="{{ url_for('static', filename='WebBanner.jpg') }}" height="130">
+    </div>
+
+    <nav class="topnav">
+    <li><a href="/home">Home</a></li>
+    <li><div class="dropdown">
+      <button class="dropbtn">Chapters ▾</button>
+      <div class="dropdown-content">
+          <a href="preface">Preface</a>
+        <a href="Introduction">Introduction</a>
+        <a href="chapter2">Chapter 2</a>
+        <a href="chapter3">Chapter 3</a>
+        <a href="chapter4">Chapter 4</a>
+        <a href="chapter5">Chapter 5</a>
+        <a href="Conclusion">Conclusion</a>
+        <a href="afterword">Afterword</a></div>
+      </div></li>
+    <li><a href="about">About</a></li>
+                <li><a href="/hoofdstuk3"><img src="{{ url_for('static', filename='dutch_flag.png') }}" width="45", height="30"></a></li>
+    </nav>
+</div>
+<!-- The sidebar -->
+    <div class="sidebar" id="sidebar">
+              <a href="/hoofdstuk3"><img src="{{ url_for('static', filename='dutch_flag.png') }}" width="30", height="20"></a>
+        <a href="/home">Home</a>
+        <a href="preface">Preface</a>
+        <a href="Introduction">Chapter 1: Introduction</a>
+        <a href="chapter2">Chapter 2</a>
+          <button type="button" class="collapsible">Chapter 3</button>
+        <div class="submenu content">
+            <a href="#highlights">Highlights</a>
+            <a href="#mapline">International Students per Municipality</a>
+            <a href='#line2'>International Students per Study Type</a>
+            <a href='#profiles'>Profiles of Institutions</a>
+            <a href='#models'>Computer Models</a>
+            <a href='#conclusion'>Conclusions</a>
+        </div>
+        <a href="chapter4">Chapter 4</a>
+        <a href="chapter5">Chapter 5</a>
+        <a href="Conclusion">Chapter 6: Conclusion</a>
+        <a href="afterword">Afterword</a>
+        <a href="about">About</a>
+    </div>
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+
+    document.querySelectorAll('.sidebar a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default behavior of internal anchor links
+
+      const targetId = this.getAttribute('href').substring(1); // Get target ID
+      const targetElement = document.getElementById(targetId); // Get target element
+
+      if (targetElement) {
+        const offset = targetElement.offsetTop - 140; // Calculate desired offset from top
+        window.scrollTo({ top: offset, behavior: 'smooth' }); // Scroll to the target element
+      }
+    });
+  });
+</script>
+
+<!--Header-->
+<!--Body text-->
+<div class="body-content">
+    <div id="chapter3"><h1>Chapter 3: International Student Mobility and the Profiles of Higher Education Institutions</h1>
+    <p><a href="https://doi.org/10.1002/psp.2744" target="_blank" rel="noopener noreferrer">Link to the academic publication.</a></p>
+    <p><a href="https://osf.io/8shjz/?view_only=668fe87007d1463b8c6d612155b77c28" target="_blank" rel="noopener noreferrer">Link to the Replication Package</a></p>
+    <div id="highlights"></div><h2>Highlights</h2>
+    <ul>
+        <li>International students are not spread out equally in the Netherlands.</li>
+        <li>Bachelor international students tend to prioritize city life over educational quality.</li>
+        <li>Master international students tend to prioritize educational quality over city life.</li>
+        <li>Most international students prioritize institutions that already have many international students.</li>
+    </ul>
+    <p>The number of international students in the Netherlands has <a href="https://www.nuffic.nl/en/subjects/facts-and-figures/regions-and-universities" target="_blank" rel="noopener noreferrer">exploded</a>.
+      In 2006 there were about 31,000 international students while in 2022 this has risen to 122,000. In percentages, the share of students that comes from abroad has increased from 5.5% to 15.5%. However, international students are not equally spread out over the Netherlands. Almost 50% of all international students are enrolled in just four cities: Amsterdam, Groningen, Maastricht, and Rotterdam. We also see these inequalities in the study programs: in 2019, 80% of all international students were enrolled in just 18% of study programs. </p>
+    <p> Below you can find a map and line chart showing the number of first-year international students per city. By clicking on play you can clearly see that some cities have seen a large increase in international students.</p>
+    <div id="mapline"></div><iframe src="https://tijmenweber.pythonanywhere.com/ch3mapandline" height = "1700" width = "860"></iframe>
+    <p>Part of the differences between the cities can be attributed to the types of education offered by each city. For the laymen: the Netherlands has two types of higher education institutions. On the one hand there are the Research Universities (RU): these institutions focus on scientific knowledge and most of its teaching staff is also involved in academic research. Research Universities also show up higher on international rankings and tend to be more selective of their students. On the other hand, there are Universities of Applied Science (UAS) which focus more on teaching professional skills. Most of its teaching staff is not active in research, and the staff members that do more often focus on applied research. Universities of applied science also tend to offer more study programs in Dutch and have a more regional appeal. Both types of institutions offer bachelor’s and master’s degrees, though the number of master’s degrees offered by universities of applied science is much lower.</p>
+    <p>In the chart below you can see the absolute and relative number of first year international students per study type. You can see that the Research Universities have seen the biggest increase, both in absolute and relative terms. Master’s degrees are especially popular among international students. Interestingly, Universities of applied science have been remarkably stable in how many enrollments of international students they have. </p>
+    <div id="line2"></div><iframe src="https://tijmenweber.pythonanywhere.com/ch3linechart2" height = "570" width = "860"></iframe>
+      <p>By looking at enrollment numbers, it is clear that international students prefer certain locations over others. So which characteristics make a place attractive? And how much do such characteristics actually matter for the enrollments? That is what I attempted to find out in this chapter. </p>
+      <div id="profiles"></div><br><h2>How Higher Education Institutions Profile Themselves</h2>
+      <p>To find out what makes institutions in the Netherlands attractive, I decided to look at the websites of all the institutions and see how they profiled and marketed themselves to international students.
+        Here I discovered that there are broadly three different dimensions by which institutions market themselves.         </p>
+      <p>The first dimension is academic characteristics, such as the quality of the study programs or the reputation of the institutions. Institutions often share what kinds of certificates they received, for example from <a href="https://keuzegids.nl/" target="_blank" rel="noopener noreferrer">Keuzegids</a>. Research universities also often boasted about showing up high in international rankings. </p>
+      <p>The second dimension was everything related to city life. Many websites focused on how nice the city was, often showing pictures of students sitting together. It was clear that the websites tried to focus on the most positive parts of their cities. For example, big cities marketed themselves as vibrant, and small cities marketed themselves as cozy. My favorite example was Almere. Apparently the university of applied science found it difficult to come with unique selling points, so it marketed itself by saying that it was <a href="https://www.aeresuas.com/student-life/study-in-almere" target="_blank" rel="noopener noreferrer">relatively close to Amsterdam</a>. </p>
+      <p>The third dimension was the international level of the institution. This could be the number of connections it has to higher education institutions in other countries, but most of the time it was related to how many international students it already had. For instance, many institutions described themselves as having a “global community” or an “international campus”. Such claims were often accompanied by statistics of how many international students they have and from how many countries they are. </p>
+      <p>In the table below you can see how often each dimension was mentioned by the different institutions. Interestingly, city life was mentioned more often than academic quality. Universities of applied science also were less likely to mention specific dimensions. Perhaps they have fewer tools to distinguish themselves so they often just used generic statements. </p>
+      <table style="width:100%">
+        <tr>
+            <th style="width:30%"></th>
+            <th style="width:25%">Academic Aspects</th>
+            <th style="width:20%">City Life</th>
+            <th style="width:25%">International Level</th>
+        </tr>
+        <tr>
+            <td>Research Universities</td>
+            <td>92%</td>
+            <td>92%</td>
+            <td>62%</td>
+
+        </tr>
+        <tr>
+            <td>Universities of Applied Science</td>
+            <td>47%</td>
+            <td>56%</td>
+            <td>38%</td>
+        </tr>
+        <tr>
+            <td>Total</td>
+            <td>60%</td>
+            <td>66%</td>
+            <td>45%</td>
+        </tr>
+    </table>
+    <div id="models"></div><p>But now the question is, do these dimensions actually matter in how many international students enroll? </p>
+    <p>To answer this question, I measured various aspects (indicators) of these dimensions. I then put these indicators in a computer model to see if they are related to the number of first-year enrollments of international students. I also analyzed the results separately for bachelor/master and research university/university of applied science programs. Data on the enrollments of international students was given to me by the Dutch government. </p>
+    <p>Important to mention is that these computer models only measure <a href="https://xkcd.com/552/" target="_blank" rel="noopener noreferrer">correlations</a>. So I cannot for example claim that program quality causes more international students to enroll, I can only say whether there is a relationship between program quality and the number of enrollments. The correlations could reflect choices students make, for example by visiting the websites and comparing the institutions. However, institutions also play active roles in recruiting students such as by visiting education fairs or using <a href="https://doi.org/10.1177/1028315318762485" target="_blank" rel="noopener noreferrer">third-party agents</a>. The findings could therefore also reflect that the institutions successfully used their strengths to market themselves. </p>
+    <h3>Academic Characteristics</h3>
+    <p>While you would expect that international students would be interested in quality of education, my computer models found mixed results here. Programs that received a <a href="https://keuzegids.nl/kwaliteitszegels/" target="_blank" rel="noopener noreferrer">quality seal from Keuzegids</a> only seemed to appeal to master students; for bachelor students such a quality seal does not increase enrollments. On the other hand, research universities with higher <a href="https://www.timeshighereducation.com/world-university-rankings/2024/world-ranking" target="_blank" rel="noopener noreferrer">international rankings</a> attracted more bachelor students, but not master students. Quality of facilities also does not seem to matter for increasing enrollments, except for bachelor programs at universities of applied science. These results are quite interesting because you would think that because the goal of studying is to get a good degree, you would go for one that is high quality. However, this only appears to sometimes be the case.</p>
+    <h3>City Life</h3>
+    <p>Regarding the indicators of city life, I found that cities that are larger and/or have more amenities tend to host more international students, and particularly more bachelor students. Interestingly, cities that have higher costs of living  for students were also more popular among international students. This is likely because nicer cities are also more expensive to live in, so this result could mean that for international students the cost of living might not outweigh the benefits that living in more expensive cities bring.</p>
+    <figure class="rounded-image"><a title="Luctor, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Terras_Neude.jpg"><img width="500" alt="Terras Neude" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Terras_Neude.jpg/1024px-Terras_Neude.jpg"></a></div>
+    </figure>
+        <h3>International Level</h3>
+    <p>For the last dimension I investigated whether institutions that already hosted many international students, both in general and from specific origin countries, were also more likely to see new enrollments of international students. Not very surprisingly, the models showed that the international level of an institution indeed contributed to new enrollments. New international students were more likely to enroll in institutions that already hosted many international students, both in general as well as from the same origin country. This could mean that international students tend to follow the advice of other international students, but it could also reflect that some institutions are more active in recruitment than others. </p>
+    <h3>Are there differences between EU and non-EU students?</h3>
+    <p>Interestingly enough, there are. I discovered that at research universities EU students<sup><a href="#fn1" id="ref1">1</a></sup> were not at all interested in any of the measures of quality, but non-EU students were. Also, non-EU students were not more likely to enroll in institutions with larger general international student populations, but they did tend to enroll in ones that had more international students from the same origin country. This could mean that non-EU students follow the advice of co-nationals, but it could also mean that institutions target specific countries when recruiting.</p>
+    <div id="conclusion"></div><br><h2>Conclusions</h2>
+    <p>When I looked at enrolments of international students, I found that the three dimensions had different results depending on the type of study program. These findings can be interpreted from two perspectives: the perspective of the students and the perspective of the higher education institutions. Both students and institutions shape the patterns found in international student mobility; students because of the choices they make, and institutions by how they profile themselves. Because I only calculated correlations, I cannot say which perspective is the most important (or indeed if other perspectives are valid). These conclusions therefore remain speculations.</p>
+    <p>From the perspective of the students, the results could mean that different types of students make different choices. I discovered that bachelor students were more interested in city life, while master students were more interested in the quality of education. This could imply that when bachelor students think about where to study, they imagine not just the study program, but also their life around it. Studying in higher education is about much more than just learning new things, it is also about having fun with your newfound freedom. The city you live in for the next three to four years can therefore definitely be important. Master students, on the other hand, might be thinking more about their later career and therefore focus on academic quality instead of city life. If you consider that a master’s degree is only 1-2 years, it seems plausible that international students give city life a lower priority. Finally, the fact that pre-existing international student populations make them attractive for new international students could mean that international students actively seek out international student communities, or that they rely on word-of-mouth recommendations. It is not uncommon for international students to rely on social media for information and advice, which could explain these patterns. </p>
+    <p>From the perspective of the institutions, the results could mean that recruiters and international offices rely on different tactics depending on the strengths and weakness of the institutions and programs. For example, universities of applied science generally do not show up on international rankings and therefore might have to rely on other selling points such as the city life or quality of the facilities. There is one factor that is especially interesting, and sometimes overlooked, namely the role of <a href="https://doi.org/10.1177/1028315318762485" target="_blank" rel="noopener noreferrer">third-party agents</a>. Such agents can be directly employed by education institutions, but they also sometimes work completely independently. <a href="https://www.aob.nl/actueel/artikelen/de-jacht-op-de-internationale-student/" target="_blank" rel="noopener noreferrer">About 20% of international students in the Netherlands</a> have enrolled with the help of an agent, though for universities of applied science this number could be higher. Because I found that the number of new enrollments was strongly related to how many international students from the same origin country were already enrolled, this could mean that institutions target specific countries, or that agents target specific institutions. This would also explain why I found that this effect was stronger for universities of applied sciences, because they have fewer tools to distinguish themselves and therefore might have to rely more strongly on agents. </p>
+    <p>Whether the results of the analyses mostly reflect preferences of students, activities of institutions, or something else entirely, the most important finding is that the different dimensions have different impacts depending on the study program. Researchers trying to figure out what is important to international students often rely on testimonies of students through interviews or surveys. What makes these analyses unique is that I used actual enrollments instead of asking students what they find important. Interestingly, this led to different conclusions. For example, studies often find that students say that they find academic quality important, but for the enrollments I found that this varied a lot and regularly did not matter. This implies that what students say they find important, and where they actually enroll are not the same. There can be many reasons for this, maybe students do not know what they want, or perhaps what they want is not achievable. Ultimately, what important is that we need to look at both preferences and enrollments to understand how international student mobility is shaped, because my results show that they are not the same.</p>
+
+    <sup id="fn1">1. It is technically students from the European Economic Area (EEA) as they have the same agreements as the EU<a href="#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup>
+<br><br>
+  </div>
+
+</body>
+</html>

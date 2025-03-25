@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Global Campuses?</title>
+            <link rel="icon" type="image/png" href="{{ url_for('static', filename='icons/favicon.png') }}" />
+    <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet" media="only screen" /> <!--For Flask-->
+    <link href="{{ url_for('static', filename='styles/mobilestyles.css') }}" rel="stylesheet" type="text/css" media="(pointer: coarse) and (max-device-width: 1080px)"  />
+    <link href="{{ url_for('static', filename='styles/smallpcstyles.css') }}" rel="stylesheet" type="text/css"  media="(pointer: fine) and (max-width: 1280px)" />
+    </head>
+
+<body>
+<div class = "placeholder2"></div>
+
+
+<div class="sticky-top2">
+    <div class="banner-container2">
+    <img src="{{ url_for('static', filename='WebBannerDutch.jpg') }}" height="130">
+    </div>
+
+    <nav class="topnav">
+        <li><a href="/thuis">Start</a></li>
+        <li><div class="dropdown">
+          <button class="dropbtn">Hoofdstukken ▾</button>
+          <div class="dropdown-content">
+            <a href="voorwoord">Voorwoord</a>
+            <a href="introductie">Introductie</a>
+            <a href="hoofdstuk2">Hoofdstuk 2</a>
+            <a href="hoofdstuk3">Hoofdstuk 3</a>
+            <a href="hoofdstuk4">Hoofdstuk 4</a>
+            <a href="hoofdstuk5">Hoofdstuk 5</a>
+            <a href="conclusie">Conclusie</a>
+            <a href="nawoord">Nawoord</a></div>
+          </div></li>
+        <li><a href="over">Over</a></li>
+        <li><a href="/chapter5"><img src="{{ url_for('static', filename='american_flag.png') }}" width="45", height="30"></a></li>
+        </nav>
+    </div>
+
+<!-- The sidebar -->
+<div class="sidebar" id="sidebar">
+    <a href="/chapter5"><img src="{{ url_for('static', filename='american_flag.png') }}" width="30", height="20"></a>
+    <a href="/thuis">Start</a>
+    <a href="voorwoord">Voorwoord</a>
+    <a href="introductie">Hoofdstuk 1: Introductie</a>
+    <a href="hoofdstuk2">Hoofdstuk 2</a>
+    <a href="hoofdstuk3">Hoofdstuk 3</a>
+    <a href="hoofdstuk4">Hoofdstuk 4</a>
+          <button type="button" class="collapsible">Hoofdstuk 5</button>
+          <div class="submenu content">
+            <a href="#highlights">Belangrijkste conclusies</a>
+            <a href="#intro">Introductie</a>
+            <a href="#claims">Beweringen</a>
+            <a href='#funding1'>Financiering van het hoger onderwijs</a>
+            <a href='#theory'>Varianten van het kapitalisme</a>
+            <a href='#tests'>Testen van de beweringen</a>
+            <a href='#conclusion'>Conclusies</a>
+        </div>
+        <a href="conclusie">Hoofdstuk 6: Conclusie</a>
+        <a href="nawoord">Nawoord</a>
+          <a href="over">Over</a>
+      </div>
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+
+    document.querySelectorAll('.sidebar a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default behavior of internal anchor links
+
+      const targetId = this.getAttribute('href').substring(1); // Get target ID
+      const targetElement = document.getElementById(targetId); // Get target element
+
+      if (targetElement) {
+        const offset = targetElement.offsetTop - 140; // Calculate desired offset from top
+        window.scrollTo({ top: offset, behavior: 'smooth' }); // Scroll to the target element
+      }
+    });
+  });
+</script>
+
+
+
+<!--Header-->
+<!--Body text-->
+<div class="body-content">
+    <div id="chapter5"></div><h1>Hoofdstuk 5: Internationale studentenmobiliteit en de financiering van het hoger onderwijs</h1>
+    <p><a href="https://doi.org/10.1177/10283153231211999" target="_blank" rel="noopener noreferrer">Link naar de wetenschappelijke publicatie</a></p>
+    <p><a href="https://osf.io/sb2pe/?view_only=d3a20026ceff4d46ae8ec83d2f115549" target="_blank" rel="noopener noreferrer">Link naar de data en statistische code</a></p>
+            <div id="highlights"></div><h1>Belangrijkste conclusies</h1>
+        <ul>
+            <li>Er is een relatie tussen het aantal internationale studenten dat een land ontvangt en de manier waarop het hoger onderwijs wordt gefinancierd (via openbare of particuliere bronnen).</li>
+            <li>De relatie tussen binnenkomende internationale studenten en soorten financiering verschilt aanzienlijk tussen westerse landen.</li>
+            <li>Het idee dat internationale studenten in de hele westerse wereld voornamelijk als bron van inkomsten worden gezien wordt niet ondersteund door de data.</li>
+            <li>Er is waarschijnlijk een oververtegenwoordiging van Angelsaksische wetenschappers in de literatuur over dit onderwerp en het is belangrijk om verder te kijken dan hun standpunten.</li>
+        </ul>
+     <div id="intro"></div><p>Dit hoofdstuk is een beetje anders dan de anderen. In plaats van in kaart te brengen waar studenten zich inschrijven en waar ze vandaan komen is dit hoofdstuk een reactie op een aantal heersende ideeën in de academische literatuur. Bepaalde wetenschappers hebben namelijk de neiging om te beweren dat het hoger onderwijs volledig onderworpen is aan neoliberale marktwerking en dat internationale studenten gereduceerd zijn tot niets meer dan melkkoeien. De titels van sommige van deze artikelen zijn vaak behoorlijk dramatisch en lijken erop te wijzen dat het hoger onderwijs compleet is overgenomen door het neoliberalisme, zoals
+     <a href="https://doi.org/10.1177/1532708617706117" target="_blank" rel="noopener noreferrer">deze titel</a>
+      of
+     <a href="https://doi.org/10.1177/1532708616669529" target="_blank" rel="noopener noreferrer">deze.</a>
+     Maar mijn favoriete titel is waarschijnlijk deze (nogal beledigende) titel (vrij vertaald):
+     <a href="https://doi.org/10.1080/03075079.2016.1196353" target="_blank" rel="noopener noreferrer">Hare Majesteit de student: gecommercialiseerd hoger onderwijs en de narcistische (on) tevredenheid van de student-consument”.</a>
+     </p>
+     <p>
+        Titels als deze lijken te suggereren dat het neoliberalisme niet alleen de dominante kracht is in het hoger onderwijs, maar ook iets dat zo uit de hand is gelopen dat het koste wat het kost moet worden gestopt. Als ik echter aan Nederland denk lijkt er inderdaad sprake te zijn van enige marktwerking, maar die is lang niet zo extreem als deze auteurs beweren. Dus wat is er aan de hand? Zien ze iets dat ik volledig heb gemist? Overdrijven ze? Of is het iets anders?
+     </p>
+
+     <div id="claims"></div><p>Een aantal van de belangrijke beweringen van deze auteurs zijn gemakkelijk kwantitatief te testen, toch heeft niemand dit ooit eerder gedaan. Het basisverhaal is dat regeringen in de westerse wereld steeds meer neoliberale beleidsmaatregelen uitvoeren. De consequentie voor het hoger onderwijs is dat overheden de marktwerking in het hoger onderwijs stimuleren door 1. de overheidsfinanciering te verminderen waardoor ze afhankelijker worden van particuliere bronnen en 2. hen toestaan het collegegeld voor internationale studenten te verhogen om zo inkomsten te genereren. Als gevolg hiervan zijn hogeronderwijsinstellingen begonnen met agressieve marketingpraktijken om internationale studenten te werven. Deze internationale studenten zijn dus gereduceerd tot de <a href="https://doi.org/10.6017/ihe.2017.90.9993" target="_blank" rel="noopener noreferrer">melkkoeien</a> van de hogeronderwijsinstellingen. Belangrijk om nog even te vermelden: voor Europese landen hebben we in dit hoofdstuk internationale studenten gedefinieerd als afkomstig van buiten de EU/EER, omdat EU/EER studenten hetzelfde collegegeld betalen als binnenlandse studenten.
+    </p>
+    <p>
+        Het Verenigd Koninkrijk is een duidelijk voorbeeld van deze ontwikkeling. In 2012 werd er fors bezuinigd op de overheidsuitgaven voor het hoger onderwijs en mochten hogeronderwijsinstellingen het
+    <a href="https://commonslibrary.parliament.uk/research-briefings/cbp-7973/" target="_blank" rel="noopener noreferrer">collegegeld flink verhogen.<a/>
+        Als gevolg hiervan is de <a href="https://doi.org/10.1111/imig.12330" target="_blank" rel="noopener noreferrer">marktwerking van (internationale) studenten in Groot-Brittannië gaan overheersen.</a>
+    </p>
+    <p>
+        Op basis van dit verhaal kunnen we dus een aantal toetsbare beweringen afleiden:
+            <ul>
+                <li>Bewering 1: de overheidsuitgaven voor hoger onderwijs zijn gedaald.</li>
+                <li>Bewering 2: particuliere uitgaven aan hoger onderwijs zijn gestegen.</li>
+                <li>Bewering 3: dalingen in overheidsuitgaven gaan gepaard met stijgingen in het aantal ingeschreven internationale studenten.</li>
+                <li>Bewering 4: stijgingen in particuliere uitgaven gaan gepaard met stijgingen in het aantal ingeschreven internationale studenten.</li>
+            </ul>
+     </p>
+     <p>
+        Het Verenigd Koninkrijk is een duidelijk voorbeeld, maar is deze ontwikkeling overal zo? De OESO heeft cijfers gepubliceerd over zowel de openbare als de particuliere uitgaven voor het hoger onderwijs. We kunnen dus nagaan of de overheidsuitgaven zijn gedaald en de particuliere uitgaven zijn gestegen. Als je naar de onderstaande grafiek kijkt zie je een duidelijk patroon? Niet echt toch? Betekent dat dat neoliberalisme niet zo veel invloed heeft als wordt voorgesteld? Of is er iets anders aan de hand?
+     </p>
+     <div id="funding1"></div><iframe src="https://tijmenweber.pythonanywhere.com/linechartch5nl" height="750" width="860"></iframe>
+     <br>
+     <div id="theory"></div><h2>Marktwerking in het hoger onderwijs en varianten van het kapitalisme.</h2>
+     <p>
+        Om te zien of ik op de een of andere manier een patroon kon vinden in al deze chaos besloot ik een theoretisch kader te gebruiken genaamd <a href="https://en.wikipedia.org/wiki/Varieties_of_Capitalism" target="_blank" rel="noopener noreferrer">Varieties of Capitalism</a> (Varianten van het Kapitalisme). Het belangrijkste idee is dat de manier waarop organisaties werken niet in elk land hetzelfde is, maar sterk afhangt van de cultuur en het soort overheidsbemoeienis. In landen als het Verenigd Koninkrijk en de Verenigde Staten is de overheid bijvoorbeeld over het algemeen nogal afstandelijk en concurreren bedrijven voortdurend met elkaar. In een land als Duitsland is de overheid echter veel meer betrokken en werken de bedrijven zelf ook meer met elkaar samen. Dit wordt verklaard doordat de optimale strategie die bedrijven kiezen afhankelijk is van de andere bedrijven eromheen. Als iedereen zich richt op samenwerking kan je het beste ook maar samenwerken.
+     </p>
+     <p>
+        Nu maak ik een beetje een sprongetje, maar ik denk dat deze theorie ook kan worden uitgebreid naar hogeronderwijsinstellingen, of in ieder geval naar hoe hogeronderwijsinstellingen internationalisering benaderen en ze zich verhouden tot de overheid en tot elkaar. In het Verenigd Koninkrijk concurreren hogeronderwijsinstellingen bijvoorbeeld voortdurend met elkaar en het gevolg daarvan is dat er er veel ongelijkheid is ontstaan tussen de instellingen. Er zijn een paar topuniversiteiten zoals Cambridge en Oxford, maar er zijn ook veel universiteiten in de middenmoot. In Nederland daarentegen zijn er wel grote verschillen tussen universiteiten en hogescholen, maar binnen deze twee categorieën zijn de verschillen op de ranglijsten vrij klein. Samenwerkingen tussen universiteiten komen ook vrij regelmatig voor en felle concurrentie is veel zeldzamer.
+     </p>
+     <p>
+        Op basis van de logica van de varianten van het kapitalisme kunnen westerse landen in drie soort markteconomieën worden ingedeeld. Zie tabel 1 hieronder voor hoe ik de landen waarover de OESO gegevens heeft verzameld heb gegroepeerd.
+     </p>
+         <h2>De landen in dit hoofdstuk en hun soort markteconomie</h2>
+         <table style="width:100%">
+             <tr>
+                 <th style="width:40%">Liberale markteconomieën </th>
+                 <th style="width:30%">Gecoördineerde markteconomieën</th>
+                 <th style="width:30%">Door de staat beïnvloedde markteconomieën</th>
+             </tr>
+             <tr>
+                 <td>Australië</td>
+                 <td>België</td>
+                 <td>Frankrijk</td>
+             </tr>
+             <tr>
+                 <td>Canada</td>
+                 <td>Denemarken</td>
+                 <td>Griekenland</td>
+             </tr>
+             <tr>
+                 <td>Ierland</td>
+                 <td>Duitsland</td>
+                 <td>Italië</td>
+             </tr>
+             <tr>
+                 <td>Nieuw-Zeeland</td>
+                 <td>Finland</td>
+                 <td>Portugal</td>
+             </tr>
+             <tr>
+                 <td>Verenigd Koninkrijk</td>
+                 <td>Nederland</td>
+                 <td>Spanje</td>
+             </tr>
+             <tr>
+                 <td>Verenigde Staten</td>
+                 <td>Noorwegen</td>
+                 <td></td>
+             </tr>
+             <tr>
+                 <td></td>
+                 <td>Oostenrijk</td>
+                 <td></td>
+             </tr>
+             <tr>
+                 <td></td>
+                 <td>Zweden</td>
+                 <td></td>
+             </tr>
+             <tr>
+                 <td></td>
+                 <td>Zwitserland</td>
+                 <td></td>
+             </tr>
+         </table>
+    <p>
+        Groep 1 bevat de liberale markteconomieën, dit zijn de westerse Engelstalige landen. In deze landen houdt de overheid zich afzijdig en concurreren hogeronderwijsinstellingen veel meer met elkaar. Er is ook veel meer hiërarchie, denk bijvoorbeeld aan Harvard of Oxford; instellingen die hoog uitsteken boven de vele doorsnee instellingen die deze landen hebben. Marktwerking is hier over het algemeen een veelgebruikte aanpak geweest, denk bijvoorbeeld aan de invloed van Reagan en Thatcher.
+    </p>
+    <p>
+        Groep 2 bevat de gecoördineerde markteconomieën. In deze landen is samenwerking het sleutelwoord. Overheden werken vaker samen met instellingen als gelijken en er is ook veel meer samenwerking tussen instellingen. Hiërarchie en onderscheid zijn minder belangrijk voor hogeronderwijsinstellingen, aangezien de meeste instellingen op vergelijkbare niveaus opereren. Marktwerking is in deze landen een minder belangrijke aanpak geweest (hoewel het wel steeds belangrijker wordt). In plaats daarvan wordt internationalisering in deze landen vaak gezien als een strategie om het hele land te op een hoger niveau te brengen.
+    </p>
+    <p>
+        Groep 3 bevat de door de staat beïnvloedde markteconomieën. Hier werkt de staat noch als gelijken samen, noch hanteert het een hands-off benadering. In plaats daarvan is een top-down benadering gebruikelijker. De staat kan organisaties vrijlaten, maar kan ook sterk ingrijpen wanneer dat nodig wordt geacht. In Frankrijk staat de overheid bijvoorbeeld hiërarchie en concurrentie tussen instellingen toe, maar de internationaliseringsstrategieën van de hogeronderwijsinstellingen worden hen nog steeds grotendeels opgelegd door de staat. Het doel van internationalisering is ook niet zozeer geweest om inkomsten te genereren, maar eerder om <a href="https://www.taylorfrancis.com/chapters/edit/10.4324/9781003217923-5/destination-france-ludovic-highman-ariane-de-gayardon" target="_blank" rel="noopener noreferrer">politieke soft power</a> te vergroten (want meer internationale studenten betekent meer internationaal aanzien).
+    </p>
+
+    <div id="tests"></div><p>Wat gebeurt er als we de publieke/private uitgaven op hoger onderwijs en het aantal internationale studenten voor elk van deze groepen afzonderlijk analyseren? Kijk maar eens naar de boxplots hieronder. Een boxplot moet als volgt gelezen worden: de lijn in het midden van de box vertegenwoordigt de mediaan, terwijl de box zelf 50% van de gegevens bevat die rond de mediaan zijn gecentreerd. De lijnen buiten de box zijn de "whiskers" die het grootste deel van de rest van de gegevens bevatten, behalve de uitschieters (landen die veel afwijken van de andere landen in een bepaald jaar) die worden weergegeven als stippen. Je kunt op de trendlijn klikken om het gemiddelde per jaar te zien.
+    </p>
+    <iframe src="https://tijmenweber.pythonanywhere.com/boxplotsnl" height="950" width="860"></iframe>
+    <p>
+        Wat zien we? Ten eerste zijn de overheidsuitgaven van de liberale markteconomieën en de door de staat beïnvloedde markteconomieën gedaald, terwijl er voor de gecoördineerde markteconomieën niet veel is veranderd. Bewering 1 geldt dus niet voor alle landen. Ten tweede zijn de particuliere uitgaven gestegen, maar alleen voor liberale markteconomieën en gecoördineerde economieën. Bewering 2 geldt dus ook niet voor alle landen. Ten derde is het aantal (niet-EER) internationale studenten toegenomen in de liberale markteconomieën, maar niet in de door de staat beïnvloedde of gecoördineerde markteconomieën. Wat zegt dit over bewering 3 en 4?
+    </p>
+    <p>
+        Om bewering 3 en 4 te testen kunnen we niet simpelweg naar de boxplots kijken, we moeten testen of er een verband is tussen de publieke of particuliere uitgaven en het aantal inschrijvingen van internationale studenten. Ik doe dit met behulp van een zogenaamd fixed effects model dat specifiek toetst of een verandering in de uitgaven gerelateerd is aan een verandering in de inschrijvingen van internationale studenten.
+    </p>
+    <p>
+        Wat komt er uit deze modellen? Dalingen in overheidsuitgaven lijken verband te houden met een toename van het aantal internationale studenten (bewering 3) voor liberale en door de staat beïnvloedde markteconomieën, maar niet voor gecoördineerde markteconomieën. Stijgingen van particuliere uitgaven houden verband met een toename van het aantal internationale studenten (bewering 4) voor liberale en gecoördineerde markteconomieën, maar niet voor de door de staat beïnvloedde markteconomieën. Dus nogmaals de beweringen lijken waar te zijn voor de liberale markteconomieën, maar gelden niet per definitie voor alle andere landen.
+    </p>
+
+    <div id="conclusion"></div><h2>Conclusies en implicaties</h2>
+    <p>
+        Wat betekent dit allemaal? Het oorspronkelijke verhaal was dat landen de overheidsfinanciering hebben verminderd en het collegegeld hebben verhoogd zodat hogeronderwijsinstellingen internationale studenten kunnen gebruiken als een bron van inkomsten. Dit lijkt te kloppen voor de Engelstalige landen, maar voor andere westerse landen zijn er andere patronen ontstaan die niet verklaard kunnen worden door naar dit verhaal te verwijzen. Er zijn dus ook andere mechanismen. In veel westerse landen wordt bijvoorbeeld internationalisering gestimuleerd door de overheidsfinanciering juist te verhogen in plaats van te verlagen. Internationalisering kan worden gebruikt als bron van inkomsten voor hoger onderwijs, maar landen kunnen het ook gebruiken als strategie om hun kenniseconomie te vergroten. Op dezelfde manier zou het verhogen van het collegegeld voor internationale studenten kunnen helpen het hoger onderwijs te financieren, maar het kan ook worden gebruikt om migratie juist tegen te gaan. We mogen ook niet vergeten dat internationalisering ook kan worden gebruikt als instrument voor buitenlands beleid, zoals Frankrijk doet. Een ander voorbeeld hiervan is China, dat studenten werft uit de gebieden in Afrika ten zuiden van de Sahara om soft power uit te oefenen over die regio. Het idee van internationalisering door middel van marktwerking kan dus niet de uiteenlopende patronen verklaren die we wereldwijd zien.
+    </p>
+    <p>
+        Er rest nog wel de vraag waarom de meeste academici lijken te beweren dat de marktwerking is doorgeslagen in het hoger onderwijs. Ik vond mijn antwoord op deze vraag door te kijken naar de academici die dit beweerden, en specifiek door te kijken in welk land ze werkten. Een verbluffende 87% van de mensen die klaagden over de marktwerking in het hoger onderwijs was afkomstig uit Australië, Canada, het Verenigd Koninkrijk en de Verenigde Staten; de landen waar deze marktwerking het meest is toegepast. In plaats van deze ontwikkeling echter in de context van hun eigen land te zien, gingen ze er gewoon van uit dat wat er in hun land gebeurde overal moet zijn gebeurd. Als gevolg hiervan is het dominante verhaal in de academische literatuur geworden dat neoliberalisme de belangrijkste drijvende kracht is achter internationale studentenmobiliteit, maar dit verhaal geldt eigenlijk maar voor een paar landen.
+    </p>
+    <p>
+        Toen ik dit artikel begon te schrijven, was ook ik in de veronderstelling dat het neoliberalisme de dominante kracht is in het hoger onderwijs (ook al zag ik dat niet heel duidelijk terug in mijn directe omgeving). Wat ik me nu realiseer is dat het neoliberalisme, hoewel het overal in de westerse wereld aanwezig is, het meest is toegepast in de liberale markteconomieën omdat het in hun culturen het best toegepast kan worden. Omdat de liberale markteconomieën zo’n sterke culturele invloed op ons hebben moeten we oppassen dat we niet zomaar aannemen dat hun ervaringen ook voor ons gelden. Op hun beurt zouden de schrijvers uit de liberale markteconomieën er goed aan doen om over hun grenzen heen te kijken en niet langer aan te nemen dat hun ervaringen universeel zijn. Er is nog steeds veel variatie in de redenen waarom regeringen en hogeronderwijsinstellingen internationaliseren. Door het fenomeen te vereenvoudigen door te wijzen op het neoliberalisme beperken we ons begrip van de complexe factoren die de internationale studentenmobiliteit wereldwijd vormen.
+    </p>
+    <br><br>
+
+</div>
+
+</body>
+</html>

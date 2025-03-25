@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Global Campuses?</title>
+            <link rel="icon" type="image/png" href="{{ url_for('static', filename='icons/favicon.png') }}" />
+    <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet" media="only screen" /> <!--For Flask-->
+    <link href="{{ url_for('static', filename='styles/mobilestyles.css') }}" rel="stylesheet" type="text/css" media="(pointer: coarse) and (max-device-width: 1080px)"  />
+    <link href="{{ url_for('static', filename='styles/smallpcstyles.css') }}" rel="stylesheet" type="text/css"  media="(pointer: fine) and (max-width: 1280px)" />
+    </head>
+
+<body>
+<div class = "placeholder2"></div>
+
+
+<div class="sticky-top2">
+    <div class="banner-container2">
+    <img src="{{ url_for('static', filename='WebBannerDutch.jpg') }}" height="130">
+    </div>
+
+    <nav class="topnav">
+        <li><a href="/thuis">Start</a></li>
+        <li><div class="dropdown">
+          <button class="dropbtn">Hoofdstukken ▾</button>
+          <div class="dropdown-content">
+            <a href="voorwoord">Voorwoord</a>
+            <a href="introductie">Introductie</a>
+            <a href="hoofdstuk2">Hoofdstuk 2</a>
+            <a href="hoofdstuk3">Hoofdstuk 3</a>
+            <a href="hoofdstuk4">Hoofdstuk 4</a>
+            <a href="hoofdstuk5">Hoofdstuk 5</a>
+            <a href="conclusie">Conclusie</a>
+            <a href="nawoord">Nawoord</a></div>
+          </div></li>
+        <li><a href="over">Over</a></li>
+        <li><a href="/chapter4"><img src="{{ url_for('static', filename='american_flag.png') }}" width="45", height="30"></a></li>
+
+        </nav>
+    </div>
+
+<!-- The sidebar -->
+<div class="sidebar" id="sidebar">
+    <a href="/chapter4"><img src="{{ url_for('static', filename='american_flag.png') }}" width="30", height="20"></a>
+  <a href="/thuis">Start</a>
+  <a href="voorwoord">Voorwoord</a>
+  <a href="introductie">Hoofdstuk 1: Introductie</a>
+  <a href="hoofdstuk2">Hoofdstuk 2</a>
+  <a href="hoofdstuk3">Hoofdstuk 3</a>
+          <button type="button" class="collapsible">Hoofdstuk 4</button>
+          <div class="submenu content">
+            <a href="#highlights">Belangrijkste conclusies</a>
+            <a href="#FOS1">Studierichtingen 1</a>
+            <a href='#aspirations'>Theorie</a>
+            <a href='#FOS2'>Studierichtingen 2</a>
+            <a href='#models'>Computermodellen</a>
+            <a href='#conclusion'>Conclusies</a>
+            </div>
+        <a href="hoofdstuk5">Hoofdstuk 5</a>
+        <a href="conclusie">Hoofdstuk 6: Conclusie</a>
+        <a href="nawoord">Nawoord</a>
+          <a href="over">Over</a>
+    </div>
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+
+    document.querySelectorAll('.sidebar a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default behavior of internal anchor links
+
+      const targetId = this.getAttribute('href').substring(1); // Get target ID
+      const targetElement = document.getElementById(targetId); // Get target element
+
+      if (targetElement) {
+        const offset = targetElement.offsetTop - 140; // Calculate desired offset from top
+        window.scrollTo({ top: offset, behavior: 'smooth' }); // Scroll to the target element
+      }
+    });
+  });
+</script>
+
+<!--Header-->
+<!--Body text-->
+<div class="body-content">
+    <div id="chapter4"></div><h1>Hoofdstuk 4: Internationale studentenmobiliteit en de keuze van opleiding</h2>
+    <p><a href="https://doi.org/10.1002/psp.2864" target="_blank" rel="noopener noreferrer">Link naar de wetenschappelijke publicatie</a></p>
+    <p><a href="https://osf.io/yu9bx/?view_only=781862d128324dfbb2c3cdfed29f95b0" target="_blank" rel="noopener noreferrer">Link naar de data en statistische code</a></p>
+        <div id="highlights"></div><h2>Belangrijkste conclusies</h2>
+      <ul>
+        <li>Internationale studenten uit lager ontwikkelde landen kiezen vaker voor opleidingen met een duidelijker arbeidsmarktperspectief.</li>
+        <li>Masterstudenten uit lager ontwikkelde landen hebben de neiging om onderwijskwaliteit voorop te stellen.</li>
+        <li>Masterstudenten uit hoger ontwikkelde landen hebben de neiging om prioriteit te geven aan het stadsleven. </li>
+        <li>Voor bachelorstudenten hangt het ontwikkelingsniveau van het land van herkomst niet duidelijk samen met een voorkeur voor onderwijskwaliteit of het stadsleven.</li>
+    </ul>
+    <p>In dit hoofdstuk ga ik verder met mijn onderzoek naar internationale studenten in Nederland. Deze keer vroeg ik mij af welke studierichtingen internationale studenten vaak kiezen. In onderstaande grafiek kun je per studierichting zien hoeveel internationale studenten er zijn ingeschreven<sup><a href="#fn1" id="ref1">1</a></sup>. Economie is veruit het populairst, maar er worden ook vaak andere studierichtingen gekozen. </p>
+    <div id="FOS1"></div><iframe src="https://tijmenweber.pythonanywhere.com/ch4stackedbarnl" height="520", width = "820"></iframe>
+    <p>Net als in hoofdstuk 2 vroeg ik mij af of het ontwikkelingsniveau van het herkomstland van de internationale studenten van belang is voor de keuzes die zij maken. Mijn motivatie om dit uit te zoeken is vooral ontstaan door mijn persoonlijke ervaringen. Toen ik bachelorstudent was kwamen de meeste internationale studenten van mijn bacheloropleiding uit West-Europa en Noord-Amerika. Op de HAN lijken de meeste internationale studenten uit Oost-Europa en Azië te komen. Dit riep bij mij de vraag op: heeft het land van herkomst van studenten invloed op welke opleiding ze kiezen?</p>
+    <div id="aspirations"></div><h2>Instrumentele en intrinsieke migratieaspiraties</h2>
+    <p>Theoretisch kunnen we verwachten dat het land van herkomst van belang is vanwege verschillen in migratieaspiraties, dat wil zeggen de redenen waarom mensen willen migreren. Het is mogelijk om onderscheid te maken tussen <a href="https://doi.org/10.1186/s40878-020-00210-4" target="_blank" rel="noopener noreferrer">instrumentele en intrinsieke aspiraties</a>. Mensen die vooral instrumentele aspiraties hebben migreren omdat ze iets willen bereiken door migratie, zoals een betere baan krijgen, vluchten voor armoede of een diploma behalen. Voor dit type aspiratie kan migratie dus simpelweg een middel zijn om een doel te bereiken. Mensen die vooral intrinsieke migraties hebben migreren omdat ze de migratie-ervaring op zichzelf waardevol vinden. Ze migreren bijvoorbeeld omdat ze met nieuwe culturen willen kennismaken, het als een overgangsritueel zien of nieuwe plaatsen willen ontdekken. In werkelijkheid bestaan beide soorten aspiraties naast elkaar, hoewel het van de persoon afhangt welke van de twee aspiraties belangrijker is. </p>
+    <p>Mijn theorie is dat, tenminste voor internationale studenten, het belang van instrumentele versus intrinsieke aspiraties wordt beïnvloed door het ontwikkelingsniveau van het land van herkomst. <a href="https://doi.org/10.1086/595942" target="_blank" rel="noopener noreferrer">Er zijn al aanwijzingen</a> dat meer beroepsgerichte studieprogramma's populairder zijn in minder ontwikkelde landen dan in hoogontwikkelde landen. De reden hiervoor is waarschijnlijk dat in lager ontwikkelde landen hoger onderwijs meer gezien wordt als een opstapje naar een goede baan. In hoger ontwikkelde landen wordt studeren vaker gezien als belangrijker op zichzelf en wordt het carrièreperspectief als minder belangrijk gezien. Met andere woorden, of mensen voor een studieprogramma kiezen vanwege de voordelen voor latere banen, of omdat ze het onderwerp gewoon leuk vinden, wordt beïnvloed door het ontwikkelingsniveau van het land van herkomst. </p>
+    <p>Voor internationale studenten in Nederland verwachtte ik dat we soortgelijke patronen zouden zien. Studenten uit minder ontwikkelde landen studeren vaak in het buitenland omdat ze een buitenlands diploma waardevoller vinden dan een diploma dat ze in eigen land kunnen behalen. Voor hen is migreren dus vooral een middel om een buitenlandse opleiding te volgen want wat met name een diploma uit een Westers land kan hen een voorsprong geven op de arbeidsmarkt. Voor studenten uit hoogontwikkelde landen is een diploma uit Nederland waarschijnlijk niet per se beter dan een diploma uit eigen land, dus zij hebben meer intrinsieke redenen nodig om naar het buitenland te migreren<sup><a href="#fn2" id="ref2">2</a></sup>. Een andere manier om hiernaar te kijken is te bedenken dat instrumenteel gemotiveerde mensen in hoger ontwikkelde landen eerder een diploma in eigen land zouden behalen. Als het diploma het belangrijkste is, dan zou verhuizen naar het buitenland het studeren onnodig ingewikkeld maken. </p>
+    <h2>Internationale ontwikkeling en de studiekeuzes van internationale studenten</h2>
+    <p>Als er inderdaad een verband is tussen het ontwikkelingsniveau van een herkomstland en het type aspiratie, dan zouden we dat moeten kunnen zien in waar studenten zich inschrijven. Als studenten uit lager ontwikkelde landen meer instrumenteel gemotiveerd zijn en daardoor eerder kiezen voor studieprogramma's met duidelijkere voordelen voor hun baan, dan is het logisch om aan te nemen dat internationale studenten uit lager ontwikkelde landen meer beroepsgerichte studieprogramma's zouden kiezen. Voor studenten uit hoger ontwikkelde landen zouden we een grotere variatie moeten zien in de keuzes die ze maken, omdat ze eerder geneigd zouden kunnen zijn om een studieprogramma te kiezen op basis van wat ze interessant of leuk vinden.  </p>
+    <p>Om mijn theorie te testen besloot ik te kijken of studenten uit verschillende herkomstlanden inderdaad verschillende opleidingen volgen. Als eerste verdeelde ik de herkomstlanden in vijf groepen van dezelfde grootte (zogenaamde kwintielen) op basis van de <a href="https://hdr.undp.org/data-center/human-development-index#/indicies/HDI" target="_blank" rel="noopener noreferrer">human development index</a>. Hoe hoger het kwintiel, hoe hoger het ontwikkelingsniveau. Ten tweede gebruikte ik een computermodel<sup><a href="#fn3" id="ref3">3</a></sup> om het percentage studenten te berekenen dat zich binnen elk kwintiel inschreef voor een van de 10 mogelijke studierichtingen. Hieronder staat een grafiek die de resultaten van deze computermodellen laat zien.</p>
+    <div id="FOS2"></div><iframe src="https://tijmenweber.pythonanywhere.com/ch4mmbarnl" height="900", width = "820"></iframe>
+    <p>De grafiek laat zien dat het ontwikkelingsniveau van het land van herkomst inderdaad van belang lijkt te zijn voor de studierichting die internationale studenten kiezen. Landbouw en rechten zijn populairder onder studenten uit laagontwikkelde landen, economie en techniek zijn populairder onder studenten uit middenontwikkelde landen en sociale wetenschappen en taal en cultuur zijn populairder onder studenten uit hoogontwikkelde landen. Daarom lijken deze resultaten mijn theorie te ondersteunen, omdat studenten uit lager ontwikkelde landen vaker opleidingen kiezen die duidelijker aansluiten op de arbeidsmarkt. Maar heeft het ontwikkelingsniveau van de herkomstlanden ook invloed op andere beslissingen van internationale studenten?</p>
+    <div id="models"></div><h2>Onderwijskwaliteit versus het stadsleven</h2>
+    <p>Om mijn theorie verder te testen besloot ik ook te kijken of studenten uit verschillende herkomstlanden prioriteit gaven aan onderwijskwaliteit of stadskenmerken. Als studenten uit minder ontwikkelde landen meer instrumenteel gemotiveerd zijn zou ik verwachten dat ze zich eerder zullen inschrijven voor een studieprogramma dat bekend staat om zijn hoge kwaliteit. Intrinsiek gemotiveerde studenten daarentegen zouden de bredere studie-ervaring in het buitenland belangrijker moeten vinden en zich daarom meer aangetrokken moeten voelen tot het aanbod van de stad waar het programma aangeboden wordt.</p>
+    <p>Om dit uit te zoeken heb ik opnieuw de inschrijvingen van internationale studenten geanalyseerd met behulp van computermodellen. Voor masterstudenten vind ik inderdaad enig bewijs voor mijn theorie. De modellen laten zien dat studenten uit lager ontwikkelde landen zich eerder inschrijven voor opleidingen die een kwaliteitszegel van <a href="https://keuzegids.nl/kwaliteitszegels/" target="_blank" rel="noopener noreferrer">Keuzegids</a> hebben gekregen. Studenten uit hoger ontwikkelde landen daarentegen schreven zich eerder in voor opleidingen in grotere steden of in steden met meer voorzieningen.</p>
+    <div class="rounded-image"><a title="Andrés Barrios, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png"><img width="550" alt="Imagen de los canales concéntricos en Ámsterdam" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png/1024px-Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png"></a></div>
+    <p>Voor bachelorstudenten kon ik echter niet zulke duidelijke patronen vinden. Er waren belangrijke verschillen tussen het feit of studenten uit verschillende herkomstlanden voorkeur gaven aan onderwijskwaliteit of aan het stadsleven, maar deze patronen konden niet adequaat worden verklaard door te wijzen op het ontwikkelingsniveau van het herkomstland. Ik denk echter niet dat deze resultaten mijn theorie noodzakelijkerwijs weerleggen. Het kan zijn dat instrumenteel gemotiveerde studenten niet alleen een diploma als einddoel hebben, maar naast hun studie ook <a href="https://doi.org/10.3167/latiss.2012.050304" target="_blank" rel="noopener noreferrer">een goede baan</a> willen vinden. Voor dergelijke studenten kan het zelfs nuttig zijn om een grotere en actievere stad te kiezen. Niet (alleen) omdat het de migratie-ervaring leuker maakt, maar omdat het betere kansen op werk biedt. In die zin kunnen studentenmigratie en arbeidsmigratie elkaar overlappen. </p>
+    <p>Een andere verklaring voor deze patronen zou kunnen zijn dat hogeronderwijsinstellingen actief betrokken zijn bij het vormen van de migratiepatronen. Het zou bijvoorbeeld kunnen dat opleidingen die geen kwaliteitslabel hebben meer middelen inzetten voor directe werving. Dergelijke hogeronderwijsinstellingen zouden zich ook meer kunnen richten op specifieke landen, zoals middeninkomenslanden, omdat ze een grotere pool van potentiële studenten hebben. Dit is echter slechts speculatie en er moet meer onderzoek worden gedaan als we beter willen begrijpen waarom verschillende internationale studenten voor verschillende locaties kiezen.</p>
+    <div id="conclusion"></div><h2>Conclusies</h2>
+    <p>Het ontwikkelingsniveau van de landen van herkomst kan een deel van de variatie in de inschrijvingspatronen van internationale studenten verklaren. Deze resultaten zijn echter slechts indicatief en studenten kunnen ook veel andere redenen hebben om een bepaalde studie te kiezen. We weten bijvoorbeeld dat mannen en vrouwen verschillende studierichtingen kiezen en <a href="https://doi.org/10.1007/s10734-020-00671-7" target="_blank" rel="noopener noreferrer">geslacht heeft invloed</a> op de waarschijnlijkheid dat iemand in het buitenland gaat studeren. Het kan ook zijn dat studenten uit lager ontwikkelde landen uit (relatief) rijkere gezinnen komen, terwijl studenten uit hoger ontwikkelde landen eerder uit middenklasse gezinnen komen. De relatieve positie van studenten binnen samenlevingen kan op zijn beurt weer van invloed zijn op het soort studieprogramma dat ze kiezen.</p>
+    <p>De resultaten impliceren ook dat er binnen Nederland belangrijke ongelijkheden kunnen zijn. Grotere en populairdere steden zijn duurder om in te wonen en zijn mogelijk niet toegankelijk voor internationale studenten uit minder ontwikkelde landen. Grote steden kunnen echter betere mogelijkheden bieden voor netwerken en stages. Dit kan belangrijke voordelen hebben voor de latere loopbaan van studenten. Na hun afstuderen verhuizen de meeste internationale studenten naar <a href="https://www.nuffic.nl/publicaties/stayrate-en-arbeidsmarktpositie-van-internationale-afgestudeerden-in-nederland" target="_blank" rel="noopener noreferrer">slechts enkele steden</a>; Amsterdam alleen al is goed voor een derde van de internationale alumni. Als studenten zich al gevestigd hebben in één van die steden kunnen ze een belangrijke voorsprong hebben.</p>
+    <p>Zoals ik in hoofdstuk 2 besprak, is het ontwikkelingsniveau van de landen aan verandering onderhevig, wat op zijn beurt de internationale studentenmobiliteit beïnvloedt. De effecten hiervan zullen we ook in Nederland terug moeten zien. Als de herkomstlanden van internationale studenten veranderen kunnen de opleidingen die zij kiezen ook veranderen. Studierichtingen die ooit populair waren kunnen een daling van het aantal inschrijvingen te zien krijgen, terwijl minder populaire studierichtingen juist een stijging kunnen zien. Hogeronderwijsinstellingen die een inschatting proberen te maken van toekomstige inschrijvingen zouden er daarom goed aan doen om rekening te houden met het ontwikkelingsniveau van mogelijke herkomstlanden.</p>
+      <sup id="fn1">1. De categorieën zijn gebaseerd of de CROHO Index.<a href="#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup><br>
+      <sup id="fn2">2. Hier zijn natuurlijk uitzonderingen op. Veel Duitsers komen bijvoorbeeld psychologie studeren in Nederland omdat er in Duitsland te weinig plaatsen zijn en ze daar geen plek wisten te bemachtigen.<a href="#ref2" title="Jump back to footnote 2 in the text.">↩</a></sup><br>
+      <sup id="fn3">3. In dit model heb ik ook rekening gehouden met de omvang van het herkomstland, de afstand tussen landen en de typen hogeronderwijsinstellingen. <a href="#ref3" title="Jump back to footnote 3 in the text.">↩</a></sup>
+<br><br>
+  </div>
+
+</body>
+</html>

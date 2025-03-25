@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Global Campuses?</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='icons/favicon.png') }}" />
+
+    <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet" media="only screen" /> <!--For Flask-->
+    <link href="{{ url_for('static', filename='styles/mobilestyles.css') }}" rel="stylesheet" type="text/css" media="(pointer: coarse) and (max-device-width: 1080px)"  />
+    <link href="{{ url_for('static', filename='styles/smallpcstyles.css') }}" rel="stylesheet" type="text/css"  media="(pointer: fine) and (max-width: 1280px)" />
+        <!--<link href="styles.css" rel="stylesheet">--><!--For testing-->
+
+
+    </head>
+
+<body>
+<div class = "placeholder2"></div>
+
+
+<div class="sticky-top2">
+    <div class="banner-container2">
+    <img src="{{ url_for('static', filename='WebBanner.jpg') }}" height="130">
+    </div>
+    <nav class="topnav">
+        <li><a href="/home">Home</a></li>
+        <li><div class="dropdown">
+          <button class="dropbtn">Chapters ▾</button>
+          <div class="dropdown-content">
+            <a href="preface">Preface</a>
+            <a href="Introduction">Introduction</a>
+            <a href="chapter2">Chapter 2</a>
+            <a href="chapter3">Chapter 3</a>
+            <a href="chapter4">Chapter 4</a>
+            <a href="chapter5">Chapter 5</a>
+            <a href="Conclusion">Conclusion</a>
+            <a href="afterword">Afterword</a></div>
+          </div></li>
+        <li><a href="about">About</a></li>
+        <li><a href="/introductie"><img src="{{ url_for('static', filename='dutch_flag.png') }}" width="45", height="30"></a></li>
+    </nav>
+</div>
+
+<!-- The sidebar -->
+    <div class="sidebar" id="sidebar">
+              <a href="/introductie"><img src="{{ url_for('static', filename='dutch_flag.png') }}" width="30", height="20"></a>
+        <a href="/home">Home</a>
+        <a href="preface">Preface</a>
+      <button type="button" class="collapsible">Chapter 1: Introduction</button>
+      <div class="submenu content">
+            <a href="#topcountries">Destination and Origin Countries</a>
+            <a href="#background-global">Background: Global</a>
+            <a href='#background-nl'>Background: Netherlands</a>
+        </div>
+        <a href="chapter2">Chapter 2</a>
+        <a href="chapter3">Chapter 3</a>
+        <a href="chapter4">Chapter 4</a>
+        <a href="chapter5">Chapter 5</a>
+        <a href="Conclusion">Chapter 6: Conclusion</a>
+        <a href="afterword">Afterword</a>
+        <a href="about">About</a>
+    </div>
+
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+
+    document.querySelectorAll('.sidebar a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default behavior of internal anchor links
+
+      const targetId = this.getAttribute('href').substring(1); // Get target ID
+      const targetElement = document.getElementById(targetId); // Get target element
+
+      if (targetElement) {
+        const offset = targetElement.offsetTop - 140; // Calculate desired offset from top
+        window.scrollTo({ top: offset, behavior: 'smooth' }); // Scroll to the target element
+      }
+    });
+  });
+</script>
+
+
+<!--Header-->
+<!--Body text-->
+<div class="body-content">
+<div id="Introduction"></div><h1>Introduction</h1>
+<p>More than a decade ago, the Dutch government wanted to <a href="https://www.ser.nl/-/media/ser/downloads/adviezen/2013/make-it-in-the-netherlands.pdf" target="_blank" rel="noopener noreferrer">stimulate internationalization</a> and draw in many more international students, and just six years ago, <a href="https://www.scienceguide.nl/2017/02/nederland-moet-een-magneet-voor-talent-zijn/" target="_blank" rel="noopener noreferrer">some politicians still had high ambitions</a> for attracting as many international students as possible. Indeed, when I applied for my PhD grant, I said that the benefit of this research would be that the findings could be used to draw in more students to the Netherlands. As we know now, the number of incoming international students proved more difficult to manage than expected, and some institutions have become <a href="https://nos.nl/artikel/2404324-universiteiten-onder-druk-door-recordaantal-studenten" target="_blank" rel="noopener noreferrer">overwhelmed</a>. Housing too turned out to be <a href="https://nos.nl/artikel/2438234-universiteiten-tegen-internationale-studenten-blijf-weg-als-je-geen-kamer-hebt" target="_blank" rel="noopener noreferrer">very problematic</a> for international students. Now, the discussion has completely shifted, and politicians are debating on how they can <a href="https://nos.nl/artikel/2472287-stroom-internationale-studenten-moet-ingedamd-rem-en-stuur-nodig" target="_blank" rel="noopener noreferrer">reduce</a> the number of international students.</p>
+<p>The number of international students has rapidly increased not just in the Netherlands, but also worldwide. In 2000 there were 2.1 million international students, in 2020 this number was 6.4 million.  International students have probably always existed, but at no point in time were there so many of them. Traditionally, the main destination countries were the United States, the United Kingdom, Australia, Germany, and France. However, the dominance of these countries is <a href="https://link.springer.com/article/10.1007/s10734-017-0154-9" target="_blank" rel="noopener noreferrer">decreasing</a>, and other destination countries are emerging as popular sites, the Netherlands being one of them. In the table below you can see an overview of the most important destination and origin countries for the year 2020.</p>
+<div id="topcountries"></div><table style="width:100%">
+    <tr><th colspan="2">Top 10 Host Countries</th><th colspan="2">Top 10 Origin Countries</th></tr>
+    <tr><th style="width:25%">Country</th><th style="width:25%">International Students</th><th style="width:25%">Country</th><th style="width:25%">International Students</th></tr>
+    <tr><td>United States</td><td>975,475</td><td>China</td><td>1,088,466</td></tr>
+    <tr><td>United Kingdom</td><td>550,877</td><td>India</td><td>516,238</td></tr>
+    <tr><td>Australia</td><td>458,279</td><td>Vietnam</td><td>132,559</td></tr>
+    <tr><td>Germany</td><td>368,717</td><td>Germany</td><td>123,512</td></tr>
+    <tr><td>Canada</td><td>323,157</td><td>United States</td><td>109,827</td></tr>
+    <tr><td>Russia</td><td>282,922</td><td>France</td><td>108,654</td></tr>
+    <tr><td>France</td><td>252,444</td><td>South Korea</td><td>100,610</td></tr>
+    <tr><td>China</td><td>225,100</td><td>Nepal</td><td>95,268</td></tr>
+    <tr><td>Japan</td><td>222,661</td><td>Kazakhstan</td><td>90,333</td></tr>
+    <tr><td>United Arab Emirates</td><td>215,975</td><td>Brazil</td><td>89,151</td></tr>
+</table>
+<p>In my dissertation, I have set out to study the migration patterns of international students. I focus specifically on degree students, that is, international students who intend to complete an entire degree abroad. Exchange students are not included in my research. Even though international student mobility is developing rapidly, there are still many gaps in our knowledge around this topic. The aim of my dissertation was to study this phenomenon from two perspectives. The first perspective is a focus on how global development influences international student mobility globally (chapter 2) and in the Netherlands (chapter 4). The second perspective is on how institutions influence international student mobility which I also investigate globally (chapter 5) and in the Netherlands (chapter 3).</p>
+<p>In the next section I will briefly describe some of the background developments of international student mobility both globally and in the Netherlands.</p>
+<h2>Background</h2>
+<div id="background-global"></div><h3>International Students Globally</h3>
+<p>Before the Second World War, international student mobility was very rare and something only a very few students could permit. During the cold war, views on international education changed and international students became seen as important political and economic assets. Both <a href="https://doi.org/10.1080/23322969.2020.1820898" target="_blank" rel="noopener noreferrer">the United States</a> and <a href="https://doi.org/10.1016/j.sbspro.2016.12.032" target="_blank" rel="noopener noreferrer">the Soviet Union</a> started to actively recruit them so that they could improve their global position and exert influence over other countries. In Europe, international mobility was stimulated through the ERASMUS program, with the aim of bringing the various EU countries closer together. </p>
+<a title="European Commission, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Erasmus%2B_Logo.svg"><img width="512" alt="Erasmus+ Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Erasmus%2B_Logo.svg/512px-Erasmus%2B_Logo.svg.png"></a>
+<p>Nowadays, the political dimension has mostly disappeared in Western countries, and the benefits of international students are largely framed through an economic lens. For example, international student mobility is seen as positive because they provide revenue for higher education institutions (a view mostly found in Anglo-Saxon countries), or because international students are seen as a solution to shortages in the labor market (a claim often repeated in the Netherlands). In other parts of the world, international students are still used for political reasons however. <a href="https://doi.org/10.1007/s10734-020-00549-8" target="_blank" rel="noopener noreferrer">China</a>, for example, recruits students from its neighboring countries, but also from Africa, in order to increase its political soft power over that region.</p>
+<p>It is likely that for the foreseeable future the United States will be the top destination country and China will be the top sending country. However, China will likely keep investing in its own education system which means that it will both attract more international students, and send out fewer students. Other countries, such as India, will likely send out more students and might replace China as the top sending country. Traditionally, student migration has been mostly towards Western countries, but new hubs are appearing which can fundamentally change the pathways that international students take.</p>
+<div id="background-nl"></div><h3>International Students in the Netherlands</h3>
+<p>The Netherlands was <a href="https://www.taylorfrancis.com/chapters/edit/10.4324/9781003217923-7/attracting-international-students-netherlands-floor-van-donselaar-margje-geurts-hendrik-jan-hobbes" target="_blank" rel="noopener noreferrer">one of the forerunners</a> of the internationalization in Europe. Originally, internationalization was meant as a form of development aid. However, starting in the 1980s international student mobility increasingly came to be focused on Europe. The Netherlands was one of the first countries to sign the ERASMUS agreement and be part of the Bologna process, two important milestones that stimulated international students mobility within Europe.  </p>
+<p>When it comes to the <a href="https://www.nuffic.nl/sites/default/files/2023-06/incoming-degree-mobility-in-dutch-higher-education-2022-2023.pdf" target="_blank" rel="noopener noreferrer">incoming students</a>, Germans have always been the largest group, and they are now followed by Italy, China, Romania, and Spain. In general, there are also more students from the European Union than from outside the European Union. China, while being the largest sending country from outside the EU, might be replaced by other emerging countries in Asia such as India and Vietnam, which been sending students to the Netherlands at a faster pace than China has.</p>
+<p>Since the 2000s, the government tried to initially increase the number of international students. The main reasons were because they would increase the quality of the education, they would bring valuable talent, and they could fill up future labor shortages. Universities went along with this and started to offer more study programs in English, which vastly increased the number of international students. However, in recent years the debate has shifted. There are complaints about international students putting too much pressure on teaching staff, worsening the housing shortages, and crowding out Dutch students (although there is <a href="https://www.nuffic.nl/sites/default/files/2023-05/factsheet-international-students-2023.pdf" target="_blank" rel="noopener noreferrer">not much evidence</a> for this last one).</p>
+<p>The debate has been rather one-sided however. Some higher education institutions are indeed facing too many international students, but there are also some who want to <a href="https://www.trouw.nl/binnenland/zeeland-staat-wel-te-springen-om-internationale-studenten~b2088ce7/" target="_blank" rel="noopener noreferrer">keep them coming</a>. The debate is also largely focused on research universities; universities of applied science have been mostly stable in how many international students they have. The problem therefore is not one of uncontrolled growth, but one of uncontrolled inequalities in growth. International student mobility in the Netherlands does needs to be managed better, but sweeping universal measures, such as forcing all bachelor programs to be in Dutch, will likely help some institutions, but also harm many others.</p>
+<br>
+</div>
+
+</body>
+</html>

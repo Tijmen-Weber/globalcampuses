@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Global Campuses?</title>
+            <link rel="icon" type="image/png" href="{{ url_for('static', filename='icons/favicon.png') }}" />
+    <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet" media="only screen" /> <!--For Flask-->
+    <link href="{{ url_for('static', filename='styles/mobilestyles.css') }}" rel="stylesheet" type="text/css" media="(pointer: coarse) and (max-device-width: 1080px)"  />
+    <link href="{{ url_for('static', filename='styles/smallpcstyles.css') }}" rel="stylesheet" type="text/css"  media="(pointer: fine) and (max-width: 1280px)" />
+    </head>
+
+<body>
+<div class = "placeholder2"></div>
+
+
+<div class="sticky-top2">
+    <div class="banner-container2">
+    <img src="{{ url_for('static', filename='WebBannerDutch.jpg') }}" height="130">
+    </div>
+
+    <nav class="topnav">
+        <li><a href="/thuis">Start</a></li>
+        <li><div class="dropdown">
+          <button class="dropbtn">Hoofdstukken ▾</button>
+          <div class="dropdown-content">
+            <a href="voorwoord">Voorwoord</a>
+            <a href="introductie">Introductie</a>
+            <a href="hoofdstuk2">Hoofdstuk 2</a>
+            <a href="hoofdstuk3">Hoofdstuk 3</a>
+            <a href="hoofdstuk4">Hoofdstuk 4</a>
+            <a href="hoofdstuk5">Hoofdstuk 5</a>
+            <a href="conclusie">Conclusie</a>
+            <a href="nawoord">Nawoord</a></div>
+          </div></li>
+        <li><a href="over">Over</a></li>
+        <li><a href="/chapter3"><img src="{{ url_for('static', filename='american_flag.png') }}" width="45", height="30"></a></li>
+
+        </nav>
+    </div>
+
+<!-- The sidebar -->
+<!-- The sidebar -->
+<div class="sidebar" id="sidebar">
+    <a href="/chapter3"><img src="{{ url_for('static', filename='american_flag.png') }}" width="30", height="20"></a>
+    <a href="/thuis">Start</a>
+    <a href="voorwoord">Voorwoord</a>
+    <a href="introductie">Hoofdstuk 1: Introductie</a>
+    <a href="hoofdstuk2">Hoofdstuk 2</a>
+          <button type="button" class="collapsible">Hoofdstuk 3</button>
+        <div class="submenu content">
+            <a href="#highlights">Belangrijkste conclusies</a>
+            <a href="#mapline">Internationale studenten per gemeente</a>
+            <a href='#line2'>Internationale studenten per type opleiding</a>
+            <a href='#profiles'>Profilering van instellingen</a>
+            <a href='#models'>Computermodellen</a>
+            <a href='#conclusion'>Conclusies</a>
+        </div>
+        <a href="hoofdstuk4">Hoofdstuk 4</a>
+        <a href="hoofdstuk5">Hoofdstuk 5</a>
+        <a href="conclusie">Hoofdstuk 6: Conclusie</a>
+        <a href="nawoord">Nawoord</a>
+        <a href="over">Over</a></div>
+</div>
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+
+    document.querySelectorAll('.sidebar a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default behavior of internal anchor links
+
+      const targetId = this.getAttribute('href').substring(1); // Get target ID
+      const targetElement = document.getElementById(targetId); // Get target element
+
+      if (targetElement) {
+        const offset = targetElement.offsetTop - 140; // Calculate desired offset from top
+        window.scrollTo({ top: offset, behavior: 'smooth' }); // Scroll to the target element
+      }
+    });
+  });
+</script>
+
+<!--Header-->
+<!--Body text-->
+<div class="body-content">
+    <div id="chapter3"><h1>Hoofdstuk 3: Internationale studentenmobiliteit en de profielen van hogeronderwijsinstellingen</h1>
+    <p><a href="https://doi.org/10.1002/psp.2744" target="_blank" rel="noopener noreferrer">Link naar de wetenschappelijke publicatie.</a></p>
+    <p><a href="https://osf.io/8shjz/?view_only=668fe87007d1463b8c6d612155b77c28" target="_blank" rel="noopener noreferrer">Link naar de data en statistische code</a></p>
+
+    <div id="highlights"></div><h2>Belangrijkste Conclusies</h2>
+    <ul>
+        <li>Internationale studenten zijn niet gelijk verdeeld over Nederland.</li>
+        <li>Internationale bachelorstudenten geven vaak de voorkeur aan het stadsleven boven onderwijskwaliteit.</li>
+        <li>Internationale masterstudenten geven vaak de voorkeur aan onderwijskwaliteit boven het stadsleven. </li>
+        <li>De meeste internationale studenten geven de voorkeur aan hogeronderwijsinstellingen die al veel internationale studenten hebben.</li>
+    </ul>
+    <p>Het aantal internationale studenten in Nederland is <a href="https://www.nuffic.nl/en/subjects/facts-and-figures/regions-and-universities" target="_blank" rel="noopener noreferrer">explosief gestegen. </a>.
+        In 2006 waren er ongeveer 31.000 internationale studenten, terwijl dit in 2022 is gestegen tot 122.000. In procenten is het aandeel studenten dat uit het buitenland komt gestegen van 5,5% naar 15,5%. Internationale studenten zijn echter niet gelijk verspreid over Nederland. Bijna 50% van alle internationale studenten is ingeschreven in slechts vier steden: Amsterdam, Groningen, Maastricht en Rotterdam. We zien deze ongelijkheden ook in de opleidingen: in 2019 was 80% van alle internationale studenten ingeschreven in slechts 18% van de opleidingen. </p>
+    <p> Hieronder staan een kaart en lijndiagram met het aantal eerstejaars internationale studenten per stad. Door op play te klikken is duidelijk te zien dat sommige steden een grote toename van internationale studenten hebben gekend.</p>
+    <div id="mapline"></div><iframe src="https://tijmenweber.pythonanywhere.com/ch3mapandlinenl" height = "1700" width = "860"></iframe>
+    <p>Een deel van de verschillen tussen de steden kan worden toegeschreven aan de soorten onderwijs die door elke stad worden aangeboden. Nederland kent twee soorten hoger onderwijs; dat zijn de universiteiten en hogescholen. Universiteiten richten zich op wetenschappelijke kennis en het grootste deel van het onderwijzend personeel is ook betrokken bij wetenschappelijk onderzoek. Universiteiten staan ook hoger op internationale ranglijsten en zijn over het algemeen selectiever ten opzichte van hun studenten. Daarnaast zijn er Hogescholen die zich meer richten op het aanleren van professionele vaardigheden. Het merendeel van het onderwijzend personeel is niet actief in onderzoek en medewerkers die dat wel doen richten zich vaker op toegepast onderzoek. Andere kenmerken zijn dat hogescholen meer opleidingen in het Nederlands aanbieden en een meer regionale aantrekkingskracht hebben. Beide soorten instellingen bieden bachelor- en masteropleidingen aan, hoewel het aantal masteropleidingen van hogescholen veel lager is.</p>
+    <p>In de onderstaande grafiek valt het absolute en relatieve aantal eerstejaars internationale studenten per type opleiding te zien. Wat opvalt is dat de universiteiten zowel absoluut als relatief het sterkst zijn gestegen. Vooral masters zijn populair onder internationale studenten. Bij hogescholen is het aantal inschrijvingen opvallend genoeg vrij stabiel gebleven. </p>
+    <div id="line2"></div><iframe src="https://tijmenweber.pythonanywhere.com/ch3linechart2nl" height = "570" width = "860"></iframe>
+      <p>Uit de inschrijvingscijfers blijkt duidelijk dat internationale studenten bepaalde locaties verkiezen boven andere. Welke kenmerken maken een plaats aantrekkelijk? En in hoeverre zijn deze kenmerken daadwerkelijk van belang voor de inschrijvingen? Dat heb ik in dit hoofdstuk uitgezocht. </p>
+      <div id="profiles"></div><br><h2>Hoe hogeronderwijsinstellingen zichzelf profileren</h2>
+      <p>Om erachter te komen wat instellingen in Nederland aantrekkelijk maakt besloot ik de websites van alle instellingen te bestuderen en te kijken hoe zij zichzelf profileren en verkopen aan internationale studenten. Ik zag dat er grofweg drie verschillende aspecten zijn waarmee instellingen zichzelf in de markt zetten. </p>
+      <p>Het eerste aspect bestaat uit academische kenmerken zoals de kwaliteit van de studieprogramma's of de reputatie van de instellingen. Instellingen vermelden vaak welke certificaten ze hebben ontvangen, bijvoorbeeld van <a href="https://keuzegids.nl/" target="_blank" rel="noopener noreferrer">Keuzegids</a>. Universiteiten maken ook reclame met hun hoge positie op internationale ranglijsten. </p>
+      <p>Het tweede aspect slaat op alles dat met het stadsleven te maken heeft. Veel websites focussen op hoe leuk de stad is, en tonen vaak foto's van studenten die bij elkaar zitten. Het is duidelijk dat de websites zich proberen te richten op het meest positieve deel van hun steden; grote steden zetten zichzelf bijvoorbeeld neer als bruisend en kleine steden als gezellig. Mijn favoriete voorbeeld is Almere. Blijkbaar vindt de hogeschool het moeilijk om zichzelf te onderscheiden te komen, dus zet ze zichzelf in de markt door te zeggen dat Almere <a href="https://www.aeresuas.com/student-life/study-in-almere" target="_blank" rel="noopener noreferrer">relatief dicht bij Amsterdam ligt</a>. </p>
+      <p>Het derde aspect was het internationale niveau van de instelling. Dit kan het aantal connecties met hogeronderwijsinstellingen in andere landen zijn, maar meestal is het gerelateerd aan het aantal internationale studenten dat de instelling al had. Veel instellingen beschrijven zichzelf bijvoorbeeld als een "global community" of een "international campus". Dergelijke beweringen gaan vaak gepaard met statistieken over hoeveel internationale studenten ze hebben en uit hoeveel landen ze komen. </p>
+      <p>In de onderstaande tabel valt te zien hoe vaak elk aspect door de verschillende instellingen wordt genoemd. Interessant genoeg wordt het stadsleven vaker genoemd dan academische kwaliteit. Hogescholen noemen ook minder vaak specifieke aspecten. Misschien komt dit omdat ze minder middelen hebben om zich te onderscheiden, dus kunnen ze vaker alleen generieke uitspraken doen. </p>
+      <table style="width:100%">
+        <tr>
+            <th style="width:30%"></th>
+            <th style="width:25%">Academische Aspecten</th>
+            <th style="width:20%">Stadsleven</th>
+            <th style="width:25%">Internationaal Niveau</th>
+        </tr>
+        <tr>
+            <td>Universiteiten</td>
+            <td>92%</td>
+            <td>92%</td>
+            <td>62%</td>
+
+        </tr>
+        <tr>
+            <td>Hogescholen</td>
+            <td>47%</td>
+            <td>56%</td>
+            <td>38%</td>
+        </tr>
+        <tr>
+            <td>Totaal</td>
+            <td>60%</td>
+            <td>66%</td>
+            <td>45%</td>
+        </tr>
+    </table>
+    <div id="models"></div><p>Maar nu is de vraag: in hoeverre doen deze aspecten er toe als het gaat om het aantal inschrijven van internationale studenten? </p>
+    <p>Om deze vraag te beantwoorden heb ik verschillende onderdelen (indicatoren) van deze aspecten gemeten. Vervolgens heb ik deze indicatoren in een computermodel gezet om te kijken of ze gerelateerd zijn aan het aantal eerstejaars inschrijvingen van internationale studenten. Ik heb de resultaten ook apart geanalyseerd voor bachelor/master- en hogescholen/universiteiten. Voor de analyses heb ik gebruik mogen magen van gegevens die DUO beschikbaar heeft gesteld.  </p>
+    <p>Belangrijk om te vermelden is dat deze computermodellen alleen <a href="https://xkcd.com/552/" target="_blank" rel="noopener noreferrer">correlaties</a> meten. Ik kan dus bijvoorbeeld niet beweren dat de kwaliteit van het programma ervoor zorgt dat meer internationale studenten zich inschrijven, ik kan alleen maar zeggen of er een verband is tussen de kwaliteit van het programma en het aantal inschrijvingen. Het is mogelijk dat de correlaties de keuzes weerspiegelen die studenten maken, bijvoorbeeld door de websites te bezoeken en de instellingen te vergelijken. Instellingen spelen echter ook een actieve rol bij het werven van studenten, bijvoorbeeld door onderwijsbeurzen te bezoeken of gebruik te maken van externe agenten. De bevindingen zouden daarom ook kunnen weerspiegelen dat de instellingen hun sterke punten met succes hebben gebruikt om zichzelf in de markt te zetten. </p>
+    <h3>Academische aspecten</h3>
+    <p>Hoewel je zou verwachten dat internationale studenten geïnteresseerd zouden zijn in de kwaliteit van het onderwijs gaven mijn computermodellen hier gemengde resultaten. Opleidingen die werden aangemerkt als “top opleiding” door <a href="https://keuzegids.nl/kwaliteitszegels/" target="_blank" rel="noopener noreferrer">Keuzegids</a>, leken alleen aantrekkelijk voor masterstudenten; voor bachelorstudenten verhoogt zo'n kwaliteitszegel de inschrijvingen niet. Aan de andere kant trokken universiteiten die hoger scoorden op een internationale <a href="https://www.timeshighereducation.com/world-university-rankings/2024/world-ranking" target="_blank" rel="noopener noreferrer">ranglijst</a> meer bachelorstudenten aan, maar niet meer masterstudenten. Er leek dus een onderscheid te bestaan tussen enerzijds de reputatie van de gehele instelling en anderzijds de kwaliteit van de specifieke opleiding. Kwaliteit van de voorzieningen lijkt ook niet van belang te zijn voor het verhogen van het aantal inschrijvingen, behalve voor bacheloropleidingen aan hogescholen. Deze resultaten zijn best interessant omdat je zou denken dat het doel van studeren is om een diploma van hoge kwaliteit te halen. Dit blijkt echter slechts af en toe het geval te zijn.</p>
+    <h3>Stadsleven</h3>
+    <p>Met betrekking tot de indicatoren van het stadsleven ontdekte ik dat steden die groter zijn en/of meer voorzieningen hebben doorgaans meer internationale studenten aantrekken en dan vooral meer bachelorstudenten. Interessant genoeg waren steden met hogere kosten voor levensonderhoud voor studenten ook populairder onder internationale studenten. Dit komt waarschijnlijk omdat steden met meer voorzieningen ook duurder zijn om in te wonen. Dit resultaat zou kunnen betekenen dat voor internationale studenten de kosten van levensonderhoud mogelijk niet opwegen tegen de voordelen die het leven in duurdere steden met zich meebrengt.</p>
+    <figure class="rounded-image"><a title="Luctor, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Terras_Neude.jpg"><img width="500" alt="Terras Neude" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Terras_Neude.jpg/1024px-Terras_Neude.jpg"></a></div>
+    </figure>
+        <h3>Internationaal Niveau</h3>
+    <p>Voor het laatste aspect onderzocht ik of instellingen waar al veel internationale studenten waren ingeschreven, zowel in het algemeen als uit specifieke herkomstlanden, ook meer nieuwe inschrijvingen van internationale studenten ontvingen. Uit de modellen bleek dat het internationale niveau inderdaad zeer relevant bleek te zijn voor het aantal inschrijvingen. Nieuwe internationale studenten schreven zich vaker in bij instellingen die al veel internationale studenten hadden, zowel in het algemeen als uit hetzelfde herkomstland. Dit zou kunnen betekenen dat internationale studenten geneigd zijn het advies van andere internationale studenten te volgen, maar het zou ook kunnen weerspiegelen dat sommige instellingen actiever zijn in werving dan andere. </p>
+    <h3>Zijn er verschillen tussen EU en niet-EU studenten?</h3>
+    <p>Interessant genoeg zijn die er. Ik ontdekte dat EU-studenten<sup><a href="#fn1" id="ref1">1</a></sup> aan universiteiten helemaal niet geïnteresseerd waren in kwaliteitsmetingen, maar voor niet-EU-studenten bleek dit wel belangrijk. Ook waren niet-EU-studenten niet meer geneigd om zich in te schrijven bij instellingen met een grotere algemene internationale studentenpopulatie, maar hadden ze wel de neiging om zich in te schrijven voor instellingen met meer internationale studenten uit hetzelfde land van herkomst. Dit kan betekenen dat niet-EU-studenten het advies van hun landgenoten opvolgen, maar het zou ook kunnen betekenen dat instellingen zich bij hun werving op specifieke landen richten. </p>
+    <div id="conclusion"></div><br><h2>Conclusies</h2>
+    <p>Toen ik de inschrijvingen van internationale studenten onderzocht, ontdekte ik dat de drie aspecten verschillende resultaten gaven, afhankelijk van het type opleiding. Deze bevindingen kunnen vanuit twee invalshoeken worden geïnterpreteerd: het perspectief van de studenten en het perspectief van hogeronderwijsinstellingen. Zowel studenten als instellingen geven vorm aan de patronen die we vinden in internationale studentenmobiliteit; studenten vanwege de keuzes die ze maken en instellingen door hoe ze zich profileren. Omdat ik alleen correlaties heb berekend kan ik niet zeggen welk perspectief het belangrijkste is (of dat andere perspectieven ook geldig zijn). Deze conclusies blijven dus speculaties.</p>
+    <p>Vanuit het perspectief van de studenten zouden de resultaten kunnen betekenen dat verschillende soorten studenten verschillende keuzes maken. Ik ontdekte dat bachelorstudenten meer geïnteresseerd waren in het stadsleven, terwijl masterstudenten meer geïnteresseerd leken in de kwaliteit van het onderwijs. Dit zou kunnen betekenen dat wanneer bachelorstudenten nadenken over waar ze gaan studeren ze zich niet alleen het studieprogramma voorstellen, maar ook hun leven eromheen. Studeren in het hoger onderwijs gaat over veel meer dan alleen nieuwe dingen leren, het gaat ook over plezier hebben met je nieuw verworven vrijheid. De stad waar je de komende drie tot vier jaar gaat wonen kan daarom zeker belangrijk zijn. Masterstudenten daarentegen denken misschien meer aan hun latere carrière en richten zich daarom op academische kwaliteit in plaats van het stadsleven. Als je bedenkt dat een masteropleiding maar 1-2 jaar duurt lijkt het aannemelijk dat internationale studenten het stadsleven een lagere prioriteit geven. Tot slot kan het feit dat reeds bestaande internationale studentenpopulaties aantrekkelijk zijn voor nieuwe internationale studenten betekenen dat internationale studenten actief op zoek gaan naar internationale studentengemeenschappen, of dat ze vertrouwen op mond-tot-mondaanbevelingen. Het is niet ongebruikelijk dat internationale studenten vertrouwen op sociale media voor informatie en advies, wat deze patronen zou kunnen verklaren. </p>
+    <p>Vanuit het perspectief van de instellingen zouden de resultaten kunnen betekenen dat wervers en international offices verschillende tactieken gebruiken, afhankelijk van de sterke en zwakke punten van de instellingen en programma's. Hogescholen komen bijvoorbeeld over het algemeen niet voor op internationale ranglijsten en zullen zich daarom op andere manieren moeten profileren, zoals het benadrukken van het stadsleven of de kwaliteit van de voorzieningen. Daarnaast is er een factor die bijzonder interessant is en soms over het hoofd wordt gezien, namelijk de rol van <a href="https://doi.org/10.1177/1028315318762485" target="_blank" rel="noopener noreferrer">externe agenten</a>. Dergelijke agenten kunnen direct in dienst zijn bij onderwijsinstellingen, maar soms werken ze ook geheel zelfstandig. <a href="https://www.aob.nl/actueel/artikelen/de-jacht-op-de-internationale-student/" target="_blank" rel="noopener noreferrer">Ongeveer 20%</a> van de internationale studenten in Nederland heeft zich via een agent ingeschreven, maar bij hogescholen zou dit aantal nog hoger kunnen liggen. Omdat het aantal nieuwe inschrijvingen sterk gerelateerd was aan hoeveel internationale studenten uit hetzelfde land van herkomst al waren ingeschreven, zou dit kunnen betekenen dat instellingen zich richten op specifieke landen, of dat agenten zich richten op specifieke instellingen. Dit zou ook verklaren waarom ik vond dat dit effect sterker was voor hogescholen, omdat ze minder instrumenten hebben om zich te onderscheiden en daarom sterker afhankelijk kunnen zijn van agenten. </p>
+    <p>Of de resultaten van de analyses nu vooral de voorkeuren van studenten, activiteiten van instellingen of iets compleet anders weerspiegelen, de belangrijkste conclusie is dat de verschillende aspecten een verschillende impact hebben, afhankelijk van het studieprogramma. Onderzoekers die proberen te achterhalen wat belangrijk is voor internationale studenten baseren zich vaak op wat studenten zeggen in interviews of enquêtes. Wat deze analyses uniek maakt, is dat ik de daadwerkelijke inschrijvingen gebruikte in plaats van studenten te vragen wat ze belangrijk vinden. Interessant genoeg leidde dit tot verschillende conclusies. Andere studies vinden bijvoorbeeld vaak dat studenten zeggen dat ze academische kwaliteit belangrijk vinden, maar voor de daadwerkelijke inschrijvingen vond ik dat de invloed van indicatoren van academische kwaliteit erg varieerde en regelmatig niet van belang was. Dit impliceert dat wat studenten zeggen belangrijk te vinden en waar ze zich daadwerkelijk inschrijven niet altijd overeen komen. Hier kunnen vele redenen voor zijn, misschien weten studenten niet wat ze willen, of misschien is wat ze willen niet haalbaar. Wat uiteindelijk belangrijk is, is dat we moeten kijken naar zowel de voorkeuren van studenten en de daadwerkelijke inschrijvingen om te begrijpen hoe internationale studentenmobiliteit gevormd wordt, want mijn resultaten laten zien dat ze niet hetzelfde zijn.</p>
+
+    <sup id="fn1">1. Technisch gezien geldt dit voor studenten uit de Europese Economische Ruimte (EER), aangezien zij onder dezelfde voorwaarden mogen studeren als EU-studenten.<a href="#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup>
+<br><br>
+  </div>
+
+</body>
+</html>

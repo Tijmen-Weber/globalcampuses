@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Global Campuses?</title>
+            <link rel="icon" type="image/png" href="{{ url_for('static', filename='icons/favicon.png') }}" />
+    <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet" media="only screen" /> <!--For Flask-->
+    <link href="{{ url_for('static', filename='styles/mobilestyles.css') }}" rel="stylesheet" type="text/css" media="(pointer: coarse) and (max-device-width: 1080px)"  />
+    <link href="{{ url_for('static', filename='styles/smallpcstyles.css') }}" rel="stylesheet" type="text/css"  media="(pointer: fine) and (max-width: 1280px)" />
+    </head>
+
+<body>
+<div class = "placeholder2"></div>
+
+
+<div class="sticky-top2">
+    <div class="banner-container2">
+    <img src="{{ url_for('static', filename='WebBanner.jpg') }}" height="130">
+    </div>
+
+    <nav class="topnav">
+    <li><a href="/home">Home</a></li>
+    <li><div class="dropdown">
+      <button class="dropbtn">Chapters ▾</button>
+      <div class="dropdown-content">
+          <a href="preface">Preface</a>
+        <a href="Introduction">Introduction</a>
+        <a href="chapter2">Chapter 2</a>
+        <a href="chapter3">Chapter 3</a>
+        <a href="chapter4">Chapter 4</a>
+        <a href="chapter5">Chapter 5</a>
+        <a href="Conclusion">Conclusion</a>
+        <a href="afterword">Afterword</a></div>
+      </div></li>
+    <li><a href="about">About</a></li>
+                <li><a href="/hoofstuk5"><img src="{{ url_for('static', filename='dutch_flag.png') }}" width="45", height="30"></a></li>
+    </nav>
+</div>
+<!-- The sidebar -->
+    <div class="sidebar" id="sidebar">
+              <a href="/hoofdstuk5"><img src="{{ url_for('static', filename='dutch_flag.png') }}" width="30", height="20"></a>
+        <a href="/home">Home</a>
+        <a href="preface">Preface</a>
+        <a href="Introduction">Chapter 1: Introduction</a>
+        <a href="chapter2">Chapter 2</a>
+        <a href="chapter3">Chapter 3</a>
+        <a href="chapter4">Chapter 4</a>
+          <button type="button" class="collapsible">Chapter 5</button>
+          <div class="submenu content">
+            <a href="#highlights">Highlights</a>
+            <a href="#intro">Introduction</a>
+            <a href="#claims">Claims</a>
+            <a href='#funding1'>Funding of Higher Education</a>
+            <a href='#theory'>Varieties of Capitalism</a>
+            <a href='#tests'>Testing the Claims</a>
+            <a href='#conclusion'>Conclusions</a>
+        </div>
+        <a href="Conclusion">Chapter 6: Conclusion</a>
+        <a href="afterword">Afterword</a>
+        <a href="about">About</a>
+    </div>
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+
+    document.querySelectorAll('.sidebar a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default behavior of internal anchor links
+
+      const targetId = this.getAttribute('href').substring(1); // Get target ID
+      const targetElement = document.getElementById(targetId); // Get target element
+
+      if (targetElement) {
+        const offset = targetElement.offsetTop - 140; // Calculate desired offset from top
+        window.scrollTo({ top: offset, behavior: 'smooth' }); // Scroll to the target element
+      }
+    });
+  });
+</script>
+
+
+
+<!--Header-->
+<!--Body text-->
+<div class="body-content">
+    <div id="chapter5"></div><h1>Chapter 5: International Student Mobility and the Funding of Higher Education</h1>
+    <p><a href="https://doi.org/10.1177/10283153231211999" target="_blank" rel="noopener noreferrer">Link to the Academic Publication</a></p>
+    <p><a href="https://osf.io/sb2pe/?view_only=d3a20026ceff4d46ae8ec83d2f115549" target="_blank" rel="noopener noreferrer">Link to the Replication Package</a></p>
+            <div id="highlights"></div><h1>Highlights</h1>
+        <ul>
+            <li>There is a relationship between how many international students a country hosts and how higher education is funded (through public or private sources).</li>
+            <li>The relationship between incoming international students and types of funding differs significantly between Western countries.</li>
+            <li>The narrative that international students are primarily used as a source of income in the whole western world is not supported by the evidence.</li>
+            <li>There is likely an Anglo-Saxon bias in the literature about this topic and it is important to look beyond their perspective.</li>
+        </ul>
+     <div id="intro"></div><p>This chapter is a bit different from the others. Instead of trying to map where students enroll and where they come from, this chapter is a reaction to some prevailing trends in the academic literature. You see, there is this tendency of certain scholars to claim that higher education has become completely subjected to neoliberal market forces, and that international student have been reduced to nothing more than cash cows. The titles of some of these papers are often quite dramatic and seem to suggest that higher education has been overrun by neoliberalism, like
+     <a href="https://doi.org/10.1177/1532708617706117" target="_blank" rel="noopener noreferrer">this one</a>
+      ,or
+     <a href="https://doi.org/10.1177/1532708616669529" target="_blank" rel="noopener noreferrer">this one.</a>
+      Probably my favorite though is this (rather offensive) title:
+     <a href="https://doi.org/10.1080/03075079.2016.1196353" target="_blank" rel="noopener noreferrer">“Her majesty the student: marketised higher education and the narcissistic (dis)satisfactions of the student-consumer”. </a>
+     </p>
+     <p>
+     Titles like these seem to suggest that neoliberalism is not only the dominant force in higher education, but also something that has gotten so out of hand that it must be stopped at all costs. When I think about the Netherlands however, there indeed seems to be some marketization going on, but it’s nowhere near as extreme as these authors claim. So what is going on? Are they seeing something that I completely missed? Are they exaggerating? Or is it something else?
+     </p>
+
+     <div id="claims"></div><p>Now luckily for us, some of the fundamental claims in these authors’ views are actually easily testable, and to be honest I have no idea why no one ever did this before. The basic narrative goes that governments in the Western world are increasingly implementing neoliberal policies. The implication for higher education is that governments are stimulating the marketization of higher education through 1. decreasing public funding thus making them more reliant on private sources, and 2.allowing them to increase tuition fees for international students. As a result, higher education institutions have started to aggressively adopt marketing practices in order to recruit international students. For European countries international students are defined as coming from outside the EU/EEA because EU/EEA students pay the same tuition fees as domestic students.</span></span></span>
+     International students have therefore been reduced to being the <a href="https://doi.org/10.6017/ihe.2017.90.9993" target="_blank" rel="noopener noreferrer">cash cows</a> of higher education institutions.
+    </p>
+    <p>
+    The United Kingdom is a good example of this, in 2012 it cut much public spending on higher education and allowed higher education institutions to increase
+    <a href="https://commonslibrary.parliament.uk/research-briefings/cbp-7973/" target="_blank" rel="noopener noreferrer">tuition fees. <a/>
+    As a result, <a href="https://doi.org/10.1111/imig.12330" target="_blank" rel="noopener noreferrer">marketization of (international) students has become rampant in the United Kingdom.</a>
+    </p>
+    <p>
+    So based on this narrative, I can derive a few testable claims:
+            <ul>
+                <li>Claim 1: public spending on higher education has decreased.</li>
+                <li>Claim 2: private spending on higher education has increased.</li>
+                <li>Claim 3: decreases in public spending are paired with increases in international student enrollments.</li>
+                <li>Claim 4: increases in private spending are paired with increases in international student enrollments.</li>
+            </ul>
+     </p>
+     <p>
+     The United Kingdom is a clear example, but has this been the case everywhere? The OECD has published figures on both the public and the private spending on higher education, so it is possible to actually check if there has been a decrease in public spending and an increase in private spending. Have a look at the graphs below. Can you see a clear pattern? Not really right? Does that mean that neoliberalism isn’t as a strong a force as suggested? Or is something else going on?
+     </p>
+     <div id="funding1"></div><iframe src="https://tijmenweber.pythonanywhere.com/linechartch5" height="750" width="860"></iframe>
+     <br>
+     <div id="theory"></div><h2>Marketisation of Higher Education and Varieties of Capitalism</h2>
+     <p>
+     To see if I could somehow manage to find a pattern in all this chaos I decided to use a theoretical framework called <a href="https://en.wikipedia.org/wiki/Varieties_of_Capitalism" target="_blank" rel="noopener noreferrer">Varieties of Capitalism.</a> The main idea here is that the way that firms operate is not the same in each country, but depends heavily on the larger culture and type of government involvement. For example, in countries like the United Kingdom and the United States, the government is generally quite hands-off and firms are in constant competition with each other. In a country like Germany however, the government is much more involved, and the firms themselves also cooperate more with each other. This is explained by pointing out that the optimal strategy that firms take depends on the other firms around it. If everyone focuses on cooperation, your best bet is to go along with this.
+     </p>
+     <p>
+     Now, I am taking a bit of a leap, but I believe that this theory can be extended to higher education institutions as well, or at least, to how higher education institutions relate to the government, to each other, and how they approach internationalization. For example, in the United Kingdom higher education institutions are in constant competition to each other and as a result there is much inequality between the institutions. There are few top universities, like Cambridge and Oxford, but there are also many mediocre universities.  In the Netherlands, in contrast, there are important differences between research universities and universities of applied science, but within these two categories differences in quality are quite small. Cooperations between universities are also quite common and fierce competition is much rarer.
+     </p>
+     <p>
+     Based on the logic of the varieties of capitalism approach, Western countries can be put into three groups  (see table 1 below for how I grouped the countries that the OECD collected data on).
+     </p>
+         <h2>The Countries in this Study and Their Type of Market Economy</h2>
+         <table style="width:100%">
+             <tr>
+                 <th style="width:40%">Liberal Market Economies (LMEs)</th>
+                 <th style="width:30%">Coordinated Market Economies (CMEs)</th>
+                 <th style="width:30%">State-Influenced Market Economies (SMEs)</th>
+             </tr>
+             <tr>
+                 <td>Australia</td>
+                 <td>Austria</td>
+                 <td>France</td>
+             </tr>
+             <tr>
+                 <td>Canada</td>
+                 <td>Belgium</td>
+                 <td>Greece</td>
+             </tr>
+             <tr>
+                 <td>Ireland</td>
+                 <td>Denmark</td>
+                 <td>Italy</td>
+             </tr>
+             <tr>
+                 <td>New Zealand</td>
+                 <td>Finland</td>
+                 <td>Portugal</td>
+             </tr>
+             <tr>
+                 <td>United Kingdom </td>
+                 <td>Germany</td>
+                 <td>Spain</td>
+             </tr>
+             <tr>
+                 <td>United States of America</td>
+                 <td>Netherlands</td>
+                 <td></td>
+             </tr>
+             <tr>
+                 <td></td>
+                 <td>Norway</td>
+                 <td></td>
+             </tr>
+             <tr>
+                 <td></td>
+                 <td>Sweden</td>
+                 <td></td>
+             </tr>
+             <tr>
+                 <td></td>
+                 <td>Switzerland</td>
+                 <td></td>
+             </tr>
+         </table>
+    <p>
+    Group 1 contains the liberal market economies, these are the Western English-speaking countries. In these countries the states takes a hands-off approach and higher education institutions are in much more competition with each other. There is also much more hierarchy, think of for example Harvard or Oxford; institutions that tower over the many middling institutions these countries have. Marketization has generally been a popular approach here, think of for example the influence of Reagan and Thatcher.
+    </p>
+    <p>
+    Group 2 contains the coordinated market economies. In these countries cooperation is the keyword. Governments more often work together with institutions as co-equal, and there is also much more cooperation between institutions. Hierarchy and distinction are less important for higher education institutions as most of them operate on similar levels. Marketization has been a less popular approach in these countries (though it is gaining prominence). Instead in these countries internationalization is often seen as a strategy of improving the whole country.
+    </p>
+    <p>
+    Group 3 contains the state-influenced market economies. Here the state neither cooperates as equals nor takes a hands-off approach, but takes a top-down approach. The state can let organizations free, but will also strongly intervene when deemed necessary. In France for example, the state allows hierarchy and competition between institutions, but the internationalization strategies of the higher education institutions are still largely imposed on them by the state. The goal of internationalization has also not so much been to generate revenue, but rather to <a href="https://www.taylorfrancis.com/chapters/edit/10.4324/9781003217923-5/destination-france-ludovic-highman-ariane-de-gayardon" target="_blank" rel="noopener noreferrer">increase political soft power</a> (because more international students means more international prestige).
+    </p>
+
+    <div id="tests"></div><p>What happens if I analyze public/private spending and incoming international students for each of these groups separately? Well have a look at the boxplots below. In case you don’t know how to read a boxplot: The line in the middle of the box represents the median, while the box itself contains 50% of the data centered around the median. The lines outside of the box are the “whiskers” which contain most of the rest of the data except for outliers (countries that deviate a lot from the other countries in a given year) which are represented as dots. You can click on the trendline option to see the average per year.
+    </p>
+    <iframe src="https://tijmenweber.pythonanywhere.com/boxplots" height="950" width="860"></iframe>
+    <p>
+    What do we see? First, the Liberal Market Economies and State-Influenced Market Economies public spending has decreased, while for coordinated market economies not much has changed. So claim 1 does not hold for all countries. Second, private spending has increased, but only for liberal market economies and coordinated economies. So Claim 2 also does not hold for all countries. Third, (non-EEA) international students have increased in the liberal market economies, but not the state-influenced or coordinated market economies. What does this say about claim 3 and 4?
+    </p>
+    <p>
+    To test claim 3 and 4 we cannot simply look at the boxplots, we have to test if there is there is a relationship between spending and international student enrollments. I do this using something called a fixed effects model which specifically tests if a change in spending is related to a change in international student enrollments.
+    </p>
+    <p>
+    What comes out of these models? Decreases in public spending appear to be related with increased international student enrollments (claim 3) for liberal and state-influenced market economies, but not coordinated market economies. Increases in private spending are related with increased international student enrollments (claim 4) for liberal and coordinated market economies, but not for state-influenced market economies. So again, the claims appear to be true for the liberal market economies, but they are not universally true.
+    </p>
+
+    <div id="conclusion"></div><h2>Conclusions and Implications</h2>
+    <p>
+    What does this all mean? The original narrative was that countries have decreased public funding and raised tuition fees in order for higher education institutions to use international students as sources of income. This seems to hold true for the English-speaking countries, but for other Western countries different patterns have emerged that cannot be explained by pointing to this narrative. Other mechanisms must be at play here. Indeed, in many western countries internationalization is stimulated by increasing public funding rather than decreasing it. Internationalization can be used a source of income for higher education, but countries can also use it a strategy for increasing their knowledge economies. Similarly, increasing tuition fees for international students could help to finance higher education, but it can also be used to curb migration. We should also not forget that internationalization can also be used as a foreign policy tool, which is what France does. Another example of this is China which recruits students from sub-Saharan Africa in order to exert soft power over that region. The idea of internationalization through marketization cannot therefore explain the varied patterns we see in international student mobility across the world.
+    </p>
+    <p>
+    But why do so many academics claim that marketization is the dominant force in higher education? I got my answer by looking at the academics who made this claim, and specifically by looking at the country that they worked in. A stunning 87% of the people lamenting the marketization of higher education were from Australia, Canada, The United Kingdom, and the United States; the countries where this marketization has mostly taken place. Instead of seeing this development in their own country contexts however, what they did was uncritically assume that what was happening in their countries must have been happening everywhere. As a result, the dominant story in the academic literature has become that neoliberalism is the main force driving international student mobility, but this story actually only applies to just a few countries.
+    </p>
+    <p>
+    When I started writing this paper I was also under the assumption that neoliberalism was the dominant force in higher education (even if I didn’t clearly see it in my direct environment). What I realize now is that neoliberalism, while present everywhere in the Western world, is felt strongest in the liberal market economies because their cultures allow it to flourish. Because the liberal market economies have such a strong cultural influence on us, we need to be careful not to assume that their experience also has to be the same for us. In turn, the writers from the liberal market economies would do well to look beyond their borders and stop assuming that their experience is universal. There is still much variety in the reasons why governments and higher education institutions internationalize, and by simplifying the phenomenon by pointing at neoliberalism we are limiting our understanding on the complex forces that shape international student mobility.
+    </p>
+    <br><br>
+
+</div>
+
+</body>
+</html>

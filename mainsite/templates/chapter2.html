@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Global Campuses?</title>
+            <link rel="icon" type="image/png" href="{{ url_for('static', filename='icons/favicon.png') }}" />
+    <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet" media="only screen" /> <!--For Flask-->
+    <link href="{{ url_for('static', filename='styles/mobilestyles.css') }}" rel="stylesheet" type="text/css" media="(pointer: coarse) and (max-device-width: 1080px)"  />
+    <link href="{{ url_for('static', filename='styles/smallpcstyles.css') }}" rel="stylesheet" type="text/css"  media="(pointer: fine) and (max-width: 1280px)" />
+    </head>
+
+<body>
+<div class = "placeholder2"></div>
+
+
+<div class="sticky-top2">
+    <div class="banner-container2">
+    <img src="{{ url_for('static', filename='WebBanner.jpg') }}" height="130">
+    </div>
+
+    <nav class="topnav">
+    <li><a href="/home">Home</a></li>
+    <li><div class="dropdown">
+      <button class="dropbtn">Chapters ▾</button>
+      <div class="dropdown-content">
+          <a href="preface">Preface</a>
+        <a href="Introduction">Introduction</a>
+        <a href="chapter2">Chapter 2</a>
+        <a href="chapter3">Chapter 3</a>
+        <a href="chapter4">Chapter 4</a>
+        <a href="chapter5">Chapter 5</a>
+        <a href="Conclusion">Conclusion</a>
+        <a href="afterword">Afterword</a></div>
+      </div></li>
+    <li><a href="about">About</a></li>
+                <li><a href="/hoofdstuk2"><img src="{{ url_for('static', filename='dutch_flag.png') }}" width="45", height="30"></a></li>
+    </nav>
+</div>
+
+<!-- The sidebar -->
+<!-- The sidebar -->
+    <div class="sidebar" id="sidebar">
+              <a href="/hoofdstuk2"><img src="{{ url_for('static', filename='dutch_flag.png') }}" width="30", height="20"></a>
+        <a href="/home">Home</a>
+        <a href="preface">Preface</a>
+  <a href="Introduction">Chapter 1: Introduction</a>
+  <button type="button" class="collapsible">Chapter 2</button>
+  <div class="submenu content">
+    <a href="#ch2highlights">Highlights</a>
+    <a href="#ch2map">Map</a>
+    <a href='#ch2theory'>Theory</a>
+    <a href='#ch2scatterplot'>Scatterplot</a>
+    <a href='#ch2models'>Computer Models</a>
+    <a href='#ch2conclusion'>Conclusions</a>
+  </div>
+  <a href="chapter3">Chapter 3</a>
+  <a href="chapter4">Chapter 4</a>
+  <a href="chapter5">Chapter 5</a>
+  <a href="Conclusion">Chapter 6: Conclusion</a>
+        <a href="afterword">Afterword</a>
+        <a href="about">About</a>
+    </div>
+
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+
+    document.querySelectorAll('.sidebar a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default behavior of internal anchor links
+
+      const targetId = this.getAttribute('href').substring(1); // Get target ID
+      const targetElement = document.getElementById(targetId); // Get target element
+
+      if (targetElement) {
+        const offset = targetElement.offsetTop - 140; // Calculate desired offset from top
+        window.scrollTo({ top: offset, behavior: 'smooth' }); // Scroll to the target element
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
+
+
+
+<!--Header-->
+<!--Body text-->
+<div class="body-content">
+    <div id="chapter2"><h1>Chapter 2: International Student Mobility and Global Development</h1></div>
+    <p><a href="https://comparativemigrationstudies.springeropen.com/articles/10.1186/s40878-023-00329-0" target="_blank" rel="noopener noreferrer">Link to the Academic Publication</a></p>
+    <p><a href="https://osf.io/czqpj/?view_only=49c4036fb27d4004b2fe2d8bb765e40c" target="_blank" rel="noopener noreferrer">Link to the Replication Package</a></p>
+    <div id="ch2highlights"><h2>Highlights</h2>
+    <ul>
+        <li>The development level of both origin and host countries plays an important role in shaping international student mobility.</li>
+        <li>International students are more likely to come from medium-developed countries but are more likely to enroll in highly developed countries.</li>
+        <li>Wealth of the destination country plays an important role in attracting international students, academic ranking shows mixed results.</li>
+        <li>Common language and colonial histories still play important roles, especially for students from lower developed countries.</li>
+        <li>As countries are further developing, the make-up of the international student population is expected to change.</li>
+    </ul>
+    </div>
+    <p>International students are among the fastest growing group of migrants. From the academic literature we know however that not all countries are equal in how many students they host and send out. Some countries, like the United Kingdom, see more students entering into the country than leaving it. Other countries, like China, see many more students leaving the country than coming in. In the map below you can see the number of incoming and outgoing students per country for the year 2018<sup><a href="#fn1" id="ref1">1</a></sup>.</p>
+    <p>The map shows the percentage of young people that either move abroad to study (outgoing) or come from abroad to study in that country (incoming). The net migration shows the difference between the two, revealing which countries receive more students and which send out more. The darker the color, the bigger the outflow or inflow. </p>
+        <div id="ch2map">
+        <iframe src="https://tijmenweber.pythonanywhere.com/ch2map" height="575" width="860"></iframe>
+        </div>
+    <p>What explains these stark differences between the countries when it comes to how many students they receive and how many they send out? To explain this, I used the
+    <a href="https://comparativemigrationstudies.springeropen.com/articles/10.1186/s40878-020-00210-4" target="_blank" rel="noopener noreferrer">aspirations-capabilities framework</a>
+    of migration developed by Hein de Haas. This framework relates migration to the level of development of a country, which is measured with the <a href="https://hdr.undp.org/data-center/human-development-index#/indicies/HDI" target="_blank" rel="noopener noreferrer">Human Development Index</a>.
+    In the next section I will show how this framework can also be applied to international students. </p>
+    <div id='ch2theory'><h2>Aspirations and Capabilities</h2></div>
+    <p>To put it shortly, capabilities refer to what people can do while aspirations refer to what people want to do. Both capabilities and aspirations are shaped by the level of development of the country that person is in.</p>
+    <p>For international students, capabilities refer to the necessary steps that make becoming an international student possible. A large part is simply being able to finance it. Not only tuition fees need to be paid, but also visa costs, housing, food etc. Students also need to have the right pre-education and, in many cases, need to speak a foreign language well enough.  </p>
+    <p>Aspirations concern people’s desire to want to become an international student. Broadly speaking, there are two main reasons why people want to become an international student. The first reason is because education abroad, and especially in highly developed countries, is perceived to be better and offer better job opportunities. The second reason why someone might want to study abroad is simply because it is exciting and fun since studying abroad allows you to explore new cultures, meet new people, and experience new perspectives. </p>
+    <p>Both capabilities and aspirations are connected to the development level of a country. The capabilities that people need to become an international student tend to increase when their country becomes more developed. That is to say, becoming an international student is much easier if you live in a highly developed country than if you live in a low developed country. This not only applies to financial costs, like tuition fees and travel expenses; highly developed countries often also have better connections with other countries, making it more likely that a student can enroll.</p>
+    <p>How aspirations are influenced by development is less linear. The aspiration to migrate tends to start out low: people in the lowest developed countries are often less educated and have less access to (international) media, which means their outlook and ambitions are limited. Becoming an international student might not even occur to them as a realistic possibility. As countries develop and people get more access to education and media, their perspective changes and they start to see more possibilities. Becoming an international student therefore starts to be seen as an achievable and worthwhile investment into the future, and so the aspirations tend to be high. However, at the highest levels of development, the aspirations decrease again as moving abroad is seen as less worthwhile. Paraphrasing one of my Dutch students: “Why would I want to study abroad if education in the Netherlands is also fine?”. Of course, people in highly developed countries still want to (and do) study abroad, but they have fewer reasons to do so compared to students from medium developed countries. In the table below the relationship between development, capabilities, and aspirations is summarized. </p>
+    <h2>Capabilities and Aspiration for Different Levels of Country Development</h2>
+    <table style="width:100%">
+        <tr>
+            <th style="width:40%">Level of Country Development</th>
+            <th style="width:30%">Capabilities</th>
+            <th style="width:30%">Aspirations</th>
+        </tr>
+        <tr>
+            <td>Low</td>
+            <td>Low</td>
+            <td>Low</td>
+        </tr>
+        <tr>
+            <td>Medium</td>
+            <td>Medium</td>
+            <td>High</td>
+        </tr>
+        <tr>
+            <td>High</td>
+            <td>High</td>
+            <td>Medium</td>
+        </tr>
+    </table>
+    <p>So what does this tell us about the relationship between development and student migration?  </p>
+    <p>For incoming migration, the expectation is that the relationship with the level of development follows an increasing increase (also known as an exponential increase). Because people generally move to where it is (perceived to be) better, people are more likely to move to countries that are more developed than to countries that are less developed. Therefore, it can be expected that students will largely enroll in countries with the highest development levels and that the less developed countries will see relatively fewer enrollments. </p>
+    <p>For outgoing migration the expectation is that the relationship between international student migration and the level of development of the origin country follows an inverted U-shape. This means that for the lowest developed countries the number of people that moves out to study in a different country is low because they have both low capabilities and low aspirations to study abroad. As countries further develop, so too do the capabilities and we see that people who aspire to become international students are more likely to be able to do so and therefore outgoing migration is expected to increase. However, as countries develop even further, the number of people that become international students is expected to decrease, because education abroad is not necessarily considered to be better. Of course, there are many other reasons besides education why someone would want to become an international student, so the number of people becoming international students is not expected to drop to zero.</p>
+    <p>Below you can see a figure depicting the theoretical relationship. This figure depicts general migration and was
+    <a href="https://www.migrationinstitute.org/publications/wp-24-10" target="_blank" rel="noopener noreferrer">created by Hein de Haas.</a> </p>
+    <img src="{{ url_for('static', filename='Migration_Transition.png') }}" width="700" height="600">
+    <p>Now have a look at the scatterplot below. It shows the number of international students per country, both incoming and outgoing, as a percentage of the population aged 15-24. In the graph you can see each country as a point (hover over it to see which country it is) and a loess curve<sup><a href="#fn1" id="ref2">2</a></sup>.</p>
+    <p>The graph starts at 2003 and shows for incoming students the predicted increasing increase with the largest receiving countries being the highest developed ones. For the outgoing international students, however, the predicted inverted U-shape is not present. Instead it seems that the more developed a country is, the more students it sends out. However, watch what happens when you click on the PLAY button! </p>
+
+    <div id='ch2scatterplot'><iframe src="https://tijmenweber.pythonanywhere.com/scatter" height="775" width="860"></iframe></div>
+
+    <p>The predicted inverted U-shape appears after 2007! A possible explanation is that studying in higher education has changed from an activity carried out by the privileged few to something that is accessible to a much larger part of the population. A very positive message to take away from this graph is that the human development index has generally been increasing meaning that living standards are improving. For international students specifically, this means that more people in medium developed countries have the capabilities to become international students and it has ceased to be an elite activity.  </p>
+    <p>Notice that the shape that appears is not exactly the same as the one in the figure created by Hein de Haas. Specifically, the peak of the outgoing migration appears much later in the human development scale than for general migration. Probably this is because becoming an international student requires more capabilities than general migration. You not only have to cross a border, you also have to have the relevant pre-education, which means the countries have to be further developed before this point can be reached. </p>
+    <br>
+    <div id='ch2models'></div><h2>Does Choice of Host Country Depend on the Level of Development of the Origin Country? </h2>
+    <p>In the final part of this study, I delved further into host country characteristics and how these shape international student mobility differently for students from differently developed countries. I focused on four characteristics specifically: the wealth of the host country (measured using GDP per capita), academic reputation (measured using the shanghai index) of the host country, and whether the host countries shares a common language or a colonial history with students from a certain origin country. Using a statistical computer model, I was able to estimate how these country characteristics influence the percentage of international students in a host country. </p>
+    <p>In this model I corrected for other factors that can influence how many students enroll in a country such as size of the host and origin countries, the distance between countries, or whether they share a border.
+    <p>For full details of how the model works, please refer to <a href="https://comparativemigrationstudies.springeropen.com/articles/10.1186/s40878-023-00329-0" target="_blank" rel="noopener noreferrer">the publication.</a></p>
+
+    <h3>GDP</h3>
+    <p>GDP per capita is a measure of how wealthy a country is. High GDP countries tend to have higher standards of living, better healthcare, better education etc. Although far from a perfect measurement (it does not for example say anything about income inequality), it is useful for getting a sense of how wealthy people in a country are. </p>
+    <p>What I found was that wealthier countries attract more international students, and especially students from high and middle developed countries. What I also found was that countries that saw a high growth in GDP tend to attract more students than countries with less growth in GDP. These high-growth countries particularly attracted students from lower developed countries. What this implies is that students from wealthy countries tend to study in other wealthy countries, while students from poorer countries tend to move to emerging economies. An interesting example of this are countries like China and South-Africa. Chinese and South-African students tend to move to wealthy countries, but China and South-Africa themselves host a lot of student from the less developed sub-Saharan African countries. </p>
+
+    <h3>Academic Ranking</h3>
+    <p>Generally speaking, students prefer enrolling at a higher education institution that has a good reputation. This also extends to destination countries: Students want to move to countries that are renowned for their academic institutions. However, there is a flip side to this because highly-ranked countries are not always accessible to everyone. For example, countries like the United Kingdom and United States have world-renowned institutions but also have very strict entry requirements and high tuition fees. </p>
+    <div style="text-align: center;">
+    <figure>
+        <a title="Dmitry Djouce, CC BY 2.0 &lt;https://creativecommons.org/licenses/by/2.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Tom_Quad,_Christ_Church,_Oxford.jpg">
+            <img width="512" alt="Tom Quad, Christ Church, Oxford" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Tom_Quad%2C_Christ_Church%2C_Oxford.jpg/512px-Tom_Quad%2C_Christ_Church%2C_Oxford.jpg">
+        </a>
+        <figcaption>
+            Institutions like Oxford University usually rank highest.
+        </figcaption>
+    </figure>
+    </div>
+
+    <p>What I found was that high-ranking countries tended to attract students from both high and low-developed countries, but less from middle developed countries. Countries that have seen a faster increase in ranking tend to only attract students from low developed countries. What this means is that students from wealthy countries tend to pick prestigious locations, such as the United States. Why students from low-developed countries would also pick prestigious locations is a bit puzzling, but it could be because they are students from very wealthy families, or because of scholarships that were handed out by the prestigious institutions. The countries that have quickly risen in ranking (examples are China and the United Arab Emirates) appear to mostly attract (or recruit) students from low-developed countries. Students from middle and high developed countries seem to be less interested in these. </p>
+
+    <h3>Common Language and Colonial History</h3>
+    <p>Finally, I looked at the whether international students are more likely to pick a certain destination country if it shares a common language or colonial history with their own country. Language matters because studying in a foreign language is significantly more difficult so a country that has the same language would be preferred. Colonial ties matter because countries in former colonial relationships often share cultural similarities or have political agreements that make migration easier.    </p>
+    <p>What I found was that students tend to move to countries with a shared language or shared colonial history, but that this especially case for students from low developed countries. For students from highly developed countries shared language and colonial history seemed to matter much less. This could be explained by looking at the capabilities of students. Students from low and middle developed countries have fewer capabilities and thus a country with the same language and similar culture might be more accessible. Students from highly-developed countries have much more capabilities and thus have a much wide array of options to choose from. Another explanation for these patterns is that European countries often have arrangements with their former colonies. For example, Portugal has policies in place that make it much easier for students from Brazil to study in Portugal. </p>
+    <br>
+    <div id='ch2conclusion'></div><h2>Conclusions and Implications</h2>
+    <p>The main takeaway of this chapter is that global development is intimately tied to international student mobility. The level of development of both host and origin countries shape the observed patterns in international student mobility. This implies that these patterns are expected to change as countries are developing. China for example, while still being the largest sending country, is starting to send out fewer students. Other countries that are in lower stages of development, like India, Bangladesh, Vietnam, or Nigeria, are expected to become the major sending countries.  </p>
+    <p>At the same time, emerging countries are expected to increasingly compete with traditional destination countries when it comes to attracting international students. Indeed, international student mobility is quickly becoming a more common form of migration, and both countries and higher education institutions will be competing with each other for enrollments. When this competition increases however, institutions should keep in mind the diverse needs of internationals students from different backgrounds. International students face more challenges than domestic students and if countries and institutions are serious about attracting international students they have to think about meeting their diverse cultural needs and addressing differences in capabilities. </p>
+    <sup id="fn1">1. The source of this data is UNESCO.<a href="#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup><br>
+    <sup id="fn2">2.A loess curve shows a local average of countries with similar levels of developments.<a href="#ref2" title="Jump back to footnote 2 in the text.">↩</a></sup>
+<br><br>
+</div>
+
+</body>
+</html>

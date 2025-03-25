@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Global Campuses?</title>
+            <link rel="icon" type="image/png" href="{{ url_for('static', filename='icons/favicon.png') }}" />
+    <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet" media="only screen" /> <!--For Flask-->
+    <link href="{{ url_for('static', filename='styles/mobilestyles.css') }}" rel="stylesheet" type="text/css" media="(pointer: coarse) and (max-device-width: 1080px)"  />
+    <link href="{{ url_for('static', filename='styles/smallpcstyles.css') }}" rel="stylesheet" type="text/css"  media="(pointer: fine) and (max-width: 1280px)" />
+    </head>
+
+<body>
+<div class = "placeholder2"></div>
+
+
+<div class="sticky-top2">
+    <div class="banner-container2">
+    <img src="{{ url_for('static', filename='WebBanner.jpg') }}" height="130">
+    </div>
+
+    <nav class="topnav">
+    <li><a href="/home">Home</a></li>
+    <li><div class="dropdown">
+      <button class="dropbtn">Chapters ▾</button>
+      <div class="dropdown-content">
+          <a href="preface">Preface</a>
+        <a href="Introduction">Introduction</a>
+        <a href="chapter2">Chapter 2</a>
+        <a href="chapter3">Chapter 3</a>
+        <a href="chapter4">Chapter 4</a>
+        <a href="chapter5">Chapter 5</a>
+        <a href="Conclusion">Conclusion</a>
+        <a href="afterword">Afterword</a></div>
+      </div></li>
+    <li><a href="about">About</a></li>
+                <li><a href="/conclusie"><img src="{{ url_for('static', filename='dutch_flag.png') }}" width="45", height="30"></a></li>
+    </nav>
+</div>
+<!-- The sidebar -->
+    <div class="sidebar" id="sidebar">
+              <a href="/conclusie"><img src="{{ url_for('static', filename='dutch_flag.png') }}" width="30", height="20"></a>
+        <a href="/home">Home</a>
+        <a href="preface">Preface</a>
+        <a href="Introduction">Chapter 1: Introduction</a>
+        <a href="chapter2">Chapter 2</a>
+        <a href="chapter3">Chapter 3</a>
+        <a href="chapter4">Chapter 4</a>
+        <a href="chapter5">Chapter 5</a>
+        <button type="button" class="collapsible">Chapter 6: Conclusion</button>
+        <div class="submenu content">
+            <a href="#conclusion1">Conclusion 1</a>
+            <a href="#conclusion2">Conclusion 2</a>
+            <a href='#conclusion3'>Conclusion 3</a>
+            <a href='#conclusion4'>Conclusion 4</a>
+            <a href='#HEIs'>Implications for Institutions</a>
+            <a href="#politicians">Implications for Policy</a>
+        </div>
+        <a href="afterword">Afterword</a>
+        <a href="about">About</a>
+    </div>
+
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+
+    document.querySelectorAll('.sidebar a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default behavior of internal anchor links
+
+      const targetId = this.getAttribute('href').substring(1); // Get target ID
+      const targetElement = document.getElementById(targetId); // Get target element
+
+      if (targetElement) {
+        const offset = targetElement.offsetTop - 140; // Calculate desired offset from top
+        window.scrollTo({ top: offset, behavior: 'smooth' }); // Scroll to the target element
+      }
+    });
+  });
+</script>
+
+<!--Header-->
+<!--Body text-->
+<div class="body-content">
+<div id="Conclusion"></div><h1>Conclusions</h1>
+<p>Based on all the research I did, there are four conclusions that I can draw. These conclusions are based on the combined findings of the chapters, though not every chapter contributes to every conclusion. After describing the conclusions, I will also describe the implications these findings have for policy makers. Here I also added a new section (that is not in the dissertation). </p>
+<div class="rounded-image"><a title="Vrenibean, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:International_Students.jpg"><img width="350" alt="International Students" src="https://upload.wikimedia.org/wikipedia/commons/2/2d/International_Students.jpg"></a></div>
+<div id="conclusion1"></div><h2>Conclusion 1: International Student Mobility is Shaped by the Development Levels of Countries.</h2>
+<p>As chapter 2 points out, the development level of a country influences how many students go abroad and what types of countries they move to. Specifically, outgoing international student mobility first increases, and then decreases, when countries reach higher stages of development. This can be explained with the <a href="https://doi.org/10.1186/s40878-020-00210-4" target="_blank" rel="noopener noreferrer">aspirations-capabilities framework:</a> young people who aspire to become an international student become capable of doing so when their countries develop. However, at higher stages of development, the aspirations for migrating decrease therefore leading to less migration. Furthermore, students from lower developed countries tend to move to host countries with historical and linguistic ties, while students from middle and high developed countries tend to move to wealthy and high ranking countries. Crucially, both the aspirations and the capabilities that young people have are shaped by the development level of the country that they live in, which in turn shapes the patterns in international student mobility.</p>
+<p>In chapter 4, I also uncovered that the level of development influences the type of study international students choose and whether they favor city amenities or academic quality. I theorized that this is because students from lower developed countries have more instrumental aspirations when migrating, that is, they are more likely to see studying abroad as primarily a means for getting a good degree. Students from higher developed countries, on the contrary, might have stronger intrinsic aspirations and want to study abroad mostly for a chance to have an adventure and experience a new culture. Different societal contexts might therefore lead to different motivations and considerations at the individual level, which in turn shape mobility patterns on a global level.</p>
+<div id="conclusion2"></div><h2>Conclusion 2: International Student Mobility is shaped by Institutions in the Destination Country.</h2>
+<p>In chapter 3 I found that higher education institutions profile themselves primarily on academic characteristics, city life, and their international level. When I checked whether these correlated with actual enrollments of international students, I found that this was indeed the case. However, when I looked at different types of degrees, I found that academic characteristics mattered more for master students, and city life mattered more for bachelor students. The international level of an institution mattered for all types of degrees though. This could reflect the preferences of the students, but it could also reveal successful recruitment activities of higher education institutions. As I have argued in chapter 3, many higher education institutions recruit students through advertisements, by directly recruiting students on fairs or schools, or by employing third-party agents who act as intermediaries. It is not uncommon for institutions to target specific countries, which could explain the strong effect that pre-existing groups of co-nationals have on new enrollments. Institutions could also make use of their reputation marked by global rankings or city size to attract students who otherwise know little about the Netherlands.</p>
+<p>In chapter 5, I revealed that international student mobility is related to how higher education institutions receive funding, that is, from public or private sources. However, this relationship varies between different country groups. This is likely because in Western Anglophone countries higher education institutions are more likely to adopt marketization practices, because of both the institutional culture and because of their relationship with the state. In other countries, however, the institutional culture and relationship to the state is different which explains why the relationship between funding and international student mobility showed so much variety. Therefore, the institutional culture in a country can influence to what degree, and for what reasons, higher education institutions attract international students.</p>
+<div id="conclusion3"></div><h2>Conclusion 3: International Student Mobility flows Unequally.</h2>
+<p>The third important conclusion is that international student mobility does not flow equally between places. Globally this is evident from the fact that, although new hubs are appearing, highly developed countries are still the main destinations for international students. In chapter 2, I showed that the countries with the highest share of incoming students are mostly highly developed countries. The analyses also showed that students generally tend to move towards high GDP countries and to former colonizers. This highlights important global inequalities as it shows that there is more “upward” mobility (flows from lower developed to higher developed countries) than horizontal or downward mobility. Traditional destination countries are losing ground, but this does not have to imply that international student mobility is becoming more egalitarian; it could also mean that new inequalities are emerging. Furthermore, Chapter 3 showed that within the Netherlands, international students tend to concentrate in a few cities. Specifically, larger cities that have more amenities tend to host more international students. It could be that these cities are better known internationally, but it is also possible that institutions in larger cities have more resources for recruiting international students.</p>
+<div id="conclusion4"></div><h2>Conclusion 4: Students’ Preferences do not Reliably Predict Enrollments.</h2>
+<p>Finally, my analyses revealed that actual enrollment patterns do not fully coincide with what would be expected based on the self-reported preferences of students. I did not personally study the preferences of students, but many other researchers did. These researchers tended to find that international students emphasize academic quality as a reason for picking a destination, but I found mixed results when it came to how well markers of academic quality correlate with actual enrollments. Chapter 2, 3, and 4 all show that in different contexts, academic characteristics matter to varying degrees to international students. Sometimes countries, institutions, or study programs with a reputation for quality attract more students, but often it does not matter, and sometimes program quality even correlates with fewer enrollments.</p>
+<p>In contrast, measures of wealth and well-being, such as GDP and city amenities, are more often positively related to incoming international students. Chapter 3 also showed that the international level of an institution matters greatly, as in the Netherlands international students are more likely to pick a higher education institution that already hosts larger numbers of international students. These findings are in contrast with much research among students which reveals that international students almost always say academic quality matters in their decision; when looking at the actual enrollments, academic quality does not always seem to lead to more enrollments.</p>
+<p>My findings are also in contrast with the perspective that international students are mainly becoming mobile in order to get a good degree. Academic characteristics probably do matter, but international students appear to be interested in many other aspects of student life as well. In fact, as I discuss in chapter 4, for some migrants, becoming an international student is also a means for gaining access to a wealthy country and enter its labor market Crucially, this could mean that self-reported preferences might not be the best way to assess how attractive an institution is to international students. Subjective reports of preferences are still important, but they should not be seen as reliable predictors of actual enrollments.</p>
+<h1>Policy Implications</h1>
+<div id="HEIs"></div><h2>Implications for Higher Education Institutions</h2>
+<p>Throughout the analyses, there are several implications for higher education institutions that have come to light. First, as the level of development of countries was found to be predictive of how many students a country receives or sends out, and because countries are shifting in their level of development, the make-up of international students at higher education institutions is likely to change. China is currently still the biggest sending country, but in the upcoming years it might be replaced by India. Furthermore, when large countries such as China and India reach higher stages of development, they will be increasingly competing for international students with Western countries, which in turn could influence the enrollments in higher education institutions in the West. With different types of international students come different challenges, and higher education institutions should make sure that they can properly facilitate them, especially since Western countries and higher education institutions have shown to not always been properly prepared to host international students.</p>
+<p>Second, recruiters of international students might want to keep in mind the development level, and the pace of development, of the countries that they are targeting. As countries become more developed, so too do the capabilities of their populations, meaning that there are more potential candidates for a study abroad. At the same time, if countries become too developed the migration aspirations might change and potential candidates might lose interest. If recruiters are intending to target specific countries, they could therefore try to aim for countries that are in the “sweet spot” of their development process. Furthermore, as chapter 4 revealed, recruiters could also keep in mind the context of their study program. Different study programs appeal to different types of students which is in part shaped by their country context. Recruiters should also be aware that the different strengths and weaknesses of their study program could have varying effects depending on the target country.  </p>
+<p>Third, chapter 3 and 4 showed that academic characteristics, city life, and the international level of institutions are all (to various degrees) important for the enrollments of international student. It might therefore be wise for higher education institutions that seek to profile themselves to potential new students to keep all of these dimensions in mind. Furthermore, chapter 3 and chapter 4 also revealed that there are important differences between bachelor and master students in how they react to education quality vs city life indicators. It is likely that international students will evaluate potential destinations not just in terms of educational quality but will also think about what their life outside their study will look like.</p>
+<p>Fourth, on an intra-national level, policy makers should be aware of the fact that international students are more likely to move to richer countries than to poorer countries. During a ministerial conference of the European Higher Education area, it was decided that <a href="https://www.ehea.info/media.ehea.info/file/2012_Bucharest/39/4/Mobility_WG_Report_606394.pdf" target="_blank" rel="noopener noreferrer">more balanced mobility</a> should be achieved between member states. Yet over the years mobility between the member states has actually become <a href="https://www.researchgate.net/profile/Florentin-Popescu-2/publication/349098644_Trends_and_targets_in_international_student_mobility_in_the_EHEA/links/601fbeb84585158939899a34/Trends-and-targets-in-international-student-mobility-in-the-EHEA.pdf" target="_blank" rel="noopener noreferrer">less balanced</a>. Opening borders between countries could be a good strategy for facilitating cooperation and internationalization, but, as chapter 2 pointed out, migration flows tend to be uneven if one country is more developed than the other. If intra-national policy makers intend to make flows of international student more balanced, then more effort is needed to achieve this, because it probably will not happen by itself.</p>
+<div id="politicians"></div><h2>Implications for (Dutch) Policy Makers.</h2>
+<section id="suggestions">
+<p>I wrote this specific part after the dissertation was already handed in (which was in November of 2023), and I might also occasionally update it when there are new developments. </p>
+<p>The basic underlying dilemma that politicians are facing is that, on the one hand, the Netherlands (and other countries) can benefit immensely from international students, but at the same time, there is not an unlimited capacity to teach and accommodate them. Since some people in society wish to curb the number of international students, I thought it would be good to offer my thoughts on this matter. I think that many politicians are simplifying the issue too much and offer solutions that can potentially cause significant harm. For starters, outright refusing international students will be very difficult, if not impossible. EU citizens enjoy specific rights, some of which mean that they can enroll in a Dutch study program under the same conditions that a Dutch student would. Refusing students from outside the EU is similarly difficult because a refusal based on country of origin counts as discrimination, and you would therefore need a very good reason to be able to justify it.</p>
+<p>So, if we cannot outright refuse students, then there are broadly three options left. The first is to spread out international students more equally across the Netherlands. The second is to change the incentives that higher education institutions have for wanting to attract international students. The third is to somehow make Dutch higher education less attractive to international students.</p>
+<p>First, chapter 3 revealed that in the Netherlands international students tend to concentrate in specific cities and higher education institutions. Because of this, it might be fruitful to reframe the discussion from halting the growth of international students, to spreading out the international students more equally. Efforts could be made to promote the study programs in less popular institutions and cities, both to help these programs internationalize, and to give the overcrowded institutions some more space. This can also be beneficial to institutions in regions that have a shrinking supply of local students, for example in provinces like Gelderland, Overijssel, and Zeeland. Some study programs are overflowing, but there are also many that still have the capacity and the desire to host international students. Of course, municipalities also need to be included in this discussion, because housing shortages also need be kept in mind when managing international students.</p>
+<p>Second, to change the incentives of higher education institutions, one option could be to reconsider the way that higher education is currently financed. At the moment, a part of the government funding of higher education is based on the relative share of students each institution has. To give a simple example, if Radboud University hosts 8% of all students they will receive 8% of this part of the funding. However, because the total amount of money is determined beforehand, this means that if other universities increase their number of enrollments, and the Radboud has the same number of enrollments, the Radboud will actually receive less money. As a result, an incentive is created where institutions have to increase their enrollments simply so that they do not fall behind. My advice is therefore to critically evaluate this funding system because it has led to institutions recruiting international students simply so that they could survive financially. Generating income should not be the primary reason for wanting to attract international students.</p>
+<p>Third, to make higher education less attractive, a stricter language policy can be adopted. This at least seems to be the option that policy makers will go for. After all, if more study programs are in Dutch, then fewer international students will enroll. Several of the political parties that won the elections already want to do this, but care needs to be taken that such language policies are flexible enough to not disadvantage many institutions. As I pointed out earlier, international students are unequally distributed, so uniform language policies might harm institutions that are still in need of international students. A related problem is that many institutions have international staff members who are not properly prepared to teach in Dutch. Forcing all the study programs to be in Dutch would not only make it more difficult for existing staff, it would also make institutions in the Netherlands less attractive to new research talent. Wageningen university, for example, relies a lot on international talent for their research and would be seriously harmed if international applicants stopped applying for research positions. Therefore, language policies should not be one-size-fits-all models, but need to be developed together with the higher education institutions so that they are fairly applied. By giving the higher education institution more tools to manage the international students themselves, through language policies or other measures, they might be able to steer international students away from the hotspots and towards the places that could benefit from them.</p>
+<p>Finally, politicians could look at how other countries are dealing with this problem. It sometimes seems like the Netherlands is the only country dealing with this issue, but it’s not. <a href="https://globalnews.ca/news/9939599/housing-for-international-students-canada/" target="_blank" rel="noopener noreferrer">Canada is also struggling</a> with finding adequate housing for international students, as is <a href="https://www.smh.com.au/national/sydney-hit-hardest-as-30-000-international-students-join-fight-for-housing-20230630-p5dkqx.html" target="_blank" rel="noopener noreferrer">Australia</a>, and <a href="https://www.hepi.ac.uk/2023/08/29/accommodation-shortages-are-the-odds-stacked-against-students/" target="_blank" rel="noopener noreferrer">the United Kingdom</a>. These countries, once major destinations for international students, are now also <a href="https://www.scienceguide.nl/2023/12/ook-internationale-gidslanden-willen-minder-internationale-studenten/" target="_blank" rel="noopener noreferrer">implementing policies</a> with the aim of reducing the number of incoming international students. Meanwhile, Denmark is <a href="https://fd.nl/samenleving/1497234/minder-internationale-studenten-in-denemarken-komen-ze-daarop-terug" target="_blank" rel="noopener noreferrer">crawling back</a> from restricting incoming international students and want to start recruiting them again. Germany too is increasing its <a href="https://www.scienceguide.nl/2023/11/duitsland-wil-het-hoger-onderwijs-en-de-wetenschap-verder-internationaliseren/" target="_blank" rel="noopener noreferrer">efforts to internationalize</a>, and is much better at <a href="https://www.scienceguide.nl/2023/11/nederland-bungelt-onderaan-lijstje-blijfratio-buitenlandse-studenten/" target="_blank" rel="noopener noreferrer">retaining international students</a> than we are. What are they doing right that we are not? What can we learn from their experiences?</p>
+</section>
+<div id="conclusion5"></div><h2>Concluding Remarks</h2>
+<p>The number of international students worldwide and in the Netherlands is unlikely to decrease any time soon so hopefully the findings of this dissertation will be used to better understand this phenomenon. I specifically chose to focus on the perspective of countries and institutions in this dissertation because much of the focus in the literature has been on the perspectives of the students. The results have shown that focusing on country development and on institutional perspectives offers fruitful new insights which hopefully can be taken up by future researchers to better understand international student mobility. As the world’s problems are increasingly transcending borders, international cooperation becomes crucial for human flourishing. If done properly, international student mobility could be the means by which younger generations learn to set aside differences, cooperate internationally, and tackle the many challenges that the twenty-first century will give us. </p>
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Global Campuses?</title>
+            <link rel="icon" type="image/png" href="{{ url_for('static', filename='icons/favicon.png') }}" />
+    <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet" media="only screen" /> <!--For Flask-->
+    <link href="{{ url_for('static', filename='styles/mobilestyles.css') }}" rel="stylesheet" type="text/css" media="(pointer: coarse) and (max-device-width: 1080px)"  />
+    <link href="{{ url_for('static', filename='styles/smallpcstyles.css') }}" rel="stylesheet" type="text/css"  media="(pointer: fine) and (max-width: 1280px)" />
+    </head>
+
+<body>
+<div class = "placeholder2"></div>
+
+
+<div class="sticky-top2">
+    <div class="banner-container2">
+    <img src="{{ url_for('static', filename='WebBanner.jpg') }}" height="130">
+    </div>
+
+    <nav class="topnav">
+    <li><a href="/home">Home</a></li>
+    <li><div class="dropdown">
+      <button class="dropbtn">Chapters ▾</button>
+      <div class="dropdown-content">
+          <a href="preface">Preface</a>
+        <a href="Introduction">Introduction</a>
+        <a href="chapter2">Chapter 2</a>
+        <a href="chapter3">Chapter 3</a>
+        <a href="chapter4">Chapter 4</a>
+        <a href="chapter5">Chapter 5</a>
+        <a href="Conclusion">Conclusion</a>
+        <a href="afterword">Afterword</a></div>
+      </div></li>
+    <li><a href="about">About</a></li>
+                <li><a href="/over"><img src="{{ url_for('static', filename='dutch_flag.png') }}" width="45", height="30"></a></li>
+    </nav>
+</div>
+
+<!-- The sidebar -->
+<!-- The sidebar -->
+    <div class="sidebar" id="sidebar">
+              <a href="/over"><img src="{{ url_for('static', filename='dutch_flag.png') }}" width="30", height="20"></a>
+        <a href="/home">Home</a>
+        <a href="preface">Preface</a>
+        <a href="Introduction">Chapter 1: Introduction</a>
+        <a href="chapter2">Chapter 2</a>
+        <a href="chapter3">Chapter 3</a>
+        <a href="chapter4">Chapter 4</a>
+        <a href="chapter5">Chapter 5</a>
+        <a href="Conclusion">Chapter 6: Conclusion</a>
+        <a href="afterword">Afterword</a>
+        <a class="active" href="about">About</a>
+    </div>
+
+
+
+
+
+
+
+<script>
+  document.querySelectorAll('.sidebar a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default behavior of internal anchor links
+
+      const targetId = this.getAttribute('href').substring(1); // Get target ID
+      const targetElement = document.getElementById(targetId); // Get target element
+
+      if (targetElement) {
+        const offset = targetElement.offsetTop - 110; // Calculate desired offset from top
+        window.scrollTo({ top: offset, behavior: 'smooth' }); // Scroll to the target element
+      }
+    });
+  });
+
+
+</script>
+
+<!--Header-->
+<!--Body text-->
+<div class="body-content">
+    <div class="about">
+        <div class="about-text">
+            <p>My name is Tijmen Weber <a href="https://nl.linkedin.com/in/tijmen-weber" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-linkedin"></ion-icon></a><a href="https://scholar.google.com/citations?user=kZtxMVUAAAAJ&hl=nl&oi=ao" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-google"></ion-icon></a>, and I created this website as part of my PhD dissertation. I obtained a bachelor’s degree at <a href="https://curriculum.maastrichtuniversity.nl/education/bachelor/university-college-maastricht" target="_blank" rel="noopener noreferrer">University College Maastricht</a> where I specialized in sociology and philosophy. After this, I moved to Nijmegen to obtain a master’s degree in <a href="https://www.ru.nl/en/education/masters/social-and-cultural-science-comparative-research-on-societies-research" target="_blank" rel="noopener noreferrer">social and cultural science</a> at Radboud University. Shortly after graduation, I started working at the <a href="https://www.hanuniversity.com/en/programs/bachelor/international-business/fulltime/" target="_blank" rel="noopener noreferrer">international business program</a> of HAN University of Applied Sciences, where I now mostly teach courses in quantitative research and data science. While working there, I applied for a <a href="https://www.nwo.nl/en/researchprogrammes/doctoral-grant-for-teachers" target="_blank" rel="noopener noreferrer">doctoral grant for teachers</a> from NWO which allowed me to work on this PhD part-time while continuing my work as a teacher. After my PhD I will continue to teach at the HAN and do (applied) research on sustainability for the <a href="https://www.hanuniversity.com/en/research/research-center/international-business/" target="_blank" rel="noopener noreferrer">Research Center International Business</a> at the HAN.</p>
+            <p>Next to my work I like cooking, martial arts, <a href="https://www.youtube.com/@tijmenweber6184" target="_blank" rel="noopener noreferrer">playing the piano</a>, reading books, and playing video games.</p>
+            <p>The banner at the top was designed by Ato Kwamina Essuman Mensah<a href="https://www.linkedin.com/in/atokwamina/" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-linkedin"></ion-icon></a>, an international student studying communications at the HAN</p>
+
+            <div class="profile-pic">
+                <img src="{{ url_for('static', filename='Tijmen.jpg') }}" width="400", height="400" alt="It's me!">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

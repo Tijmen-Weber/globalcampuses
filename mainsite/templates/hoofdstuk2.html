@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Global Campuses?</title>
+            <link rel="icon" type="image/png" href="{{ url_for('static', filename='icons/favicon.png') }}" />
+    <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet" media="only screen" /> <!--For Flask-->
+    <link href="{{ url_for('static', filename='styles/mobilestyles.css') }}" rel="stylesheet" type="text/css" media="(pointer: coarse) and (max-device-width: 1080px)"  />
+    <link href="{{ url_for('static', filename='styles/smallpcstyles.css') }}" rel="stylesheet" type="text/css"  media="(pointer: fine) and (max-width: 1280px)" />
+    </head>
+
+<body>
+<div class = "placeholder2"></div>
+
+
+<div class="sticky-top2">
+    <div class="banner-container2">
+    <img src="{{ url_for('static', filename='WebBannerDutch.jpg') }}" height="130">
+    </div>
+
+    <nav class="topnav">
+    <li><a href="/thuis">Start</a></li>
+    <li><div class="dropdown">
+      <button class="dropbtn">Hoofdstukken ▾</button>
+      <div class="dropdown-content">
+        <a href="voorwoord">Voorwoord</a>
+        <a href="introductie">Introductie</a>
+        <a href="hoofdstuk2">Hoofdstuk 2</a>
+        <a href="hoofdstuk3">Hoofdstuk 3</a>
+        <a href="hoofdstuk4">Hoofdstuk 4</a>
+        <a href="hoofdstuk5">Hoofdstuk 5</a>
+        <a href="conclusie">Conclusie</a>
+        <a href="nawoord">Nawoord</a></div>
+      </div></li>
+    <li><a href="over">Over</a></li>
+                <li><a href="/chapter2"><img src="{{ url_for('static', filename='american_flag.png') }}" width="45", height="30"></a></li>
+
+    </nav>
+</div>
+
+<!-- The sidebar -->
+<div class="sidebar" id="sidebar">
+          <a href="/chapter2"><img src="{{ url_for('static', filename='american_flag.png') }}" width="30", height="20"></a>
+  <a href="/thuis">Start</a>
+  <a href="voorwoord">Voorwoord</a>
+  <a href="introductie">Hoofdstuk 1: Introductie</a>
+  <button type="button" class="collapsible">Hoofdstuk 2</button>
+  <div class="submenu content">
+    <a href="#ch2highlights">Belangrijkste conclusies</a>
+    <a href="#ch2map">Kaart</a>
+    <a href='#ch2theory'>Theorie</a>
+    <a href='#ch2scatterplot'>Spreidingsdiagram</a>
+    <a href='#ch2models'>Computermodellen</a>
+    <a href='#ch2conclusion'>Conclusies</a>
+  </div>
+  <a href="hoofdstuk3">Hoofdstuk 3</a>
+  <a href="hoofdstuk4">Hoofdstuk 4</a>
+  <a href="hoofdstuk5">Hoofdstuk 5</a>
+  <a href="conclusie">Hoofdstuk 6: Conclusie</a>
+  <a href="nawoord">Nawoord</a>
+  <a href="over">Over</a>
+</div>
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+
+    document.querySelectorAll('.sidebar a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default behavior of internal anchor links
+
+      const targetId = this.getAttribute('href').substring(1); // Get target ID
+      const targetElement = document.getElementById(targetId); // Get target element
+
+      if (targetElement) {
+        const offset = targetElement.offsetTop - 140; // Calculate desired offset from top
+        window.scrollTo({ top: offset, behavior: 'smooth' }); // Scroll to the target element
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
+
+
+
+<!--Header-->
+<!--Body text-->
+<div class="body-content">
+    <div id="chapter2"><h1>Hoofdstuk 2: Internationale studentenmobiliteit en internationale ontwikkeling</h1></div>
+    <p><a href ="https://comparativemigrationstudies.springeropen.com/articles/10.1186/s40878-023-00329-0" target="_blank" rel="noopener noreferrer">Link naar de wetenschappelijke publicatie</a></p>
+    <p><a href="https://osf.io/czqpj/?view_only=49c4036fb27d4004b2fe2d8bb765e40c" target="_blank" rel="noopener noreferrer">Link naar de data en statistische code</a></p>
+    <div id="ch2highlights"><h2>Belangrijkste conclusies</h2>
+    <ul>
+        <li>Het ontwikkelingsniveau van zowel het herkomstland als het bestemmingsland speelt een belangrijke rol bij het vormen van internationale studentenmobiliteit.</li>
+        <li>Internationale studenten komen vaker uit middenontwikkelde landen, maar schrijven zich vaker in in hoogontwikkelde landen.</li>
+        <li>De rijkdom van het bestemmingsland speelt een belangrijke rol bij het aantrekken van internationale studenten, terwijl de academische reputatie gemengde resultaten laat zien.</li>
+        <li>Een gemeenschappelijke taal en een koloniale geschiedenis spelen nog steeds een belangrijke rol, vooral voor studenten uit lager ontwikkelde landen.</li>
+        <li>Naarmate landen zich verder ontwikkelen zal de samenstelling van de internationale studentenpopulatie naar verwachting veranderen.</li>
+    </ul>
+    </div>
+    <p>Internationale studenten behoren tot de snelst groeiende groep migranten. Uit de wetenschappelijke literatuur weten we echter dat niet alle landen gelijk zijn wat betreft het aantal studenten dat ze ontvangen en uitzenden. In sommige landen, zoals het Verenigd Koninkrijk, komen meer studenten het land binnen dan studenten die het land verlaten. Andere landen, zoals China, zien veel meer studenten het land verlaten dan binnenkomen. In de onderstaande kaart is het aantal emigrerende en immigrerende studenten te zien voor het jaar 2018<sup><a href="#fn1" id="ref1">1</a></sup>.</p>
+    <p>De kaart toont het percentage jongeren dat naar het buitenland verhuist om te studeren (emigrerend) of uit het buitenland komt om in dat land te studeren (immigrerend). Het migratiesaldo laat het verschil tussen die twee zien en laat zien welke landen meer studenten ontvangen en welke meer uitsturen. Hoe donkerder de kleur, hoe groter de uitstroom of instroom.</p>
+        <div id="ch2map">
+        <iframe src="https://tijmenweber.pythonanywhere.com/ch2mapnl" height="575" width="860"></iframe>
+        </div>
+    <p>Wat verklaart deze grote verschillen tussen de landen als het gaat om het aantal studenten dat ze ontvangen en het aantal dat emigreert of immigreert? Om dit te verklaren hebben we gebruik gemaakt van de
+    <a href="https://comparativemigrationstudies.springeropen.com/articles/10.1186/s40878-020-00210-4" target="_blank" rel="noopener noreferrer">aspiraties-capaciteiten theorie</a>
+    van migratie ontwikkeld door Hein de Haas. Deze theorie verbindt migratie aan het ontwikkelingsniveau van een land, dat we meten met de <a href="https://hdr.undp.org/data-center/human-development-index#/indicies/HDI" target="_blank" rel="noopener noreferrer">Human Development Index</a>.
+    In de volgende paragrafen zal ik laten zien hoe deze theorie ook kan worden toegepast op internationale studenten.</p>
+    <div id='ch2theory'><h2>Aspiraties en capaciteiten</h2></div>
+    <p>Kort gezegd, capaciteiten verwijzen naar wat mensen kunnen doen, terwijl aspiraties verwijzen naar wat mensen willen doen. Zowel capaciteiten als aspiraties worden gevormd door het ontwikkelingsniveau van het land waarin een persoon zich bevindt.</p>
+    <p>Voor internationale studenten verwijzen capaciteiten naar de noodzakelijke stappen die het mogelijk maken om een internationale student te worden. Voor een groot deel betekent dit simpelweg in staat zijn om het te financieren. Er moet niet alleen collegegeld worden betaald, maar ook visumkosten, huisvesting, eten enz. Studenten moeten ook de juiste vooropleiding hebben en in veel gevallen een vreemde taal goed genoeg spreken.</p>
+    <p>Aspiraties hebben betrekking op de wens van mensen om een internationale student te worden. In grote lijnen zijn er twee belangrijke redenen waarom mensen dit willen. De eerste reden is dat onderwijs in het buitenland en vooral in hoogontwikkelde landen als beter wordt gezien en betere kansen op goed werk kan bieden. De tweede reden waarom iemand in het buitenland zou willen studeren is simpelweg omdat het spannend en leuk is. Studeren in het buitenland stelt je in staat nieuwe culturen te ontdekken, nieuwe mensen te ontmoeten en nieuwe perspectieven te ervaren.</p>
+    <p>Zowel capaciteiten als aspiraties zijn verbonden met het ontwikkelingsniveau van een land. De capaciteiten die mensen nodig hebben om een internationale student te worden nemen toe naarmate hun land meer ontwikkeld is. Dat wil zeggen dat het veel gemakkelijker is om een internationale student te worden als je in een hoogontwikkeld land woont dan als je in een laagontwikkeld land woont. Dit geldt niet alleen voor de financiële kosten, zoals collegegeld en reiskosten; hoogontwikkelde landen hebben vaak ook betere afspraken met andere landen, waardoor de kans groter is dat een student zich kan inschrijven.</p>
+    <p>Hoe aspiraties worden beïnvloed door ontwikkeling is minder lineair. De aspiratie om te migreren begint vaak laag: mensen in de laagst ontwikkelde landen zijn vaak lager opgeleid en hebben minder toegang tot (internationale) media waardoor hun vooruitzichten en ambities beperkt zijn. In het buitenland studeren komt misschien niet eens in hen op als een realistische mogelijkheid. Naarmate landen zich ontwikkelen en mensen meer toegang krijgen tot onderwijs en media, verandert hun perspectief en beginnen ze meer mogelijkheden te zien. In het buiteland studeren begint daarom gezien te worden als een haalbare en waardevolle investering in de toekomst dus zijn de aspiraties hoog. Op het hoogste ontwikkelingsniveau nemen de ambities echter weer af, omdat verhuizen naar het buitenland als minder de moeite waard wordt gezien. Of zoals één van mijn Nederlandse studenten zei: “Waarom zou ik in het buitenland willen studeren als het onderwijs in Nederland ook prima is?”. Natuurlijk willen (en gaan) mensen in hoogontwikkelde landen nog steeds naar het buitenland om te studeren, maar daar hebben ze minder redenen voor in vergelijking met studenten uit middenontwikkelde landen. In de onderstaande tabel wordt de relatie tussen ontwikkeling, capaciteiten en aspiraties samengevat.</p>
+    <h2>Capaciteiten en aspiraties voor landen met verschillende ontwikkelingsniveaus</h2>
+    <table style="width:100%">
+        <tr>
+            <th style="width:42%">Ontwikkelingsniveau van een Land</th>
+            <th style="width:29%">Capaciteiten</th>
+            <th style="width:29%">Aspiraties</th>
+        </tr>
+        <tr>
+            <td>Laag</td>
+            <td>Laag</td>
+            <td>Laag</td>
+        </tr>
+        <tr>
+            <td>Midden</td>
+            <td>Midden</td>
+            <td>Hoog</td>
+        </tr>
+        <tr>
+            <td>Hoog</td>
+            <td>Hoog</td>
+            <td>Midden</td>
+        </tr>
+    </table>
+    <p>Dus wat zegt dit ons over de relatie tussen internationale ontwikkeling en studentenmigratie?</p>
+    <p>Voor immigratie is de verwachting dat de relatie met het ontwikkelingsniveau een toenemende toename volgt (ook wel een exponentiële toename genoemd). Omdat mensen over het algemeen verhuizen naar landen waar het beter is (of als beter wordt gezien), is de kans groter dat mensen naar landen verhuizen die hoger ontwikkeld zijn dan naar landen die lager ontwikkeld zijn. Daarom verwachten we dat studenten zich grotendeels zullen inschrijven in landen met de hoogste ontwikkelingsniveaus en dat de minder ontwikkelde landen relatief minder inschrijvingen zullen zien.</p>
+    <p>Voor emigratie is de verwachting dat de relatie tussen internationale studentenmigratie en het ontwikkelingsniveau van het land van herkomst een omgekeerde U-vorm volgt. Dit betekent voor de laagst ontwikkelde landen dat het aantal mensen dat naar een ander land verhuist om te studeren laag is, omdat ze zowel weinig capaciteiten hebben als weinig aspiraties hebben om in het buitenland te studeren. Naarmate landen zich verder ontwikkelen nemen ook de capaciteiten toe en ambitieuze mensen hebben dan meer mogelijkheden om international student te worden. Emigratie zal dus toenemen. Naarmate landen zich echter nog verder ontwikkelen zal naar verwachting het aantal mensen dat internationaal student wordt weer afnemen omdat onderwijs in het thuisland als even goed wordt ervaren. Dit zal echter niet dalen tot nul omdat er nog steeds wel andere redenen zijn om in het buitenland te studeren. </p>
+    <p>Hieronder staat een figuur die de theoretische relatie weergeeft. Deze figuur toont algemene migratie en is gemaakt door
+    <a href="https://www.migrationinstitute.org/publications/wp-24-10" target="_blank" rel="noopener noreferrer">Hein de Haas.</a> </p>
+    <img src="{{ url_for('static', filename='Migration_Transition.png') }}" width="700" height="600">
+    <p>Het onderstaande spreidingsdiagram toont het aantal internationale studenten per land, zowel immigrerend als emigrerend, als percentage van de bevolking tussen de 15 en 24 jaar. In de grafiek is elk land als een punt (ga er met de muis over om te zien welk land het is) en een zogenaamde loesscurve <sup><a href="#fn1" id="ref2">2</a></sup>.</p>
+    <p>De grafiek begint in 2003 en toont voor immigrerende studenten de voorspelde toenemende stijging, waarbij de grootste bestemmingslanden de hoogst ontwikkelde landen zijn. Voor de emigrerende internationale studenten is de voorspelde omgekeerde U-vorm echter niet aanwezig. In plaats daarvan lijkt het erop dat hoe meer ontwikkeld een land is, hoe meer studenten het uitzendt. Kijk echter wat er gebeurt als je op de PLAY-knop klikt! </p>
+
+    <div id='ch2scatterplot'><iframe src="https://tijmenweber.pythonanywhere.com/scatternl" height="775" width="860"></iframe></div>
+
+    <p>De voorspelde omgekeerde U-vorm verschijnt na 2007! Een mogelijke verklaring is dat studeren is veranderd van een activiteit bedoeld voor een paar bevoorrechten naar iets dat toegankelijker is voor een veel groter deel van de bevolking. Een positieve boodschap die uit deze grafiek kan worden afgeleid is dat de human development index over het algemeen is gestegen, wat betekent dat de levensstandaard wereldwijd verbetert. Met name voor internationale studenten betekent dit dat meer mensen in middelgrote ontwikkelde landen de capaciteiten hebben om internationaal student te worden en dat het niet langer een elitaire activiteit is.</p>
+    <p>Opmerkelijk is dat de vorm die verschijnt niet precies dezelfde is als die in het eerdere figuur van Hein de Haas. In het bijzonder verschijnt de piek van de uitgaande migratie veel later op de human development index dan voor algemene migratie. Waarschijnlijk komt dit omdat er meer capaciteiten nodig zijn voor studentenmigratie dan voor algemene migratie. Je moet niet alleen een grens over, je moet ook de relevante vooropleiding hebben, wat betekent dat de landen verder moeten worden ontwikkeld voordat dit punt kan worden bereikt.</p>
+    <br>
+    <div id='ch2models'></div><h2>Hangt de keuze voor een bestemmingsland af van het ontwikkelingsniveau van het land van herkomst?</h2>
+    <p>Het laatste deel van deze studie ging dieper in op de kenmerken van het bestemmingsland. Er is gekeken hoe deze kenmerken de internationale studentenmobiliteit beïnvloeden voor studenten uit verschillend ontwikkelde landen. Vier kenmerken zijn onderzocht: de rijkdom van het bestemmingsland (gemeten aan de hand van het BBP per hoofd van de bevolking), de academische reputatie van het bestemmingsland (gemeten aan de hand van de shanghai index), en of het bestemmingsland een gemeenschappelijke taal of een koloniale geschiedenis deelt met studenten uit een bepaald herkomstland. Met behulp van een statistisch computermodel konden we schatten hoe deze landkenmerken het aantal internationale studenten in een bestemmingsland beïnvloeden. </p>
+    <p>In dit model hebben we gecorrigeerd voor andere factoren die van invloed kunnen zijn op het aantal studenten dat zich in een land inschrijft, zoals de grootte van het bestemmings- en herkomstland, de afstand tussen landen en of ze een grens delen.
+    <p>Hoe het model precies werkt is te lezen in <a href="https://comparativemigrationstudies.springeropen.com/articles/10.1186/s40878-023-00329-0" target="_blank" rel="noopener noreferrer">de publicatie.</a></p>
+
+    <h3>Rijkdom</h3>
+    <p>Het BBP per hoofd van de bevolking is een maatstaf voor hoe rijk een land is. Landen met een hoog BBP hebben doorgaans een hogere levensstandaard, betere gezondheidszorg, beter onderwijs, enz. Hoewel het verre van een perfecte maatstaf is (het zegt bijvoorbeeld niets over inkomensongelijkheid), is het nuttig om een idee te krijgen van hoe rijk mensen in een land zijn. </p>
+    <p>Wat de resultaten lieten zien was dat rijkere landen meer internationale studenten aantrekken, en vooral studenten uit hoog- en middenontwikkelde landen. Wat we ook ontdekten, was dat landen met een sterke groei van het BBP doorgaans meer studenten aantrekken dan landen met minder groei van het BBP. Deze snelgroeiende landen trokken vooral studenten uit lager ontwikkelde landen aan. Dit houdt in dat studenten uit rijkere landen de neiging hebben om in andere rijke landen te studeren, terwijl studenten uit armere landen de neiging hebben om naar opkomende economieën te verhuizen. Een interessant voorbeeld hiervan zijn landen als China en Zuid-Afrika. Chinese en Zuid-Afrikaanse studenten verhuizen vaak naar rijke landen, maar China en Zuid-Afrika ontvangen zelf veel studenten uit de minder ontwikkelde Afrikaanse landen die ten zuiden van de Sahara liggen.  </p>
+
+    <h3>Academische reputatie</h3>
+    <p>Over het algemeen geven studenten er de voorkeur aan om zich in te schrijven bij een hogeronderwijsinstelling die een goede reputatie heeft. Dit geldt ook voor de bestemmingslanden: studenten willen vaak verhuizen naar landen die bekend staan om hun academische instellingen. Er zit echter een keerzijde aan landen die goed scoren, omdat hooggeplaatste landen niet altijd voor iedereen toegankelijk zijn. Landen als het Verenigd Koninkrijk en de Verenigde Staten hebben bijvoorbeeld wereldberoemde instellingen, maar ook zeer strenge toelatingseisen en hoge collegegelden. </p>
+    <div style="text-align: center;">
+    <figure>
+        <a title="Dmitry Djouce, CC BY 2.0 &lt;https://creativecommons.org/licenses/by/2.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Tom_Quad,_Christ_Church,_Oxford.jpg">
+            <img width="512" alt="Tom Quad, Christ Church, Oxford" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Tom_Quad%2C_Christ_Church%2C_Oxford.jpg/512px-Tom_Quad%2C_Christ_Church%2C_Oxford.jpg">
+        </a>
+        <figcaption>
+          Universiteiten zoals die in Oxford scoren vaak hoog op internationale ranglijsten.
+        </figcaption>
+    </figure>
+    </div>
+
+    <p>Wat we ontdekten was dat landen met hogere scores de neiging hadden om studenten aan te trekken uit zowel hoog- als laagontwikkelde landen, maar minder uit middenontwikkelde landen. Landen die een snellere stijging op de ranglijst lieten zien trekken meestal alleen studenten uit laagontwikkelde landen aan. Dit betekent dat studenten uit rijke landen de neiging hebben om prestigieuze locaties te kiezen, zoals de Verenigde Staten. Waarom studenten uit laagontwikkelde landen ook prestigieuze locaties zouden kiezen is een beetje raadselachtig. Het kan zijn dat deze studenten uit zeer rijke families komen of dat prestigieuze hogeronderwijsinstellingen vaker beurzen uitreiken aan studenten in arme landen. De landen die snel zijn gestegen op de ranglijsten (voorbeelden zijn China en de Verenigde Arabische Emiraten) blijken vooral studenten uit laagontwikkelde landen aan te trekken (of te werven). Studenten uit midden- en hoogontwikkelde landen lijken hierin minder geïnteresseerd te zijn. </p>
+
+    <h3>Gedeelde taal en koloniale geschiedenis</h3>
+    <p>Kiezen internationale studenten eerder een bepaald bestemmingsland kiezen als het land een gemeenschappelijke taal of koloniale geschiedenis deelt met hun eigen land? Taal is van belang omdat studeren in een vreemde taal aanzienlijk moeilijker is, dus een land dat dezelfde taal heeft kan de voorkeur hebben. Koloniale banden zijn van belang omdat landen met voormalige koloniale relaties vaak culturele overeenkomsten delen of politieke overeenkomsten hebben die migratie gemakkelijker maken. </p>
+    <p>Wat de analyses lieten zien was dat studenten de neiging hebben om te verhuizen naar landen met een gedeelde taal of een gedeelde koloniale geschiedenis, maar dat dit vooral het geval is voor studenten uit laagontwikkelde landen. Voor studenten uit hoogontwikkelde landen leek de gedeelde taal en koloniale geschiedenis er veel minder toe te doen. Dit kan verklaard worden door te kijken naar de capaciteiten van studenten: Als ze uit laag- en middenontwikkelde landen komen hebben ze vaak minder capaciteiten dus kan een land met dezelfde taal en vergelijkbare cultuur toegankelijker zijn. Studenten uit hoogontwikkelde landen hebben veel meer capaciteiten en hebben dus een veel breder scala aan opties om uit te kiezen. Een andere verklaring voor deze patronen is dat Europese landen vaak afspraken hebben gemaakt met hun voormalige koloniën. Portugal heeft bijvoorbeeld een beleid dat het voor studenten uit Brazilië veel gemakkelijker maakt om in Portugal te studeren. </p>
+    <br>
+    <div id='ch2conclusion'></div><h2>Conclusies en implicaties</h2>
+    <p>De belangrijkste conclusie van dit hoofdstuk is dat internationale ontwikkeling nauw verbonden is met internationale studentenmobiliteit. Het ontwikkelingsniveau van zowel bestemmings- als herkomstlanden beïnvloedt de waargenomen patronen in de internationale studentenmobiliteit. Dit impliceert dat deze patronen naar verwachting zullen veranderen naarmate landen zich ontwikkelen. China is bijvoorbeeld weliswaar nog steeds het grootste herkomstland, maar begint ook minder studenten uit te zenden. Andere landen die zich in een lagere ontwikkelingsfase bevinden, zoals India, Bangladesh, Vietnam of Nigeria, zullen naar verwachting de belangrijkste herkomstlanden worden.</p>
+    <p>Tegelijkertijd wordt verwacht dat opkomende landen steeds meer zullen concurreren met traditionele bestemmingslanden als het gaat om het aantrekken van internationale studenten. Internationale studentenmobiliteit wordt in snel tempo een steeds vaker voorkomende vorm van migratie, en zowel landen als hogeronderwijsinstellingen zullen met elkaar gaan concurreren om inschrijvingen. Wanneer deze concurrentie echter toeneemt, moeten instellingen rekening houden met de uiteenlopende behoeften van internationale studenten met verschillende achtergronden. Internationale studenten worden met meer uitdagingen geconfronteerd dan nationale studenten. Als landen en instellingen internationale studenten willen aantrekken moeten ze goed nadenken over hoe ze aan hun diverse culturele behoeften en verschillen in capaciteiten kunnen voldoen.</p>
+    <sup id="fn1">1. De data is afkomstig van UNESCO<a href="#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup><br>
+    <sup id="fn2">2. Een loesscurve toont een lokaal gemiddelde van landen met vergelijkbare ontwikkelingsniveaus. <a href="#ref2" title="Jump back to footnote 2 in the text.">↩</a></sup>
+<br><br>
+</div>
+
+</body>
+</html>

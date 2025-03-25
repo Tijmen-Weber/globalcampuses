@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Global Campuses?</title>
+            <link rel="icon" type="image/png" href="{{ url_for('static', filename='icons/favicon.png') }}" />
+    <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet" media="only screen" /> <!--For Flask-->
+    <link href="{{ url_for('static', filename='styles/mobilestyles.css') }}" rel="stylesheet" type="text/css" media="(pointer: coarse) and (max-device-width: 1080px)"  />
+    <link href="{{ url_for('static', filename='styles/smallpcstyles.css') }}" rel="stylesheet" type="text/css"  media="(pointer: fine) and (max-width: 1280px)" />
+    </head>
+
+<body>
+<div class = "placeholder2"></div>
+
+
+<div class="sticky-top2">
+    <div class="banner-container2">
+    <img src="{{ url_for('static', filename='WebBannerDutch.jpg') }}" height="130">
+    </div>
+
+    <nav class="topnav">
+      <li><a href="/thuis">Start</a></li>
+      <li><div class="dropdown">
+        <button class="dropbtn">Hoofdstukken ▾</button>
+        <div class="dropdown-content">
+          <a href="voorwoord">Voorwoord</a>
+          <a href="introductie">Introductie</a>
+          <a href="hoofdstuk2">Hoofdstuk 2</a>
+          <a href="hoofdstuk3">Hoofdstuk 3</a>
+          <a href="hoofdstuk4">Hoofdstuk 4</a>
+          <a href="hoofdstuk5">Hoofdstuk 5</a>
+          <a href="conclusie">Conclusie</a>
+          <a href="nawoord">Nawoord</a></div>
+        </div></li>
+      <li><a href="over">Over</a></li>
+    <li><a href="/Introduction"><img src="{{ url_for('static', filename='american_flag.png') }}" width="45", height="30"></a></li>
+      </nav>
+  </div>
+<!-- The sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="/Introduction"><img src="{{ url_for('static', filename='american_flag.png') }}" width="30", height="20"></a>
+        <a href="/thuis">Start</a>
+        <a href="voorwoord">Voorwoord</a>
+      <button type="button" class="collapsible">Hoofdstuk 1: Introductie</button>
+      <div class="submenu content">
+            <a href="#topcountries">Bestemmings en Herkomstlanden</a>
+            <a href="#background-global">Achtergrond: Wereldwijd</a>
+            <a href='#background-nl'>Achtergrond: Nederland</a>
+        </div>
+        <a href="hoofdstuk2">Hoofdstuk 2</a>
+        <a href="hoofdstuk3">Hoofdstuk 3</a>
+        <a href="hoofdstuk4">Hoofdstuk 4</a>
+        <a href="hoofdstuk5">Hoofdstuk 5</a>
+        <a href="conclusie">Hoofdstuk 6: Conclusie</a>
+        <a href="nawoord">Nawoord</a>
+        <a href="about">Over</a>
+    </div>
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+
+    document.querySelectorAll('.sidebar a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default behavior of internal anchor links
+
+      const targetId = this.getAttribute('href').substring(1); // Get target ID
+      const targetElement = document.getElementById(targetId); // Get target element
+
+      if (targetElement) {
+        const offset = targetElement.offsetTop - 140; // Calculate desired offset from top
+        window.scrollTo({ top: offset, behavior: 'smooth' }); // Scroll to the target element
+      }
+    });
+  });
+</script>
+
+
+<!--Header-->
+<!--Body text-->
+<div class="body-content">
+<div id="Introduction"></div><h1>Hoofdstuk 1: Introductie </h1>
+<p>Meer dan tien jaar geleden wilde de Nederlandse overheid <a href="https://www.ser.nl/-/media/ser/downloads/adviezen/2013/make-it-in-the-netherlands.pdf" target="_blank" rel="noopener noreferrer">internationalisering stimuleren</a> en veel meer internationale studenten aantrekken. Nog maar zes jaar geleden hadden sommige politici nog <a href="https://www.scienceguide.nl/2017/02/nederland-moet-een-magneet-voor-talent-zijn/" target="_blank" rel="noopener noreferrer">hoge ambities</a> om het aantal internationale studenten te vergroten. Toen ik mijn promotiebeurs aanvroeg zei ik dat het voordeel van dit onderzoek zou zijn dat de bevindingen gebruikt zouden kunnen worden om meer studenten naar Nederland te krijgen. Zoals we nu weten, bleek het aantal inkomende internationale studenten moeilijker te beheersen dan verwacht en zijn sommige instellingen <a href="https://nos.nl/artikel/2404324-universiteiten-onder-druk-door-recordaantal-studenten" target="_blank" rel="noopener noreferrer">overbelast</a> geraakt. Ook huisvesting bleek erg <a href="https://nos.nl/artikel/2438234-universiteiten-tegen-internationale-studenten-blijf-weg-als-je-geen-kamer-hebt" target="_blank" rel="noopener noreferrer">problematisch</a> voor internationale studenten. Nu is de discussie volledig veranderd en zijn beleidsmakers aan het discussiëren over hoe ze het aantal internationale studenten kunnen <a href="https://nos.nl/artikel/2472287-stroom-internationale-studenten-moet-ingedamd-rem-en-stuur-nodig" target="_blank" rel="noopener noreferrer">verminderen.</a></p>
+<p>Het aantal internationale studenten is snel toegenomen, niet alleen in Nederland, maar ook wereldwijd. In 2000 waren er 2,1 miljoen internationale studenten, in 2020 waren dat er 6,4 miljoen. Internationale studenten hebben waarschijnlijk altijd bestaan, maar op geen enkel moment waren het er zoveel. Traditioneel waren de belangrijkste bestemmingslanden de Verenigde Staten, het Verenigd Koninkrijk, Australië, Duitsland en Frankrijk. De dominantie van deze landen <a href="https://link.springer.com/article/10.1007/s10734-017-0154-9" target="_blank" rel="noopener noreferrer">neemt echter af</a> en andere bestemmingslanden, waaronder Nederland, worden steeds populairder. In de onderstaande tabel staat een overzicht van de belangrijkste bestemmings- en herkomstlanden in het jaar 2020.</p>
+<div id="topcountries"></div><table style="width:100%">
+    <tr><th colspan="2">Top 10 bestemmingslanden</th><th colspan="2">Top 10 herkomstlanden</th></tr>
+    <tr><th style="width:25%">Land</th><th style="width:25%">Internationale Studenten</th><th style="width:25%">Land</th><th style="width:25%">Internationale Studenten</th></tr>
+    <tr><td>Verenigde Staten</td><td>975,475</td><td>China</td><td>1,088,466</td></tr>
+    <tr><td>Verenigd Koninkrijk</td><td>550,877</td><td>India</td><td>516,238</td></tr>
+    <tr><td>Australië</td><td>458,279</td><td>Vietnam</td><td>132,559</td></tr>
+    <tr><td>Duitsland</td><td>368,717</td><td>Duitsland</td><td>123,512</td></tr>
+    <tr><td>Canada</td><td>323,157</td><td>Verenigde Staten</td><td>109,827</td></tr>
+    <tr><td>Rusland</td><td>282,922</td><td>Frankrijk</td><td>108,654</td></tr>
+    <tr><td>Frankrijk</td><td>252,444</td><td>Zuid-Korea</td><td>100,610</td></tr>
+    <tr><td>China</td><td>225,100</td><td>Nepal</td><td>95,268</td></tr>
+    <tr><td>Japan</td><td>222,661</td><td>Kazakhstan</td><td>90,333</td></tr>
+    <tr><td>Verenigde Arabische Emiraten</td><td>215,975</td><td>Brazilië</td><td>89,151</td></tr>
+</table>
+<p>In mijn proefschrift heb ik de migratiepatronen van internationale studenten bestudeerd. Ik richt me specifiek op zogenaamde diplomastudenten, dat wil zeggen internationale studenten die van plan zijn een hele opleiding in het buitenland af te ronden. Uitwisselingsstudenten worden niet meegenomen in mijn onderzoek. Hoewel de internationale studentenmobiliteit zich snel ontwikkelt, is er nog steeds veel onduidelijk. Het doel van mijn proefschrift is om dit fenomeen vanuit twee invalshoeken te bestuderen. De eerste invalshoek is een focus op hoe internationale ontwikkeling de internationale studentenmobiliteit beïnvloedt, zowel wereldwijd (hoofdstuk 2) als in Nederland (hoofdstuk 4). De tweede invalshoek gaat over hoe instellingen internationale studentenmobiliteit beïnvloeden, ook zowel wereldwijd (hoofdstuk 5) als in Nederland (hoofdstuk 3). </p>
+<p>In het volgende gedeelte zal ik eerst enkele achtergrondontwikkelingen van internationale studentenmobiliteit beschrijven. Hierna zal ik een (verkorte) versie van de hoofdstukken van mijn proefschrift presenteren. </p>
+<h2>Achtergrond</h2>
+<div id="background-global"></div><h3>Internationale studenten wereldwijd</h3>
+<p>Voor de Tweede Wereldoorlog was internationale studentenmobiliteit zeer zeldzaam en iets wat slechts enkele studenten zich konden veroorloven, maar tijdens de Koude Oorlog veranderde de kijk op internationaal onderwijs en werden internationale studenten steeds meer gezien als een belangrijke manier om de politieke en economische macht te vergroten. Zowel de Verenigde Staten als de Sovjet-Unie begonnen actief studenten te werven om hun positie in de wereld te verbeteren en invloed uit te oefenen over andere landen. In Europa werd internationale mobiliteit gestimuleerd door het ERASMUS-programma, met als doel de verschillende EU-landen dichter bij elkaar te brengen.</p>
+<a title="European Commission, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Erasmus%2B_Logo.svg"><img width="512" alt="Erasmus+ Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Erasmus%2B_Logo.svg/512px-Erasmus%2B_Logo.svg.png"></a>
+<p>Tegenwoordig is de politieke dimensie in Westerse landen grotendeels verdwenen en worden de voordelen van internationale studenten vooral door een economische bril bekeken. Internationale studenten worden bijvoorbeeld als aantrekkelijk gezien omdat ze hogeronderwijsinstellingen inkomsten opleveren (een opvatting die vooral in Angelsaksische landen heerst), of omdat internationale studenten worden gezien als een oplossing voor tekorten op de arbeidsmarkt (een bewering die in Nederland vaak wordt herhaald). In andere delen van de wereld worden internationale studenten echter nog steeds gebruikt om politieke redenen. <a href="https://doi.org/10.1007/s10734-020-00549-8" target="_blank" rel="noopener noreferrer">China</a> rekruteert bijvoorbeeld studenten uit zijn buurlanden, maar ook uit Afrika, om zo de politieke invloed op die regio’s te vergroten.</p>
+<p>Waarschijnlijk zullen in de nabije toekomst de Verenigde Staten het belangrijkste bestemmingsland en China het belangrijkste herkomstland blijven. China zal echter blijven investeren in het eigen onderwijssysteem, wat betekent dat het zowel meer internationale studenten zal aantrekken als minder studenten zal uitzenden. Andere landen, zoals India, zullen waarschijnlijk meer studenten uitzenden en China vervangen als het belangrijkste herkomstland. Tot nu toe vond de studentenmigratie vooral plaats in de richting van westerse landen, maar er verschijnen nieuwe hubs die de migratiepatronen van internationale studenten fundamenteel kunnen veranderen.</p>
+<div id="background-nl"></div><h3>Internationale studenten in Nederland</h3>
+<p>Nederlands was één van de <a href="https://www.taylorfrancis.com/chapters/edit/10.4324/9781003217923-7/attracting-international-students-netherlands-floor-van-donselaar-margje-geurts-hendrik-jan-hobbes" target="_blank" rel="noopener noreferrer">voorlopers</a> van de internationalisering in Europa. Oorspronkelijk was internationalisering bedoeld als een vorm van ontwikkelingshulp, maar vanaf de jaren tachtig werd de internationale studentenmobiliteit steeds meer gericht op Europa. Nederland was één van de eerste landen die de ERASMUS-overeenkomst ondertekende en deel uitmaakte van het Bologna-proces, twee belangrijke mijlpalen die de internationale studentenmobiliteit binnen Europa hebben gestimuleerd.</p>
+<p>Als het gaat om de <a href="https://www.nuffic.nl/sites/default/files/2023-06/incoming-degree-mobility-in-dutch-higher-education-2022-2023.pdf" target="_blank" rel="noopener noreferrer">binnenkomende studenten</a>, zijn Duitsers altijd de grootste groep geweest en worden ze nu gevolgd door Italianen, Chinezen, Roemenen en Spanjaarden. Over het algemeen zijn er ook meer studenten uit de Europese Unie dan van buiten de Europese Unie. China is weliswaar het grootste herkomstland buiten de EU, maar zou kunnen worden vervangen door andere opkomende landen in Azië, zoals India en Vietnam, die steeds meer studenten naar Nederland sturen.</p>
+<p>Sinds de jaren 2000 probeerde de regering in eerste instantie het aantal internationale studenten te vergroten. De belangrijkste redenen die werden gegeven waren dat ze de kwaliteit van het onderwijs zouden verhogen, dat ze waardevol talent zouden opleveren en dat ze toekomstige tekorten aan arbeidskrachten zouden kunnen opvullen. Met name universiteiten gingen hierin mee en begonnen meer opleidingen in het Engels aan te bieden, waardoor het aantal internationale studenten enorm toenam. De laatste jaren is het debat echter veranderd. Er zijn klachten over internationale studenten die te veel druk uitoefenen op onderwijspersoneel, de woningnood verergeren en Nederlandse studenten verdringen (hoewel er <a href="https://www.nuffic.nl/sites/default/files/2023-05/factsheet-international-students-2023.pdf" target="_blank" rel="noopener noreferrer">niet veel bewijs</a> is voor dit laatste).</p>
+<p>Het debat is echter nogal eenzijdig. Sommige hogeronderwijsinstellingen hebben inderdaad te maken met te veel internationale studenten, maar er zijn er ook die er <a href="https://www.trouw.nl/binnenland/zeeland-staat-wel-te-springen-om-internationale-studenten~b2088ce7/" target="_blank" rel="noopener noreferrer">graag meer willen</a>. Het debat richt zich grotendeels op universiteiten; hogescholen zijn vrij stabiel gebleven in het aantal internationale studenten dat ze aantrekken. Het probleem is dus niet een ongecontroleerde groei, maar eerder een ongecontroleerde ongelijkheid in de groei. De internationale studentenmobiliteit in Nederland moet beter worden beheerst, maar ingrijpende universele maatregelen, zoals het verplicht stellen van het Nederlands in alle bacheloropleidingen, zullen waarschijnlijk sommige instellingen helpen, maar ook vele andere schaden.</p>
+<br>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Global Campuses?</title>
+            <link rel="icon" type="image/png" href="{{ url_for('static', filename='icons/favicon.png') }}" />
+    <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet" media="only screen" /> <!--For Flask-->
+    <link href="{{ url_for('static', filename='styles/mobilestyles.css') }}" rel="stylesheet" type="text/css" media="(pointer: coarse) and (max-device-width: 1080px)"  />
+    <link href="{{ url_for('static', filename='styles/smallpcstyles.css') }}" rel="stylesheet" type="text/css"  media="(pointer: fine) and (max-width: 1280px)" />
+    </head>
+
+<body>
+<div class = "placeholder2"></div>
+
+
+<div class="sticky-top2">
+    <div class="banner-container2">
+    <img src="{{ url_for('static', filename='WebBanner.jpg') }}" height="130">
+    </div>
+
+    <nav class="topnav">
+    <li><a href="/home">Home</a></li>
+    <li><div class="dropdown">
+      <button class="dropbtn">Chapters ▾</button>
+      <div class="dropdown-content">
+          <a href="preface">Preface</a>
+        <a href="Introduction">Introduction</a>
+        <a href="chapter2">Chapter 2</a>
+        <a href="chapter3">Chapter 3</a>
+        <a href="chapter4">Chapter 4</a>
+        <a href="chapter5">Chapter 5</a>
+        <a href="Conclusion">Conclusion</a>
+        <a href="afterword">Afterword</a></div>
+      </div></li>
+    <li><a href="about">About</a></li>
+                <li><a href="/hoofdstuk4"><img src="{{ url_for('static', filename='dutch_flag.png') }}" width="45", height="30"></a></li>
+    </nav>
+</div>
+<!-- The sidebar -->
+    <div class="sidebar" id="sidebar">
+              <a href="/hoofdstuk4"><img src="{{ url_for('static', filename='dutch_flag.png') }}" width="30", height="20"></a>
+        <a href="/home">Home</a>
+        <a href="preface">Preface</a>
+        <a href="Introduction">Chapter 1: Introduction</a>
+        <a href="chapter2">Chapter 2</a>
+        <a href="chapter3">Chapter 3</a>
+          <button type="button" class="collapsible">Chapter 4</button>
+          <div class="submenu content">
+            <a href="#highlights">Highlights</a>
+            <a href="#FOS1">Fields of Study 1</a>
+            <a href='#aspirations'>Theory</a>
+            <a href='#FOS2'>Fields of Study 2</a>
+            <a href='#models'>Computer Models</a>
+            <a href='#conclusion'>Conclusions</a>
+        </div>
+        <a href="chapter5">Chapter 5</a>
+        <a href="Conclusion">Chapter 6: Conclusion</a>
+        <a href="afterword">Afterword</a>
+        <a href="about">About</a>
+    </div>
+
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+
+    document.querySelectorAll('.sidebar a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default behavior of internal anchor links
+
+      const targetId = this.getAttribute('href').substring(1); // Get target ID
+      const targetElement = document.getElementById(targetId); // Get target element
+
+      if (targetElement) {
+        const offset = targetElement.offsetTop - 140; // Calculate desired offset from top
+        window.scrollTo({ top: offset, behavior: 'smooth' }); // Scroll to the target element
+      }
+    });
+  });
+</script>
+
+<!--Header-->
+<!--Body text-->
+<div class="body-content">
+    <div id="chapter4"></div><h1>Chapter 4: International Student Mobility and the Choice of Study Program</h2>
+    <p><a href="https://doi.org/10.1002/psp.2864" target="_blank" rel="noopener noreferrer">Link to the academic publication.</a></p>
+    <p><a href="https://osf.io/yu9bx/?view_only=781862d128324dfbb2c3cdfed29f95b0" target="_blank" rel="noopener noreferrer">Link to the Replication Package</a></p>
+        <div id="highlights"></div><h2>Highlights</h2>
+      <ul>
+        <li>International students from less developed countries are more likely to choose more job-oriented study programs.</li>
+        <li>Master students from less developed countries tend to prioritize educational quality.</li>
+        <li>Master students from higher developed countries tend to prioritize city characteristics.</li>
+        <li>For bachelor students the development level of the origin country does not clearly correlate with a preference for educational quality or city characteristics.</li>
+    </ul>
+    <p>In this chapter I continue my research on international students in the Netherlands. This time I wanted to know which fields of study international students tend to choose. In the graph below, you can see how many international students are enrolled in each field of study<sup><a href="#fn1" id="ref1">1</a></sup>. Economics is by far the most popular, but most other fields of study are also commonly chosen.  </p>
+    <div id="FOS1"></div><iframe src="https://tijmenweber.pythonanywhere.com/ch4stackedbar" height="520", width = "820"></iframe>
+    <p>Like in chapter 2, I wanted to know if the development level of the origin country of the international students matters for the choices they make. I was inspired to find this out because of my personal experiences. When I was a bachelor student, most international students at my bachelor program came from Western Europe and North America. At the HAN, most international students seem to come from Eastern Europe and Asia. This raises the question: does the country of origin of students influence which study program they choose? </p>
+    <div id="aspirations"></div><h2>Instrumental and Intrinsic Migration Aspirations</h2>
+    <p>Theoretically, we can expect that the country of origin matters by looking at migration aspirations, that is, the reasons why people want to migrate. It is possible to distinguish between <a href="https://doi.org/10.1186/s40878-020-00210-4" target="_blank" rel="noopener noreferrer">instrumental and intrinsic aspirations</a>. Instrumental aspirations refer to migrating because you want to achieve something through migration, like getting a better job, fleeing from poverty, or getting a degree. Migration would therefore simply be a means to achieving a goal. Intrinsic aspirations refer to migrating because you find the migration experience valuable in and of itself. People who are intrinsically motivated to migrate do so because to want to experience new cultures, see it as a rite of passage, or want to discover new places. In reality, both types of aspirations exist next to each other, though whether instrumental or intrinsic aspirations are more important depends on the person.</p>
+    <p>My theory is that, at least for international students, the importance of instrumental vs intrinsic aspirations is influenced by the development level of the origin country. <a href="https://doi.org/10.1086/595942" target="_blank" rel="noopener noreferrer">There is already evidence</a> that more job-oriented study programs are more popular in less developed countries, compared to highly developed countries. The reason is probably because in lower developed countries, higher education is seen more as a steppingstone to getting a good job. In higher developed countries, studying might be seen as more important in and of itself, and the job benefits might be seen as less relevant. In other words, whether people choose a study program because of the job benefits or because they simply like the subject is influenced by the development level of the origin country.</p>
+    <p>For international students in the Netherlands, I expected that we should see similar patterns. Students from less developed countries often study abroad because they consider a foreign degree to be more valuable than a degree that is available to them at home. So for them, migrating is a means for getting a degree they could not get at home. Especially a degree from a Western country could give them an edge on the labor market. For students from highly developed countries, a degree from the Netherlands is probably not necessarily better than a degree at home, so they would need more intrinsic reasons for moving abroad<sup><a href="#fn2" id="ref2">2</a></sup>. Another way of looking at it is to consider that instrumentally motivated people in higher developed countries would be more likely get a degree in their own country, because if the degree is what matters, then moving abroad would just unnecessarily complicate things.</p>
+    <h2>Development and Field Of Study for International Students</h2>
+    <p>If there is indeed a relationship between country development and the type of aspiration, we should be able to see it in the enrollment decisions of students. If students from lower developed countries are more instrumentally motivated, and instrumentally motivated students are more likely to choose study programs with clearer job benefits, then it is logical to assume the international students from lower developed countries would choose more job-oriented study programs. For students from higher developed countries, we should see a wider variety in the choices they make, because they should be more likely to choose a study program based on whether they find it interesting. </p>
+    <p>To test my theory, I decided to see if students from different origin countries indeed enroll in different study programs. The first thing I did was to divide the original countries into five equally-sized groups (so-called quintiles) based on the <a href="https://hdr.undp.org/data-center/human-development-index#/indicies/HDI" target="_blank" rel="noopener noreferrer">human development index</a>. The higher the quintile, the higher the level of development. Second, I used a computer model<sup><a href="#fn3" id="ref3">3</a></sup> to calculate the percentage of students, within each quintile, enrolled in one of the 10 possible fields of study. Below you can see a graph that shows the results of these computer models. </p>
+    <div id="FOS2"></div><iframe src="https://tijmenweber.pythonanywhere.com/ch4mmbar" height="900", width = "820"></iframe>
+    <p>Based on the figure you can see that, yes, the development level of the origin country does seem to matter for the field of study international students choose. Agriculture and law are more popular for students from low developed countries, economics and engineering are more popular for students from middle developed countries, and social sciences and language and culture are more popular among students from highly developed countries. Therefore, these results appear to support my theory, because students from lower developed countries more often choose study programs that have clearer job benefits. But does the development level of origin countries also influence other decisions of international students?</p>
+    <div id="models"></div><h2>Educational Quality and City Life</h2>
+    <p>To further test my theory, I also decided to see if students from different origin countries prioritized educational quality or city characteristics. If students from less developed countries are more instrumentally motivated, I would expect that they would be more likely to enroll in a study program that is known for being of high quality. Intrinsically motivated students, on the other hand, should see the wider study abroad experience as more important, and therefore be more attracted to the offerings of the city that the program is in.</p>
+    <p>To test this, I again created computer models where I analyzed the enrollments of the students. For master students, I find that there is indeed some support for my theory. The models reveal that students from lower developed countries are more likely to enroll in study programs that have obtained a quality seal from <a href="https://keuzegids.nl/kwaliteitszegels/" target="_blank" rel="noopener noreferrer">Keuzegids</a>. Students from higher developed countries in contrast might be more likely to enroll in programs that are in bigger cities or cities that have more amenities. </p>
+    <div class="rounded-image"><a title="Andrés Barrios, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png"><img width="550" alt="Imagen de los canales concéntricos en Ámsterdam" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png/1024px-Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png"></a></div>
+    <p>For bachelor students, however, I could not find such clear patterns. There were important differences between whether students from different origin countries prioritized educational quality or city life, but these patterns could not be adequately explained by pointing to the level of development of the origin country. I do not think these results necessarily disprove my theory, however. It could be the case that instrumentally motivated students do not only have a degree as the end goal, but also <a href="https://doi.org/10.3167/latiss.2012.050304" target="_blank" rel="noopener noreferrer">finding a good job next to their studies</a>. For such students, it might actually be beneficial to choose a larger and more active city, not (just) because it makes the migration experience nicer, but because it offers better job opportunities. In this sense, student migration and labor migration can overlap. </p>
+    <p>Another explanation of these patterns could be that higher education institutions are actively involved in shaping international student mobility. For example, it could be that education programs that do not have a quality seal put more resources into direct recruitment. Such higher education institutions might also be more likely to target specific countries, such as middle-income countries, because they have a larger pool of potential students. This is just speculation however, and more research needs to be done if we want to further understand why different international students choose different locations.</p>
+    <div id="conclusion"></div><h2>Concluding remarks</h2>
+    <p>The level of development of origin countries might help to explain some of the variety in the enrollment patterns of international students. However, these results are only indicative and there are also many other characteristics of students that influence which study program they choose. For example, we know that men and women choose different study programs, and <a href="https://doi.org/10.1007/s10734-020-00671-7" target="_blank" rel="noopener noreferrer">gender might influence</a> how likely it is that someone becomes an international student. It could also be that students from lower developed countries come from upper class families, while students from higher developed countries are more likely to come from middle class families. The relative position of students within societies might in turn influence what types of study programs they choose.</p>
+    <p>The results also imply that there might be important inequalities within the Netherlands. Larger and more popular cities are more expensive to live in and might not be accessible to international students from less developed countries. However, large cities can offer better opportunities for networking and internships, which could have important benefits to students’ later careers. After graduation, most international students move to <a href="https://www.nuffic.nl/publicaties/stayrate-en-arbeidsmarktpositie-van-internationale-afgestudeerden-in-nederland" target="_blank" rel="noopener noreferrer">just a few cities</a>; Amsterdam alone accounts for a third of international alumni. Already having a foothold in one of those cities could therefore give students an important edge. </p>
+    <p>As I discussed in chapter 2, the development levels of countries is changing, which in turn influences international student mobility. We should also see the effects of this in the Netherlands because if the origin countries of international students change, then the study programs that they choose might also change. Fields of study that were once popular might see a decline in enrollments, while less popular fields might see increases. Higher education institutions that try to make an estimation of future enrollments would therefore do well to take into account the development levels of possible origin countries.</p>
+      <sup id="fn1">1. The categories are based on the CROHO index.<a href="#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup><br>
+      <sup id="fn2">2. There are exceptions to this of course. For example, many Germans come to study psychology in the Netherlands because in Germany there are limited spaces and they did not manage to secure a spot there.<a href="#ref2" title="Jump back to footnote 2 in the text.">↩</a></sup><br>
+      <sup id="fn3">3. In this model I also accounted for the size of the origin country, distance between countries, and types of higher education institutions.<a href="#ref3" title="Jump back to footnote 3 in the text.">↩</a></sup>
+<br><br>
+  </div>
+
+</body>
+</html>

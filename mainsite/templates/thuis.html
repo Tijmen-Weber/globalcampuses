@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Global Campuses?</title>
+            <link rel="icon" type="image/png" href="{{ url_for('static', filename='icons/favicon.png') }}" />
+    <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet" media="only screen" /> <!--For Flask-->
+    <link href="{{ url_for('static', filename='styles/mobilestyles.css') }}" rel="stylesheet" type="text/css" media="(pointer: coarse) and (max-device-width: 1080px)"  />
+    <link href="{{ url_for('static', filename='styles/smallpcstyles.css') }}" rel="stylesheet" type="text/css"  media="(pointer: fine) and (max-width: 1280px)" />
+    </head>
+
+<body>
+<div class = "placeholder2"></div>
+
+
+<div class="sticky-top2">
+    <div class="banner-container2">
+    <img src="{{ url_for('static', filename='WebBannerDutch.jpg') }}" height="130">
+    </div>
+
+    <nav class="topnav">
+        <li><a href="/thuis">Start</a></li>
+        <li><div class="dropdown">
+          <button class="dropbtn">Hoofdstukken ▾</button>
+          <div class="dropdown-content">
+            <a href="voorwoord">Voorwoord</a>
+            <a href="introductie">Introductie</a>
+            <a href="hoofdstuk2">Hoofdstuk 2</a>
+            <a href="hoofdstuk3">Hoofdstuk 3</a>
+            <a href="hoofdstuk4">Hoofdstuk 4</a>
+            <a href="hoofdstuk5">Hoofdstuk 5</a>
+            <a href="conclusie">Conclusie</a>
+            <a href="nawoord">Nawoord</a></div>
+          </div></li>
+        <li><a href="over">Over</a></li>
+            <li><a href="/home"><img src="{{ url_for('static', filename='american_flag.png') }}" width="45", height="30"></a></li>
+        </nav>
+    </div>
+
+<!-- The sidebar -->
+<div class="sidebar" id="sidebar">
+      <a href="/home"><img src="{{ url_for('static', filename='american_flag.png') }}" width="30", height="20"></a>
+  <a class="active" href="/thuis">Start</a>
+  <a href="voorwoord">Voorwoord</a>
+  <a href="introductie">Hoofdstuk 1: Introductie</a>
+  <a href="hoofdstuk2">Hoofdstuk 2</a>
+  <a href="hoofdstuk3">Hoofdstuk 3</a>
+  <a href="hoofdstuk4">Hoofdstuk 4</a>
+  <a href="hoofdstuk5">Hoofdstuk 5</a>
+  <a href="conclusie">Hoofdstuk 6: Conclusie</a>
+  <a href="nawoord">Nawoord</a>
+  <a href="over">Over</a>
+
+</div>
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+
+    document.querySelectorAll('.sidebar a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default behavior of internal anchor links
+
+      const targetId = this.getAttribute('href').substring(1); // Get target ID
+      const targetElement = document.getElementById(targetId); // Get target element
+
+      if (targetElement) {
+        const offset = targetElement.offsetTop - 110; // Calculate desired offset from top
+        window.scrollTo({ top: offset, behavior: 'smooth' }); // Scroll to the target element
+      }
+    });
+  });
+</script>
+
+<!--Header-->
+<!--Body text-->
+<div class="body-content">
+    <H1>Start</H1>
+    <p>Hallo en welkom. Deze website heb ik gemaakt als onderdeel van mijn proefschrift over internationale studentenmobiliteit. In mijn proefschrift onderzoek ik waar internationale studenten zich inschrijven en of dit iets te maken heeft met waar ze vandaan komen en waar ze naartoe gaan. Om mijn conclusies toegankelijker te maken heb ik de hoofdstukken aangepast zodat ze makkelijker en leuker te lezen zijn. In de onderstaande tabel kun je zien welke vraag elk hoofdstuk beantwoordt.</p>
+    <p>Het volledige proefschrift is <a href="https://repository.ubn.ru.nl/handle/2066/306643">hier</a> te vinden. De code die ik heb gebruikt om deze website te maken is <a href="https://github.com/Tijmen-Weber/globalcampuses">hier</a> te vinden.</p>
+<H2>Overzicht van de hoofdstukken</H2>
+    <table style="width:100%">
+        <tr><th style="width:28%"><b>Hoofdstuk</b></th><th style="width:72%"><b>Vraag</b></th></tr>
+        <tr><td><a href="https://www.globalcampuses.nl/voorwoord">Voorwoord</a></td><td>Wat is de inspiratie geweest voor dit onderzoek?</td></tr>
+        <tr><td><a href="https://www.globalcampuses.nl/introductie">Hoofdstuk 1 (Introductie)</a></td><td>Wat zijn de belangrijkste ontwikkelingen op het gebied van internationale studentenmobiliteit? En wat hebben andere onderzoekers erover gezegd?</td></tr>
+        <tr><td><a href="https://www.globalcampuses.nl/hoofdstuk2">Hoofdstuk 2</a></td><td>Hoe verhoudt internationale studentenmobiliteit zich tot het ontwikkelingsniveau van herkomst- en bestemmingslanden?</td></tr>
+        <tr><td><a href="https://www.globalcampuses.nl/hoofdstuk3">Hoofdstuk 3</a></td><td>Welke kenmerken gebruiken hogeronderwijsinstellingen in Nederland om zich te profileren? En in hoeverre hangen deze kenmerken samen met daadwerkelijke inschrijvingen?</td></tr>
+        <tr><td><a href="https://www.globalcampuses.nl/hoofdstuk4">Hoofdstuk 4</a></td><td>Heeft het ontwikkelingsniveau van de herkomstlanden van internationale studenten invloed op de opleiding die ze in Nederland kiezen?</td></tr>
+        <tr><td><a href="https://www.globalcampuses.nl/hoofdstuk5">Hoofdstuk 5</a></td><td>Hoe hangt internationale studentenmobiliteit samen met de financiering van het hoger onderwijs?</td></tr>
+        <tr><td><a href="https://www.globalcampuses.nl/conclusie">Hoofdstuk 6 (Conclusie)</a></td><td>Wat zijn de belangrijkste conclusies van dit proefschrift? En wat zijn de beleidsimplicaties?</td></tr>
+        <tr><td><a href="https://www.globalcampuses.nl/nawoord">Nawoord</a></td><td>Moeten we internationale studentenmobiliteit stimuleren?</td></tr>
+
+    </table>
+<br>
+<iframe src="https://tijmenweber.pythonanywhere.com/empty" height="1" width="1"></iframe>
+</div>
+
+</body>
+</html>
